@@ -21,4 +21,3 @@ if exist "%SOURCE_DIR%komorebi.json" (
 )
 
 echo Done.
-pause
