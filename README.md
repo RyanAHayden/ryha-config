@@ -5,6 +5,7 @@ Mostly for personal reasons but feel free to mess around with the configs.
 <br>
 ![screenshot of windows setup](README_Assets/preview.png)
 <br>
+
 # < [EarTrumpet](https://eartrumpet.app/) >
 ```
 winget install File-New-Project.EarTrumpet
@@ -40,9 +41,15 @@ winget install windhawk
 ```
 winget install "Flow Launcher"
 ```
-### Settings
+### Settings & Theme
 Copy `/FlowLauncher` to
 `C:\Users\{user}\AppData\Roaming`
+Apply `ryha-green` using `fltheme ryha-green`
+
+### Plugin Settings
+Set explorer shortcuts like these:
+
+<img src="README_Assets/example_quicklaunch.png" alt="example" width="400" />
 
 # < [Nilesoft](https://nilesoft.org/download) >
 ```
