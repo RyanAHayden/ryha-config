@@ -2,7 +2,7 @@
 
 # Reload whkd configuration
 alt + o                 : taskkill /f /im whkd.exe; Start-Process whkd -WindowStyle hidden # if shell is pwsh / powershell
-alt + shift + o         : komorebic reload-configuration
+alt + shift + o         : komorebic stop; komorebic start --masir; start /b whkd.exe
 
 alt + i                 : komorebic toggle-shortcuts
 
@@ -14,6 +14,7 @@ alt + shift + a         : komorebic move left
 alt + shift + s         : komorebic move down
 alt + shift + w         : komorebic move up
 alt + shift + d         : komorebic move right
+
 # Move windows between monitors
 alt + shift + left      : komorebic cycle-move-to-monitor previous;
 alt + shift + right      : komorebic cycle-move-to-monitor next;
@@ -34,10 +35,6 @@ alt + t                 : komorebic toggle-pause
 alt + r                 : komorebic toggle-floating
 # alt + p                 : komorebic toggle-pause
 
-# Layouts
-# alt + x                 : komorebic flip-layout horizontal
-# alt + y                 : komorebic flip-layout vertical
-
 # Workspaces
 alt + 1                 : komorebic focus-workspace 0
 alt + 2                 : komorebic focus-workspace 1
@@ -57,3 +54,33 @@ alt + shift + 5         : komorebic move-to-workspace 4
 alt + shift + 6         : komorebic move-to-workspace 5
 alt + shift + 7         : komorebic move-to-workspace 6
 alt + shift + 8         : komorebic move-to-workspace 7
+
+
+# Unused
+# Layouts
+# alt + x                 : komorebic flip-layout horizontal
+# alt + y                 : komorebic flip-layout vertical
+# # Focus windows
+# alt + h                 : komorebic focus left
+# alt + j                 : komorebic focus down
+# alt + k                 : komorebic focus up
+# alt + l                 : komorebic focus right
+# alt + shift + oem_4     : komorebic cycle-focus previous # oem_4 is [
+# alt + shift + oem_6     : komorebic cycle-focus next # oem_6 is ]
+# # Stack windows
+# alt + left              : komorebic stack left
+# alt + down              : komorebic stack down
+# alt + up                : komorebic stack up
+# alt + right             : komorebic stack right
+# alt + oem_1             : komorebic unstack # oem_1 is ;
+# alt + oem_4             : komorebic cycle-stack previous # oem_4 is [
+# alt + oem_6             : komorebic cycle-stack next # oem_6 is ]
+# alt + shift + 1         : komorebic cycle-move-to-monitor next; komorebic move-to-workspace 0; Start-Sleep -Milliseconds 150; komorebic retile; 
+# alt + shift + 2         : komorebic cycle-move-to-monitor next; komorebic move-to-workspace 1; Start-Sleep -Milliseconds 150; komorebic retile; 
+# alt + shift + 3         : komorebic cycle-move-to-monitor next; komorebic move-to-workspace 2; Start-Sleep -Milliseconds 150; komorebic retile;
+# alt + shift + 4         : komorebic cycle-move-to-monitor next; komorebic move-to-workspace 3; Start-Sleep -Milliseconds 150; komorebic retile; 
+# alt + shift + 5         : komorebic cycle-move-to-monitor next; komorebic move-to-workspace 4; Start-Sleep -Milliseconds 150; komorebic retile;
+# # App shortcuts - these require shell to be pwsh / powershell
+# # The apps will be focused if open, or launched if not open
+# alt + f                 : if ($wshell.AppActivate('Firefox') -eq $False) { start firefox }
+# alt + b                 : if ($wshell.AppActivate('Chrome') -eq $False) { start chrome }

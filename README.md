@@ -19,6 +19,7 @@ winget install windhawk
 ### Mods
 - `explorer-details-better-file-sizes`
 - `chrome-wheel-scroll-tabs` (reverse)
+- `taskbar-on-top`
 
 # < [Flow Launcher](https://github.com/Flow-Launcher/Flow.Launcher) >
 ```
@@ -32,3 +33,4 @@ Copy `/FlowLauncher` to
 ```
 winget install nilesoft.shell
 ```
+# < [THide](https://github.com/amnweb/thide?tab=readme-ov-file) > (Taskbar Hide)

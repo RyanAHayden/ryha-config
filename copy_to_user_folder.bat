@@ -1,5 +1,5 @@
 @echo off
-REM Copy .config folder and komorebi.json to user directory
+REM Copy .config folder, komorebi.json, and FlowLauncher to user directory
 
 set SOURCE_DIR=%~dp0
 set DEST_DIR=C:\Users\ryha
@@ -18,6 +18,14 @@ if exist "%SOURCE_DIR%komorebi.json" (
     echo komorebi.json copied successfully
 ) else (
     echo komorebi.json not found
+)
+
+REM Copy FlowLauncher folder
+if exist "%SOURCE_DIR%FlowLauncher" (
+    xcopy "%SOURCE_DIR%FlowLauncher" "%DEST_DIR%\AppData\Roaming\FlowLauncher" /E /I /Y
+    echo FlowLauncher folder copied successfully
+) else (
+    echo FlowLauncher folder not found
 )
 
 echo Done.

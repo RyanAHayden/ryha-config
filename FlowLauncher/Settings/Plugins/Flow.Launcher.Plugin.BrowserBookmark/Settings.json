@@ -1,0 +1,29 @@
+{
+  "OpenInNewBrowserWindow": true,
+  "BrowserPath": null,
+  "EnableFavicons": false,
+  "LoadChromeBookmark": false,
+  "LoadFirefoxBookmark": false,
+  "LoadEdgeBookmark": false,
+  "CustomChromiumBrowsers": [
+    {
+      "Name": "Brave",
+      "DataDirectoryPath": "C:\\Users\\ryha\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data",
+      "AllBrowserTypes": [
+        {
+          "Value": 0,
+          "Display": "Chromium",
+          "LocalizationKey": null,
+          "LocalizationValue": "Chromium"
+        },
+        {
+          "Value": 1,
+          "Display": "Firefox",
+          "LocalizationKey": null,
+          "LocalizationValue": "Firefox"
+        }
+      ],
+      "BrowserType": 0
+    }
+  ]
+}
