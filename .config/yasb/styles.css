@@ -151,17 +151,10 @@
     color: var(--overlay2);
 }
 .komorebi-workspaces .ws-btn.populated {
-    color: var(--text);
+    color: var(--subtext0);
 }
 .komorebi-workspaces .ws-btn.active {
-    color: var(--text);
-}
-.cpu-widget .icon {
-    color: var(--orange);
-}
-.memory-widget .label,
-.cpu-widget .label {
-    padding-right: 8px;
+    color: var(--green);
 }
 .clock-widget .label {
     color: var(--green);
