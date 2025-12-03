@@ -261,9 +261,8 @@ widgets:
       label: "<span>\uf192</span>"
       menu_list:
       - { title: "User Home", path: "~" }
-      - { title: "Download", path: "E:\\Ivcho Games\\download"}
-      - { title: "Documents", path: "~\\Documents" }
-      - { title: "Pictures", path: "~\\Pictures" }
+      # - { title: "Documents", path: "~\\Documents" }
+      # - { title: "Pictures", path: "~\\Pictures" }
       system_menu: true
       power_menu: true
       blur: true
