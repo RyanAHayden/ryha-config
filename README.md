@@ -3,6 +3,9 @@ This is My Windows Config For Theming &amp; Applications. <br>
 Mostly for personal reasons but feel free to mess around with the configs.
 
 # < [EarTrumpet](https://eartrumpet.app/) >
+```
+winget install File-New-Project.EarTrumpet
+```
 ### Setttings
 Open Taskbar flyout: `Ctrl+Alt+S`
 
