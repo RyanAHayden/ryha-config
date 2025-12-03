@@ -19,10 +19,6 @@ Open Taskbar flyout: `Ctrl+Alt+Shift+S`
 ```
 winget install --id DEVCOM.JetBrainsMonoNerdFont
 ```
-# < [masir](https://github.com/LGUG2Z/masir) >
-```
-winget install LGUG2Z.masir
-```
 
 # < [WindHawk](https://windhawk.net/) >
 ```
@@ -60,3 +56,9 @@ Set explorer shortcuts like these:
 winget install nilesoft.shell
 ```
 # < [THide](https://github.com/amnweb/thide?tab=readme-ov-file) > (Taskbar Hide)
+
+# Unused
+## < [masir](https://github.com/LGUG2Z/masir) > (optional)
+```
+winget install LGUG2Z.masir
+```
