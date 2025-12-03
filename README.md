@@ -2,7 +2,7 @@
 This is My Windows Config For Theming &amp; Applications. <br>
 Mostly for personal reasons but feel free to mess around with the configs.
 
-# < [Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip) (Required)
+# < [Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip) > (Required)
 # < [YASB](https://docs.yasb.dev/latest/installation) >
 ```
 winget install --id DEVCOM.JetBrainsMonoNerdFont
