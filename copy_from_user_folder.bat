@@ -28,4 +28,20 @@ if exist "%SOURCE_DIR%\AppData\Roaming\FlowLauncher" (
     echo FlowLauncher folder not found
 )
 
+REM Copy applications.json file
+if exist "%SOURCE_DIR%\applications.json" (
+    copy "%SOURCE_DIR%\applications.json" "%DEST_DIR%applications.json" /Y
+    echo applications.json copied successfully
+) else (
+    echo applications.json not found
+)
+
+REM Copy start_apps.bat to shell:startup
+if exist "%SOURCE_DIR%\start_apps.bat" (
+    xcopy "%SOURCE_DIR%\start_apps.bat" "%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\" /Y
+    echo start_apps.bat copied to shell:startup successfully
+) else (
+    echo start_apps.bat not found
+)
+
 echo Done.
