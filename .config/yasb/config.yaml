@@ -19,15 +19,16 @@ bars:
       enabled: true
       duration: 400
     blur_effect:
-      enabled: true
+      enabled: false
       acrylic: false
       dark_mode: true
       round_corners: true
       round_corners_type: "normal"
       border_color: "None"
     window_flags:
-      always_on_top: false
+      always_on_top: true
       windows_app_bar: true
+      hide_on_fullscreen: true
     dimensions:
       width: "100%"
       height: 32
