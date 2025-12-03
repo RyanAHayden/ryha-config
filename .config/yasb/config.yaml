@@ -4,9 +4,9 @@ debug: false
 update_check: true
 komorebi:
   # Start Masir first, then launch WHKD as a separate process
-  start_command: "komorebic start --masir && start \"\" whkd.exe"
-  stop_command: "komorebic stop --whkd --masir"
-  reload_command: "komorebic stop && komorebic start --whkd --masir"
+  start_command: "komorebic start --masir && start \"\" /b whkd.exe"
+  stop_command: "komorebic stop"
+  reload_command: "komorebic stop && komorebic start --masir && start \"\" /b whkd.exe"
 bars:
   primary-bar:
     enabled: true

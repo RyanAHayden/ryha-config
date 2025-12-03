@@ -1,8 +1,18 @@
 /.config/yasb/yasb.log
+
+# Windhawk
+/Windhawk/Engine
+/Windhawk/ModsSource
+/Windhawk/UIData/
+!/Windhawk/UIData/user-data/User/settings.json
+
 # FlowLauncher
 /FlowLauncher/Cache
 /FlowLauncher/Logs
 /FlowLauncher/Settings/History*
+/FlowLauncher/Plugins/**
+!/FlowLauncher/Plugins/**/plugin.json
+!/FlowLauncher/Plugins/**/
 
 # Backup files
 *.bak
