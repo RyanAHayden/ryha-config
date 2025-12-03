@@ -20,9 +20,9 @@ winget install LGUG2Z.masir
 ```
 winget install windhawk
 ```
-### Settings
-Copy `Windhawk` to
-`C:\ProgramData`
+### Mods
+- `explorer-details-better-file-sizes`
+- `chrome-wheel-scroll-tabs` (reverse)
 
 # < [Flow Launcher](https://github.com/Flow-Launcher/Flow.Launcher) >
 ```
@@ -31,6 +31,9 @@ winget install "Flow Launcher"
 ### Settings
 Copy `/FlowLauncher` to
 `C:\Users\{user}\AppData\Roaming`
+
+### Plugins
+- `VSCodeWorkspace`
 
 # < [Nilesoft](https://nilesoft.org/download) >
 ```
