@@ -10,10 +10,6 @@
 /FlowLauncher/Cache
 /FlowLauncher/Logs
 /FlowLauncher/Settings/History*
-/FlowLauncher/Plugins/**
-!/FlowLauncher/Plugins/**/
-/FlowLauncher/Settings/Plugins/**
-!/FlowLauncher/Settings/Plugins/**/plugin.json
 
 # Backup files
 *.bak
