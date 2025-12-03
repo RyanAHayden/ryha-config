@@ -2,6 +2,16 @@
 This is My Windows Config For Theming &amp; Applications. <br>
 Mostly for personal reasons but feel free to mess around with the configs.
 
+# Nerd Font (Required)
+```
+winget install --id DEVCOM.JetBrainsMonoNerdFont
+```
+
+# < [YASB](https://docs.yasb.dev/latest/installation) >
+```
+winget install --id DEVCOM.JetBrainsMonoNerdFont
+```
+
 # < [WindHawk](https://windhawk.net/) >
 ### Settings
 Copy `Windhawk` to
