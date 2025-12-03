@@ -9,7 +9,7 @@ Mostly for personal reasons but feel free to mess around with the configs.
 ```
 winget install File-New-Project.EarTrumpet
 ```
-### Setttings
+### Settings
 Open Taskbar flyout: `Ctrl+Alt+S`
 
 # < [Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip) > (Required)
