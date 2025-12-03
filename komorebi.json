@@ -1,0 +1,41 @@
+{
+  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.34/schema.json",
+  "app_specific_configuration_path": "$Env:USERPROFILE/applications.json",
+  "resize_delta": 50,
+  "animation": {
+    "enabled": true,
+    "duration": 500,
+    "fps": 240,
+    "style": {
+      "movement": "EaseOutExpo",
+      "transparency": "Linear"
+    }
+  },
+  "border": true,
+  "border_colours": {
+    "unfocused": "#00000000",
+    "stack": "#ffffff",
+    "monocle": "#ffffff",
+    "single": "#81e6ff"
+  },
+  "border_implementation": "Komorebi",
+  "border_offset": -1,
+  "border_style": "Rounded",
+  "border_width": 3,
+  "cross_monitor_move_behaviour": "Insert",
+  "default_container_padding": 8,
+  "default_workspace_padding": 5,
+  "global_work_area_offset": {
+    "left": 0,
+    "top": 0,
+    "bottom": 10,
+    "right": 0
+  },
+  "mouse_follows_focus": false,
+  "transparency": true,
+  "transparency_alpha": 230,
+  "unmanaged_window_operation_behaviour": "Op",
+  "window_container_behaviour": "Create",
+  "window_hiding_behaviour": "Minimize",
+  "layout": "BSP" 
+}
