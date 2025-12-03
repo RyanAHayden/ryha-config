@@ -13,6 +13,9 @@ winget install --id DEVCOM.JetBrainsMonoNerdFont
 ```
 
 # < [WindHawk](https://windhawk.net/) >
+```
+winget install windhawk
+```
 ### Settings
 Copy `Windhawk` to
 `C:\ProgramData`
