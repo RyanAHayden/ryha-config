@@ -3,14 +3,13 @@ watch_config: true
 debug: false
 update_check: true
 komorebi:
-  # Start Masir first, then launch WHKD as a separate process
-  start_command: "komorebic start --masir && start \"\" /b whkd.exe"
-  stop_command: "komorebic stop"
-  reload_command: "komorebic stop && komorebic start --masir && start \"\" /b whkd.exe"
+    start_command: "komorebic start --masir && start /b whkd.exe"
+    stop_command: "komorebic stop"
+    reload_command: "komorebic stop && komorebic start --masir && start /b whkd.exe"
 bars:
   primary-bar:
     enabled: true
-    screens: ["*"]
+    screens: ["primary"]
     class_name: "yasb-bar"
     alignment:
       position: "top"
@@ -39,31 +38,20 @@ bars:
     widgets:
       left: 
       - "home"
-      - "sys_widgets"
-      - "apps"
       - "komorebi_active_layout"
-      - "active_window"
       - "taskbar"
+      - "komorebi_workspaces"
+      - "active_window"
       center:
       - "clock"
-      - "komorebi_workspaces"
       right:
+      - "systray"
+      - "settings"
       - "media"
-      - "language"
       - "volume"
-      - "power_menu"
+      - "notifications"
+      - "whkd"
 widgets:
-  apps:
-    type: "yasb.applications.ApplicationsWidget"
-    options:
-      label: "{data}"
-      app_list:
-        - {icon: "\ueb03", launch: "cmd /c Taskmgr"}
-        # - {icon: "\uf489", launch: "wt"}
-        # - {icon: "\uea83", launch: "explorer.exe"}
-        # - {icon: "\uf1ff", launch: "C:\\Users\\iv4ob\\AppData\\Local\\Discord\\Update.exe --processStart Discord.exe"}
-        # - {icon: "\udb80\ude39", launch: "C:\\Program Files\\Zen Browser\\zen.exe"}
-
   komorebi_active_layout:
     type: "komorebi.active_layout.ActiveLayoutWidget"
     options:
@@ -104,7 +92,6 @@ widgets:
         color: "black"
         radius: 3
         offset: [ 1, 1 ]
-
   taskbar:
     type: "yasb.taskbar.TaskbarWidget"
     options:
@@ -121,7 +108,37 @@ widgets:
         processes: []
         titles: []
         classes: []
-
+  whkd:
+    type: "yasb.whkd.WhkdWidget"
+    options:
+      label: "<span>\uf11c</span>"
+      special_keys:
+        - key: "lwin"
+          key_replace: "\ue70f"
+        - key: "left"
+          key_replace: "\u2190"
+        - key: "right"
+          key_replace: "\u2192"
+        - key: "up"
+          key_replace: "\u2191"
+        - key: "down"
+          key_replace: "\u2193"
+      container_padding:
+        top: 0
+        left: 0
+        bottom: 0
+        right: 8
+  settings:
+    type: "yasb.applications.ApplicationsWidget"
+    options:
+      label: "{data}"
+      app_list:
+        - {icon: "\ue690", launch: "quick_settings"}
+      container_padding: 
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
   media:
     type: "yasb.media.MediaWidget"
     options:
@@ -139,10 +156,8 @@ widgets:
       controls_only: false
       controls_left: false
       controls_hide: true
-      thumbnail_alpha: 100
-      thumbnail_padding: 50
-      thumbnail_corner_radius: 0
       thumbnail_edge_fade: true
+      thumbnail_padding: 32
       scrolling_label:
         enabled: true
         update_interval_ms: 50
@@ -176,76 +191,13 @@ widgets:
         pause: "\ue769"
         prev_track: "\ue892"
         next_track: "\ue893"
-
-  language:
-    type: "yasb.language.LanguageWidget"
-    options:
-      label: "<span>\uf11c</span> {lang[country_code]}"
-      label_alt: "{lang[full_name]}"
-      update_interval: 5
-      callbacks:
-        on_left: "toggle_menu"
-        on_middle: "do_nothing"
-        on_right: "toggle_label"
-      language_menu:
-        blur: true
-        round_corners: true
-        round_corners_type: "normal"
-        border_color: "None"
-        alignment: "right"
-        direction: "down"
-        offset_top: 6
-        offset_left: 0
-        show_layout_icon: true
-        layout_icon: "\uf11c"
-      container_padding:
-        top: 0
-        left: 2
-        bottom: 0
-        right: 2
-
-  memory:
-    type: "yasb.memory.MemoryWidget"
-    options:
-      label: "MEM"
-      label_alt: "VIRT: {virtual_mem_percent}% SWAP: {swap_mem_percent}%"
-      update_interval: 5000
-      progress_bar:
-        enabled: true
-        size: 14
-        thickness: 2
-        color: "#91d7e3"
-        background_color: "#242739" 
-      callbacks:
-        on_left: "toggle_label"
-      memory_thresholds:
-        low: 25
-        medium: 50
-        high: 90
-
-  cpu:
-    type: "yasb.cpu.CpuWidget"
-    options:
-      label: "CPU"
-      label_alt: "CPU {info[percent][total]:.0f}%"
-      progress_bar:
-        enabled: true
-        position: "left"
-        size: 14
-        thickness: 2
-        color: "#91d7e3"
-        background_color: "#242739" 
-      update_interval: 2000
-      callbacks:
-        on_right: "do_nothing"
-
   systray:
     type: "yasb.systray.SystrayWidget"
     options:
       class_name: "systray"
-      label_collapsed: "\uf460"
-      label_expanded: "\uf47d"
-      label_position: "left"
+      label_collapsed: "\uf47d"
+      label_expanded: "\uf460"
+      label_position: "right"
       icon_size: 16
       pin_click_modifier: "alt"
       show_unpinned: false
@@ -254,15 +206,15 @@ widgets:
       show_volume: false
       show_network: false
       tooltip: true
-
   home:
     type: "yasb.home.HomeWidget"
     options:
       label: "<span>\uf192</span>"
       menu_list:
       - { title: "User Home", path: "~" }
-      # - { title: "Documents", path: "~\\Documents" }
-      # - { title: "Pictures", path: "~\\Pictures" }
+      - { title: "Download", path: "~\\Downloads" }
+      - { title: "Documents", path: "~\\Documents" }
+      - { title: "Pictures", path: "~\\Pictures" }
       system_menu: true
       power_menu: true
       blur: true
@@ -272,11 +224,10 @@ widgets:
         left: 6
         bottom: 0
         right: 4
-
   clock:
     type: "yasb.clock.ClockWidget"
     options:
-      label: "{%I:%M:%S %p}"
+      label: "{%H:%M:%S}"
       label_alt: "{%A, %d %B %Y %H:%M}"
       timezones: []
       calendar: 
@@ -289,64 +240,55 @@ widgets:
       callbacks:
         on_left: "toggle_calendar"
         on_right: "toggle_label"
-
   komorebi_workspaces:
     type: "komorebi.workspaces.WorkspaceWidget"
     options:
       label_offline: "\u23fc Offline"
-      label_workspace_btn: "\udb80\udd30"
-      label_workspace_active_btn: "\udb80\udd2f"
-      label_workspace_populated_btn: "\udb80\udd30"
-      label_default_name: "{index}"
-      label_zero_index: true
+      label_workspace_active_btn: "{index}"
+      label_zero_index: false
       hide_empty_workspaces: true
-      hide_if_offline: true
+      hide_if_offline: false
       animation: false
-
+  # komorebi_workspaces:
+  #   type: "komorebi.workspaces.WorkspaceWidget"
+  #   options:
+  #     label_offline: "\u23fc Offline"
+  #     label_workspace_btn: "\udb80\udd30"
+  #     label_workspace_active_btn: "\udb80\udd2f"
+  #     label_workspace_populated_btn: "\udb80\udd30"
+  #     label_default_name: "{index}"
+  #     label_zero_index: false
+  #     hide_empty_workspaces: false
+  #     hide_if_offline: true
+  #     animation: false
   volume:
     type: "yasb.volume.VolumeWidget"
     options:
       label: "<span>{icon}</span> {level}"
-      label_alt: "{volume}"
+      label_alt: "{level}"
       volume_icons:
         - "\ueee8"
         - "\uf026"
         - "\uf027"
         - "\uf027"
         - "\uf028"
-      tooltip: false
-      audio_menu:
-        blur: True
-        round_corners: True
-        round_corners_type: 'normal'
-        border_color: 'System'
-        alignment: 'right'
-        direction: 'down'
       callbacks:
-        on_right: "exec cmd.exe /c start mmsys.cpl"
-
-  power_menu:
-    type: "yasb.power_menu.PowerMenuWidget"
-    options:
-      label: "\uf011"
-      uptime: true
-      blur: false
-      blur_background: true
-      animation_duration: 200
-      button_row: 3
-      buttons:
-        shutdown: ["\uf011", "Shut Down"]
-        restart: ["\uead2", "Restart"]
-        signout: ["\udb80\udf43", "Sign out"]
-        hibernate: ["\uf28e", "Hibernate"]
-        sleep: ["\u23fe", "Sleep"]
-        cancel: ["\ueab8", "Close"]
+        on_left: "toggle_volume_menu"
+        on_right: "toggle_mute"
+      audio_menu:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "None"
+        alignment: "center"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
       container_padding:
         top: 0
-        left: 0
+        left: 2
         bottom: 0
-        right: 6
-
+        right: 2
   notifications:
     type: "yasb.notifications.NotificationsWidget"
     options:
@@ -363,7 +305,6 @@ widgets:
         left: 4
         bottom: 0
         right: 4
-
   weather:
     type: "yasb.weather.WeatherWidget"
     options:
@@ -412,20 +353,17 @@ widgets:
         current_line_color: "#8EAEE8"
         current_line_width: 2
         current_line_style: "dot"
-
   active_window:
     type: "yasb.active_window.ActiveWindowWidget"
     options:
       label: "{win[title]}"
-      label_alt: "{win[title]}"
-      # label_alt: "[class_name='{win[class_name]}' exe='{win[process][name]}' hwnd={win[hwnd]}]"
+      label_alt: "[class_name='{win[class_name]}' exe='{win[process][name]}' hwnd={win[hwnd]}]"
       label_no_window: ""
       label_icon: true
       label_icon_size: 16
       max_length: 36
       max_length_ellipsis: "..."
       monitor_exclusive: false
-
   grouped_widgets:
     type: "yasb.grouper.GrouperWidget"
     options:
@@ -434,19 +372,6 @@ widgets:
         "memory",
         "cpu",
         "weather",
-      ]
-      container_padding:
-        top: 0
-        left: 2
-        bottom: 0
-        right: 6
-
-  sys_widgets:
-    type: "yasb.grouper.GrouperWidget"
-    options:
-      class_name: "sys-widgets"
-      widgets: [
-        "systray",
       ]
       container_padding:
         top: 0
