@@ -1,10 +1,21 @@
 # ryha-config
-My Windows Config For Theming &amp; Applications
+This is My Windows Config For Theming &amp; Applications. <br>
+Mostly for personal reasons but feel free to mess around with the configs.
 
-# [WindHawk](https://windhawk.net/)
-### Mods
+# < [WindHawk](https://windhawk.net/) >
+### Settings
+Copy `Windhawk` to
+`C:\ProgramData`
 
-- chrome-wheel-scroll-tabs:
-1. Reverse Scroll Direction
+# < [Flow Launcher](https://github.com/Flow-Launcher/Flow.Launcher) >
+```
+winget install "Flow Launcher"
+```
+### Settings
+Copy `/FlowLauncher` to
+`C:\Users\{user}\AppData\Roaming`
 
-- explorer-details-better-file-sizes
+# < [Nilesoft](https://nilesoft.org/download) >
+```
+winget install nilesoft.shell
+```

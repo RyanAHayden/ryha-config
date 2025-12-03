@@ -1,1 +1,8 @@
 /.config/yasb/yasb.log
+# FlowLauncher
+/FlowLauncher/Cache
+/FlowLauncher/Logs
+/FlowLauncher/Settings/History*
+
+# Backup files
+*.bak
