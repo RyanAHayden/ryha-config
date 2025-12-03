@@ -20,6 +20,7 @@ winget install windhawk
 - `explorer-details-better-file-sizes`
 - `chrome-wheel-scroll-tabs` (reverse)
 - `taskbar-on-top`
+- `windows-11-start-menu-styler` (SideBySideMinimal)
 
 # < [Flow Launcher](https://github.com/Flow-Launcher/Flow.Launcher) >
 ```

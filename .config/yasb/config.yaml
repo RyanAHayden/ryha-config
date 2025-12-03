@@ -9,7 +9,8 @@ komorebi:
 bars:
   primary-bar:
     enabled: true
-    screens: ["primary"]
+    screens: ["primary"] # main monitor only
+    # screens: ["*"]  # all screens
     class_name: "yasb-bar"
     alignment:
       position: "top"
@@ -45,9 +46,9 @@ bars:
       center:
       - "clock"
       right:
+      - "media"
       - "systray"
       - "settings"
-      - "media"
       - "volume"
       - "notifications"
       - "whkd"
