@@ -1,0 +1,57 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "Flow.Launcher.Plugin.PluginIndicator/1.0.0": {
+        "dependencies": {
+          "Flow.Launcher.Localization": "0.0.6",
+          "Flow.Launcher.Plugin": "5.1.0"
+        },
+        "runtime": {
+          "Flow.Launcher.Plugin.PluginIndicator.dll": {}
+        }
+      },
+      "Flow.Launcher.Localization/0.0.6": {
+        "runtime": {
+          "lib/netstandard2.0/Flow.Launcher.Localization.Attributes.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "JetBrains.Annotations/2025.2.2": {
+        "runtime": {
+          "lib/netstandard2.0/JetBrains.Annotations.dll": {
+            "assemblyVersion": "4242.42.42.42",
+            "fileVersion": "2025.2.2.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Flow.Launcher.Plugin.PluginIndicator/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Flow.Launcher.Localization/0.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WNI/TLGPDr3XdOW8gaALN0Uyz9h+bzqOaNZev2nHEuA3HW9o7XuqaM6C0PqNi96mNgxiypwWpVazBNzaylJ2Aw==",
+      "path": "flow.launcher.localization/0.0.6",
+      "hashPath": "flow.launcher.localization.0.0.6.nupkg.sha512"
+    },
+    "JetBrains.Annotations/2025.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0X56ZRizuHdrnPpgXjWV7f2tQO1FlQg5O1967OGKnI/4ZRNOK642J8L7brM1nYvrxTTU5TP1yRyXLRLaXLPQ8A==",
+      "path": "jetbrains.annotations/2025.2.2",
+      "hashPath": "jetbrains.annotations.2025.2.2.nupkg.sha512"
+    }
+  }
+}

@@ -1,0 +1,67 @@
+- name: Python
+  version: 3.9.1  
+  id: 1  
+  url: https://www.python.org/ftp/python/3.9.1/python-3.9.1-amd64.exe
+  mirror: http://npmmirror.com/mirrors/python/3.9.1/python-3.9.1-amd64.exe
+  args: -passive
+
+- name: Python 
+  version: 3.8.7
+  id: 2
+  url: https://www.python.org/ftp/python/3.8.7/python-3.8.7-amd64.exe
+  mirror: http://npmmirror.com/mirrors/python/3.8.7/python-3.8.7-amd64.exe
+  args: -passive
+
+- name: Everything
+  version: 1.3.4.686
+  id: 3
+  url: https://www.voidtools.com/Everything-1.3.4.686.x64-Setup.exe
+  args: /S
+
+- name: Putty
+  version: 0.74
+  id: 4
+  url: https://the.earth.li/~sgtatham/putty/0.74/w64/putty-64bit-0.74-installer.msi
+  args: -passive
+
+- name: Zabbix
+  version: 5.2.6
+  id: 5
+  url: https://cdn.zabbix.com/zabbix/binaries/stable/5.2/5.2.6/zabbix_agent-5.2.6-windows-amd64-openssl.msi
+  args: -passive SERVER=myserver.com.au
+
+- name: Python-Embeddable
+  version: 3.8.9
+  id: 6
+  url: https://www.python.org/ftp/python/3.8.9/python-3.8.9-embed-amd64.zip
+  mirror: http://npmmirror.com/mirrors/python/3.8.9/python-3.8.9-embed-amd64.zip
+
+- name: Putty
+  version: 0.75
+  id: 7
+  url: https://the.earth.li/~sgtatham/putty/0.75/w64/putty-64bit-0.75-installer.msi
+  args: -passive
+
+- name: Everything
+  version: 1.4.1.1009
+  id: 8
+  url: https://www.voidtools.com/Everything-1.4.1.1009.x64-Setup.exe
+  args: /S
+
+- name: Node.js
+  version: 16.18.0
+  id: 9
+  url: https://nodejs.org/dist/v16.18.0/node-v16.18.0-win-x64.zip
+  mirror: https://npmmirror.com/mirrors/node/latest-v16.x/node-v16.18.0-win-x64.zip
+
+- name: Python-Embeddable
+  version: 3.10.8
+  id: 10
+  url: https://www.python.org/ftp/python/3.10.8/python-3.10.8-embed-amd64.zip
+  mirror: http://npmmirror.com/mirrors/python/3.10.8/python-3.10.8-embed-amd64.zip
+
+- name: Python-Embeddable
+  version: 3.11.4
+  id: 11
+  url: https://www.python.org/ftp/python/3.11.4/python-3.11.4-embed-amd64.zip
+  mirror: http://npmmirror.com/mirrors/python/3.11.4/python-3.11.4-embed-amd64.zip

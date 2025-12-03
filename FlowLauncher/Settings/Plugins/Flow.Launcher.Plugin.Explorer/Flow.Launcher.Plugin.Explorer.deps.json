@@ -1,0 +1,208 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "Flow.Launcher.Plugin.Explorer/1.0.0": {
+        "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.0",
+          "Droplex": "1.7.0",
+          "Flow.Launcher.Localization": "0.0.6",
+          "Flow.Launcher.Plugin": "5.1.0",
+          "System.Data.OleDb": "9.0.9",
+          "System.Linq.Async": "6.0.3",
+          "tlbimp-Microsoft.Search.Interop": "1.0.0"
+        },
+        "runtime": {
+          "Flow.Launcher.Plugin.Explorer.dll": {}
+        }
+      },
+      "CommunityToolkit.Mvvm/8.4.0": {
+        "runtime": {
+          "lib/net8.0/CommunityToolkit.Mvvm.dll": {
+            "assemblyVersion": "8.4.0.0",
+            "fileVersion": "8.4.0.1"
+          }
+        }
+      },
+      "Droplex/1.7.0": {
+        "dependencies": {
+          "YamlDotNet": "9.1.0"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Droplex.dll": {
+            "assemblyVersion": "1.7.0.0",
+            "fileVersion": "1.7.0.0"
+          }
+        }
+      },
+      "Flow.Launcher.Localization/0.0.6": {
+        "runtime": {
+          "lib/netstandard2.0/Flow.Launcher.Localization.Attributes.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "JetBrains.Annotations/2025.2.2": {
+        "runtime": {
+          "lib/netstandard2.0/JetBrains.Annotations.dll": {
+            "assemblyVersion": "4242.42.42.42",
+            "fileVersion": "2025.2.2.0"
+          }
+        }
+      },
+      "System.Configuration.ConfigurationManager/9.0.9": {
+        "dependencies": {
+          "System.Diagnostics.EventLog": "9.0.9",
+          "System.Security.Cryptography.ProtectedData": "9.0.9"
+        }
+      },
+      "System.Data.OleDb/9.0.9": {
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "9.0.9",
+          "System.Diagnostics.PerformanceCounter": "9.0.9"
+        },
+        "runtime": {
+          "lib/net9.0/System.Data.OleDb.dll": {
+            "assemblyVersion": "9.0.0.9",
+            "fileVersion": "9.0.925.41916"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net9.0/System.Data.OleDb.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "9.0.0.9",
+            "fileVersion": "9.0.925.41916"
+          }
+        }
+      },
+      "System.Diagnostics.EventLog/9.0.9": {},
+      "System.Diagnostics.PerformanceCounter/9.0.9": {
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "9.0.9"
+        }
+      },
+      "System.Linq.Async/6.0.3": {
+        "runtime": {
+          "lib/net6.0/System.Linq.Async.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.3.6811"
+          }
+        }
+      },
+      "System.Security.Cryptography.ProtectedData/9.0.9": {},
+      "tlbimp-Microsoft.Search.Interop/1.0.0": {
+        "runtime": {
+          "lib/net45/Microsoft.Search.Interop.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "YamlDotNet/9.1.0": {
+        "runtime": {
+          "lib/netstandard2.1/YamlDotNet.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.1.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Flow.Launcher.Plugin.Explorer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CommunityToolkit.Mvvm/8.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tqVU8yc/ADO9oiTRyTnwhFN68hCwvkliMierptWOudIAvWY1mWCh5VFh+guwHJmpMwfg0J0rY+yyd5Oy7ty9Uw==",
+      "path": "communitytoolkit.mvvm/8.4.0",
+      "hashPath": "communitytoolkit.mvvm.8.4.0.nupkg.sha512"
+    },
+    "Droplex/1.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wutfIus/Ufw/9TDsp86R1ycnIH+wWrj4UhcmrzAHWjsdyC2iM07WEQ9+APTB7pQynsDnYH1r2i58XgAJ3lxUXA==",
+      "path": "droplex/1.7.0",
+      "hashPath": "droplex.1.7.0.nupkg.sha512"
+    },
+    "Flow.Launcher.Localization/0.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WNI/TLGPDr3XdOW8gaALN0Uyz9h+bzqOaNZev2nHEuA3HW9o7XuqaM6C0PqNi96mNgxiypwWpVazBNzaylJ2Aw==",
+      "path": "flow.launcher.localization/0.0.6",
+      "hashPath": "flow.launcher.localization.0.0.6.nupkg.sha512"
+    },
+    "JetBrains.Annotations/2025.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0X56ZRizuHdrnPpgXjWV7f2tQO1FlQg5O1967OGKnI/4ZRNOK642J8L7brM1nYvrxTTU5TP1yRyXLRLaXLPQ8A==",
+      "path": "jetbrains.annotations/2025.2.2",
+      "hashPath": "jetbrains.annotations.2025.2.2.nupkg.sha512"
+    },
+    "System.Configuration.ConfigurationManager/9.0.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Q1LknxnRmmsUXt/ElBp739Gexppy0HeDYxvExpJq09jAYhpTHRRRkZIwfNKfM4BGRlFzRDVdnerZawxoE8naMg==",
+      "path": "system.configuration.configurationmanager/9.0.9",
+      "hashPath": "system.configuration.configurationmanager.9.0.9.nupkg.sha512"
+    },
+    "System.Data.OleDb/9.0.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YTxzDFKAEEWgyl2S5qWi+JfcD+/MtvckXIxivKmrw6FdWT/w7CwuzgAiHHYqVV5jdLeIKYoiInCRIFTsHKCJTA==",
+      "path": "system.data.oledb/9.0.9",
+      "hashPath": "system.data.oledb.9.0.9.nupkg.sha512"
+    },
+    "System.Diagnostics.EventLog/9.0.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wpsUfnyv8E5K4WQaok6weewvAbQhcLwXFcHBm5U0gdEaBs85N//ssuYvRPFWwz2rO/9/DFP3A1sGMzUFBj8y3w==",
+      "path": "system.diagnostics.eventlog/9.0.9",
+      "hashPath": "system.diagnostics.eventlog.9.0.9.nupkg.sha512"
+    },
+    "System.Diagnostics.PerformanceCounter/9.0.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7MSbJ7xSqwAs3dQmZ2mIkJMpLkGVcAcPZ4Txw2q3As82QjZwm/PQGh33Od9PYCyiTPeXMmuIp3BQB7cXkTlRgA==",
+      "path": "system.diagnostics.performancecounter/9.0.9",
+      "hashPath": "system.diagnostics.performancecounter.9.0.9.nupkg.sha512"
+    },
+    "System.Linq.Async/6.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hSHiq2m1ky7zUQgTp+/2h1K3lABIQ+GltRixoclHPg/Sc1vnfeS6g/Uy5moOVZKrZJdQiFPFZd6OobBp3tZcFg==",
+      "path": "system.linq.async/6.0.3",
+      "hashPath": "system.linq.async.6.0.3.nupkg.sha512"
+    },
+    "System.Security.Cryptography.ProtectedData/9.0.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XN37933FTzEkqGJoOTunvnvzAv/4VO/9wQ0QwsGcrR5KyQpYT0z4Ssm+f+fpY9bea6srypFp3JjNPHHC26xzLw==",
+      "path": "system.security.cryptography.protecteddata/9.0.9",
+      "hashPath": "system.security.cryptography.protecteddata.9.0.9.nupkg.sha512"
+    },
+    "tlbimp-Microsoft.Search.Interop/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tPI0ZniIRQCQyMkgR/dpClJ1lGweMZMPDa7Pb0XhJYiK1GPgNPSJUcTyEH5FYRQv3qPeLf1fBZJLwZFmtefxVw==",
+      "path": "tlbimp-microsoft.search.interop/1.0.0",
+      "hashPath": "tlbimp-microsoft.search.interop.1.0.0.nupkg.sha512"
+    },
+    "YamlDotNet/9.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fuvGXU4Ec5HrsmEc+BiFTNPCRf1cGBI2kh/3RzMWgddM2M4ALhbSPoI3X3mhXZUD1qqQd9oSkFAtWjpz8z9eRg==",
+      "path": "yamldotnet/9.1.0",
+      "hashPath": "yamldotnet.9.1.0.nupkg.sha512"
+    }
+  }
+}

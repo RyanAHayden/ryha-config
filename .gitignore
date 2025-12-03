@@ -11,7 +11,6 @@
 /FlowLauncher/Logs
 /FlowLauncher/Settings/History*
 /FlowLauncher/Plugins/**
-!/FlowLauncher/Plugins/**/plugin.json
 !/FlowLauncher/Plugins/**/
 
 # Backup files

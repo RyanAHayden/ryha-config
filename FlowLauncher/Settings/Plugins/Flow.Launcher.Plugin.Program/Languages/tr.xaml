@@ -1,0 +1,99 @@
+﻿<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <!--  Program setting  -->
+    <system:String x:Key="flowlauncher_plugin_program_reset">Varsayılana Sıfırla</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_delete">Sil</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_edit">Düzenle</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_add">Ekle</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_name">Ad</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_enable">Etkin</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_enabled">Etkin</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_disable">Devre Dışı Bırak</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_status">Durum</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_true">Etkin</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_false">Devre dışı</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_location">Konum</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_all_programs">Tüm Programlar</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_suffixes">Dosya Tipi</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_reindex">Yeniden İndeksle</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_indexing">İndeksleniyor</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_index_source">Kaynak Dizinleri</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_index_option">Seçenekler</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_index_uwp">UWP Uygulamaları</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_index_uwp_tooltip">Etkinleştirildiğinde Flow, UWP Uygulamalarını yükleyecektir</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_index_start">Başlat Menüsü</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_index_start_tooltip">Etkinleştirildiğinde Flow, programları başlat menüsünden yükleyecektir</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_index_registry">Kayıt Defteri</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_index_registry_tooltip">Etkinleştirildiğinde Flow, programları kayıt defterinden yükleyecektir</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_index_PATH">YOL</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_index_PATH_tooltip">Etkinleştirildiğinde Flow, programları PATH ortam değişkeninden yükleyecektir</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_enable_hidelnkpath">Uygulama yolunu gizle</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_enable_hidelnkpath_tooltip">UWP ya da lnk gibi dosyalar için dosya yolunu gösterme</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_enable_hideuninstallers">Kaldırıcıları gizle</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_enable_hideuninstallers_tooltip">unins000.exe gibi yaygın kaldırıcı adlarına sahip programları gizler</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_enable_description">Program Açıklamasında Ara</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_enable_description_tooltip">Flow, programların açıklamasında arama yapar</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_enable_hideduplicatedwindowsapp">Yinelenen uygulamaları gizle</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_enable_hideduplicatedwindowsapp_tooltip">UWP listesinde zaten bulunan yinelenen Win32 programları gizler</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_suffixes_header">Uzantılar</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_max_depth_header">Derinlik</system:String>
+
+    <system:String x:Key="flowlauncher_plugin_program_directory">Dizin:</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_browse">Gözat</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_file_suffixes">Dosya Uzantıları:</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_max_search_depth">Maksimum Arama Derinliği (Limitsiz için -1):</system:String>
+
+    <system:String x:Key="flowlauncher_plugin_program_pls_select_program_source">İşlem yapmak istediğiniz klasörü seçin.</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_delete_program_source">Seçili program kaynaklarını silmek istediğinizden emin misiniz?</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_delete_program_source_select_not_user_added">Lütfen sizin tarafınızdan eklenmemiş program kaynaklarını seçin</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_delete_program_source_select_user_added">Lütfen sizin tarafınızdan eklenmiş program kaynaklarını seçin</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_duplicate_program_source">Aynı konuma sahip başka bir program kaynağı zaten mevcut.</system:String>
+
+    <system:String x:Key="flowlauncher_plugin_program_edit_program_source_title">Program Kaynağı</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_edit_program_source_tips">Bu programın kaynağının dizinini ve durumunu düzenleyin.</system:String>
+
+    <system:String x:Key="flowlauncher_plugin_program_update">Güncelle</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_only_index_tip">Program eklentisi yalnızca seçilen uzantılara sahip dosyaları ve belirli protokollere sahip .url dosyalarını dizine ekler.</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_update_file_suffixes">Dosya uzantıları başarıyla güncellendi</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_suffixes_cannot_empty">Dosya uzantıları boş olamaz</system:String>
+    <system:String x:Key="flowlauncher_plugin_protocols_cannot_empty">Protokoller boş olamaz</system:String>
+
+    <system:String x:Key="flowlauncher_plugin_program_suffixes_executable_types">İndekslenecek Uzantılar</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_suffixes_URL_types">URL Protokolleri</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_suffixes_URL_steam">Steam Oyunları</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_suffixes_URL_epic">Epic Games</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_suffixes_URL_http">Http/Https</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_suffixes_custom_urls">Özel URL Protokolleri</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_suffixes_custom_file_types">Özel Dosya Sonekleri</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_suffixes_tooltip">
+        Dizinlemek istediğiniz dosya uzantılarını girin. Uzantılar ';' ile ayrılmalıdır. (örnek&gt;bat;py)
+    </system:String>
+    <system:String x:Key="flowlauncher_plugin_program_protocol_tooltip">
+        İndekslemek istediğiniz .url dosyalarının protokollerini girin. Protokoller ';' ile ayrılmalı ve &quot;://&quot; ile bitmelidir. (örn&gt;ftp://;mailto://)
+    </system:String>
+
+    <system:String x:Key="flowlauncher_plugin_program_run_as_different_user">Başka Bir Kullanıcı Olarak Çalıştır</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_run_as_administrator">Yönetici Olarak Çalıştır</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_open_containing_folder">İçeren klasörü aç</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_disable_program">Gizle</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_open_target_folder">Hedef klasörü aç</system:String>
+
+    <system:String x:Key="flowlauncher_plugin_program_plugin_name">Program</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_plugin_description">Programları Flow Launcher'tan arayın</system:String>
+
+    <system:String x:Key="flowlauncher_plugin_program_invalid_path">Geçersiz Konum</system:String>
+
+    <system:String x:Key="flowlauncher_plugin_program_customizedexplorer">Özelleştirilmiş Gezgin</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_args">Parametreler</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_tooltip_customizedexplorer">Kullanmak istediğiniz dosya gezgininin Ortam Değişkenini girerek, konteyner klasörünü açmak için kullanılan gezgini özelleştirebilirsiniz. Ortam Değişkeninin kullanılabilir olup olmadığını test etmek için CMD'yi kullanmak faydalı olacaktır.</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_tooltip_args">Özelleştirilmiş gezgin için eklemek istediğiniz özelleştirilmiş argümanları girin. Üst dizin için %s, tam yol için %f (yalnızca win32 için geçerlidir). Ayrıntılar için gezginin web sitesini kontrol edin.</system:String>
+
+    <!--  Dialogs  -->
+    <system:String x:Key="flowlauncher_plugin_program_disable_dlgtitle_success">Başarılı</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_disable_dlgtitle_error">Hata</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_disable_dlgtitle_success_message">Bu programın sorgunuzda görüntülenmesi başarıyla devre dışı bırakıldı</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_run_as_administrator_not_supported_message">Bu uygulama yönetici olarak çalıştırılmak için tasarlanmamıştır</system:String>
+    <system:String x:Key="flowlauncher_plugin_program_run_failed">{0} çalıştırılamıyor</system:String>
+
+</ResourceDictionary>

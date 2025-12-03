@@ -1,0 +1,100 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "Flow.Launcher.Plugin.Sys/1.0.0": {
+        "dependencies": {
+          "Flow.Launcher.Localization": "0.0.6",
+          "Flow.Launcher.Plugin": "5.1.0",
+          "Microsoft.Windows.CsWin32": "0.3.205"
+        },
+        "runtime": {
+          "Flow.Launcher.Plugin.Sys.dll": {}
+        }
+      },
+      "Flow.Launcher.Localization/0.0.6": {
+        "runtime": {
+          "lib/netstandard2.0/Flow.Launcher.Localization.Attributes.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "JetBrains.Annotations/2025.2.2": {
+        "runtime": {
+          "lib/netstandard2.0/JetBrains.Annotations.dll": {
+            "assemblyVersion": "4242.42.42.42",
+            "fileVersion": "2025.2.2.0"
+          }
+        }
+      },
+      "Microsoft.Windows.CsWin32/0.3.205": {
+        "dependencies": {
+          "Microsoft.Windows.SDK.Win32Docs": "0.1.42-alpha",
+          "Microsoft.Windows.SDK.Win32Metadata": "61.0.15-preview",
+          "Microsoft.Windows.WDK.Win32Metadata": "0.12.8-experimental"
+        }
+      },
+      "Microsoft.Windows.SDK.Win32Docs/0.1.42-alpha": {},
+      "Microsoft.Windows.SDK.Win32Metadata/61.0.15-preview": {},
+      "Microsoft.Windows.WDK.Win32Metadata/0.12.8-experimental": {
+        "dependencies": {
+          "Microsoft.Windows.SDK.Win32Metadata": "61.0.15-preview"
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Flow.Launcher.Plugin.Sys/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Flow.Launcher.Localization/0.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WNI/TLGPDr3XdOW8gaALN0Uyz9h+bzqOaNZev2nHEuA3HW9o7XuqaM6C0PqNi96mNgxiypwWpVazBNzaylJ2Aw==",
+      "path": "flow.launcher.localization/0.0.6",
+      "hashPath": "flow.launcher.localization.0.0.6.nupkg.sha512"
+    },
+    "JetBrains.Annotations/2025.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0X56ZRizuHdrnPpgXjWV7f2tQO1FlQg5O1967OGKnI/4ZRNOK642J8L7brM1nYvrxTTU5TP1yRyXLRLaXLPQ8A==",
+      "path": "jetbrains.annotations/2025.2.2",
+      "hashPath": "jetbrains.annotations.2025.2.2.nupkg.sha512"
+    },
+    "Microsoft.Windows.CsWin32/0.3.205": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-U5wGAnyKd7/I2YMd43nogm81VMtjiKzZ9dsLMVI4eAB7jtv5IEj0gprj0q/F3iRmAIaGv5omOf8iSYx2+nE6BQ==",
+      "path": "microsoft.windows.cswin32/0.3.205",
+      "hashPath": "microsoft.windows.cswin32.0.3.205.nupkg.sha512"
+    },
+    "Microsoft.Windows.SDK.Win32Docs/0.1.42-alpha": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Z/9po23gUA9aoukirh2ItMU2ZS9++Js9Gdds9fu5yuMojDrmArvY2y+tq9985tR3cxFxpZO1O35Wjfo0khj5HA==",
+      "path": "microsoft.windows.sdk.win32docs/0.1.42-alpha",
+      "hashPath": "microsoft.windows.sdk.win32docs.0.1.42-alpha.nupkg.sha512"
+    },
+    "Microsoft.Windows.SDK.Win32Metadata/61.0.15-preview": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cysex3dazKtCPALCluC2XX3f5Aedy9H2pw5jb+TW5uas2rkem1Z7FRnbUrg2vKx0pk0Qz+4EJNr37HdYTEcvEQ==",
+      "path": "microsoft.windows.sdk.win32metadata/61.0.15-preview",
+      "hashPath": "microsoft.windows.sdk.win32metadata.61.0.15-preview.nupkg.sha512"
+    },
+    "Microsoft.Windows.WDK.Win32Metadata/0.12.8-experimental": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3n8R44/Z96Ly+ty4eYVJfESqbzvpw96lRLs3zOzyDmr1x1Kw7FNn5CyE416q+bZQV3e1HRuMUvyegMeRE/WedA==",
+      "path": "microsoft.windows.wdk.win32metadata/0.12.8-experimental",
+      "hashPath": "microsoft.windows.wdk.win32metadata.0.12.8-experimental.nupkg.sha512"
+    }
+  }
+}
