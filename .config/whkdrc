@@ -25,12 +25,14 @@ alt + shift + oem_plus  : komorebic resize-axis vertical increase
 alt + shift + oem_minus : komorebic resize-axis vertical decrease
 
 # Manipulate windows
-alt + t                 : komorebic toggle-floating
-alt + shift + f         : komorebic toggle-monocle
+# alt + t                 : komorebic toggle-floating
 
 # Window manager options
+alt + shift + f         : komorebic toggle-monocle
 alt + shift + r         : komorebic retile
-alt + p                 : komorebic toggle-pause
+alt + t                 : komorebic toggle-pause
+alt + r                 : komorebic toggle-floating
+# alt + p                 : komorebic toggle-pause
 
 # Layouts
 # alt + x                 : komorebic flip-layout horizontal
