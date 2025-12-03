@@ -28,9 +28,6 @@ winget install "Flow Launcher"
 Copy `/FlowLauncher` to
 `C:\Users\{user}\AppData\Roaming`
 
-### Plugins
-- `VSCodeWorkspace`
-
 # < [Nilesoft](https://nilesoft.org/download) >
 ```
 winget install nilesoft.shell
