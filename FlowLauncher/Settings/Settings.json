@@ -53,10 +53,10 @@
   "TimeFormat": "hh:mm tt",
   "DateFormat": "MM\u0027/\u0027dd ddd",
   "FirstLaunch": false,
-  "SettingWindowWidth": 1555,
+  "SettingWindowWidth": 1255,
   "SettingWindowHeight": 1360,
   "SettingWindowTop": 55,
-  "SettingWindowLeft": 15,
+  "SettingWindowLeft": 1290,
   "SettingWindowState": 0,
   "ShowPlaceholder": false,
   "PlaceholderText": "",
@@ -145,7 +145,7 @@
   "AlwaysPreview": false,
   "AlwaysStartEn": false,
   "QuerySearchPrecision": "Regular",
-  "AutoUpdates": false,
+  "AutoUpdates": true,
   "WindowLeft": 990,
   "WindowTop": 379.5,
   "PreviousScreenWidth": 0,
@@ -156,7 +156,7 @@
   "CustomWindowTop": 0,
   "KeepMaxResults": false,
   "MaxResultsToShow": 8,
-  "ActivateTimes": 69,
+  "ActivateTimes": 92,
   "CustomPluginHotkeys": [],
   "CustomShortcuts": [],
   "DontPromptUpdateMsg": false,
@@ -374,6 +374,18 @@
         "Version": "1.4.1",
         "ActionKeywords": [
           "{"
+        ],
+        "Priority": 0,
+        "SearchDelayTime": null,
+        "Disabled": false,
+        "HomeDisabled": false
+      },
+      "SY91U1N7H9D0X1DTZ8IOP4YV43KT7C5M": {
+        "ID": "SY91U1N7H9D0X1DTZ8IOP4YV43KT7C5M",
+        "Name": "SpotifyPremium",
+        "Version": "1.1.7",
+        "ActionKeywords": [
+          "sp"
         ],
         "Priority": 0,
         "SearchDelayTime": null,

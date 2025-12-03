@@ -1,6 +1,17 @@
 {
   "MaxResult": 100,
-  "QuickAccessLinks": [],
+  "QuickAccessLinks": [
+    {
+      "Path": "C:\\Users\\ryha\\Downloads",
+      "Type": 1,
+      "Name": "1d"
+    },
+    {
+      "Path": "C:\\Users\\ryha",
+      "Type": 1,
+      "Name": "1e"
+    }
+  ],
   "IndexSearchExcludedSubdirectoryPaths": [],
   "EditorPath": "",
   "FolderEditorPath": "",
