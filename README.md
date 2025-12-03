@@ -11,6 +11,10 @@ winget install --id DEVCOM.JetBrainsMonoNerdFont
 ```
 winget install --id DEVCOM.JetBrainsMonoNerdFont
 ```
+# < [masir](https://github.com/LGUG2Z/masir) >
+```
+winget install LGUG2Z.masir
+```
 
 # < [WindHawk](https://windhawk.net/) >
 ```
