@@ -227,8 +227,8 @@ widgets:
   clock:
     type: "yasb.clock.ClockWidget"
     options:
-      label: "{%H:%M:%S}"
-      label_alt: "{%A, %d %B %Y %H:%M}"
+      label: "{%I:%M:%S %p}"
+      label_alt: "{%A, %d %B %Y %I:%M %p}"
       timezones: []
       calendar: 
         blur: true
@@ -249,18 +249,6 @@ widgets:
       hide_empty_workspaces: true
       hide_if_offline: false
       animation: false
-  # komorebi_workspaces:
-  #   type: "komorebi.workspaces.WorkspaceWidget"
-  #   options:
-  #     label_offline: "\u23fc Offline"
-  #     label_workspace_btn: "\udb80\udd30"
-  #     label_workspace_active_btn: "\udb80\udd2f"
-  #     label_workspace_populated_btn: "\udb80\udd30"
-  #     label_default_name: "{index}"
-  #     label_zero_index: false
-  #     hide_empty_workspaces: false
-  #     hide_if_offline: true
-  #     animation: false
   volume:
     type: "yasb.volume.VolumeWidget"
     options:
@@ -305,54 +293,6 @@ widgets:
         left: 4
         bottom: 0
         right: 4
-  weather:
-    type: "yasb.weather.WeatherWidget"
-    options:
-      label: "<span>{icon}</span> {temp}"
-      label_alt: "{location}: Min {min_temp}, Max {max_temp}, Humidity {humidity}"
-      api_key: "$Env:YASB_WEATHER_API_KEY"
-      location: "$Env:YASB_WEATHER_LOCATION"
-      show_alerts: true
-      update_interval: 600
-      hide_decimal: true
-      units: "metric"
-      icons:
-        sunnyDay: "\ue30d"
-        clearNight: "\ue32b"
-        cloudyDay: "\ue312"
-        cloudyNight: "\ue311"
-        rainyDay: "\ue308"
-        rainyNight: "\ue333"
-        snowyIcyDay: "\ue30a"
-        snowyIcyNight: "\ue335"
-        blizzardDay: "\udb83\udf36"
-        blizzardNight: "\udb83\udf36"
-        foggyDay: "\ue303"
-        foggyNight: "\ue346"
-        thunderstormDay: "\ue30f"
-        thunderstormNight: "\ue338"
-        default: "\uebaa"
-      callbacks:
-        on_left: "toggle_card"
-        on_middle: "do_nothing"
-        on_right: "toggle_label"
-      weather_card:
-        blur: true
-        round_corners: true
-        round_corners_type: "normal"
-        border_color: "None"
-        alignment: "right"
-        direction: "down"
-        icon_size: 64
-        show_hourly_forecast: true
-        time_format: "24h"
-        hourly_point_spacing: 76
-        hourly_icon_size: 32
-        icon_smoothing: true
-        temp_line_width: 2
-        current_line_color: "#8EAEE8"
-        current_line_width: 2
-        current_line_style: "dot"
   active_window:
     type: "yasb.active_window.ActiveWindowWidget"
     options:
@@ -364,17 +304,3 @@ widgets:
       max_length: 36
       max_length_ellipsis: "..."
       monitor_exclusive: false
-  grouped_widgets:
-    type: "yasb.grouper.GrouperWidget"
-    options:
-      class_name: "grouped-widgets"
-      widgets: [
-        "memory",
-        "cpu",
-        "weather",
-      ]
-      container_padding:
-        top: 0
-        left: 2
-        bottom: 0
-        right: 6
