@@ -46,6 +46,10 @@ Copy `/FlowLauncher` to
 `C:\Users\{user}\AppData\Roaming`
 Apply `ryha-green` using `fltheme ryha-green`
 
+### Plugins
+- Steam Search by Garulf
+- Visual Studio Code Workspaces by ricardosantos9521, MaskedRPGFan
+
 ### Plugin Settings
 Set explorer shortcuts like these:
 
