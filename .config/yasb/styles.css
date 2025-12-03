@@ -333,7 +333,9 @@
     font-family: 'Segoe UI';
     font-size: 12px;
 }
-.systray {
+
+/* Style for container with unpinned systray icons */
+.systray .pinned-container[forceshow=true] {
     background: transparent;
     border: none;
     margin: 0;

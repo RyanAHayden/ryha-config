@@ -38,20 +38,18 @@ bars:
       right: 4
     widgets:
       left: 
-      - "home"
       - "komorebi_active_layout"
-      - "taskbar"
       - "komorebi_workspaces"
-      - "active_window"
+      - "taskbar"
       center:
       - "clock"
       right:
       - "media"
       - "systray"
-      - "settings"
+      # - "settings"
+      - "whkd"
       - "volume"
       - "notifications"
-      - "whkd"
 widgets:
   komorebi_active_layout:
     type: "komorebi.active_layout.ActiveLayoutWidget"
@@ -96,15 +94,24 @@ widgets:
   taskbar:
     type: "yasb.taskbar.TaskbarWidget"
     options:
-      preview:
-        enabled: true
-        width: 240
-        delay: 400
-        padding: 8
-        margin: 8
+      icon_size: 20
+      tooltip: true
+      show_only_visible: false
+      strict_filtering: true
+      monitor_exclusive: false
       animation:
         enabled: true
-      icon_size: 20
+      preview:
+        enabled: true
+        width: 300
+        delay: 300
+        padding: 8
+        margin: 8
+      title_label:
+        enabled: true
+        show: "focused"
+        min_length: 10
+        max_length: 30
       ignore_apps:
         processes: []
         titles: []
@@ -129,17 +136,17 @@ widgets:
         left: 0
         bottom: 0
         right: 8
-  settings:
-    type: "yasb.applications.ApplicationsWidget"
-    options:
-      label: "{data}"
-      app_list:
-        - {icon: "\ue690", launch: "quick_settings"}
-      container_padding: 
-        top: 0
-        left: 0
-        bottom: 0
-        right: 0
+  #settings:
+  #  type: "yasb.applications.ApplicationsWidget"
+  #  options:
+  #    label: "{data}"
+  #    app_list:
+  #      - {icon: "\ue690", launch: "quick_settings"}
+  #    container_padding: 
+  #      top: 0
+  #      left: 0
+  #      bottom: 0
+  #      right: 0
   media:
     type: "yasb.media.MediaWidget"
     options:
@@ -207,24 +214,6 @@ widgets:
       show_volume: false
       show_network: false
       tooltip: true
-  home:
-    type: "yasb.home.HomeWidget"
-    options:
-      label: "<span>\uf192</span>"
-      menu_list:
-      - { title: "User Home", path: "~" }
-      - { title: "Download", path: "~\\Downloads" }
-      - { title: "Documents", path: "~\\Documents" }
-      - { title: "Pictures", path: "~\\Pictures" }
-      system_menu: true
-      power_menu: true
-      blur: true
-      border_color: "None"
-      container_padding:
-        top: 0
-        left: 6
-        bottom: 0
-        right: 4
   clock:
     type: "yasb.clock.ClockWidget"
     options:
@@ -294,14 +283,3 @@ widgets:
         left: 4
         bottom: 0
         right: 4
-  active_window:
-    type: "yasb.active_window.ActiveWindowWidget"
-    options:
-      label: "{win[title]}"
-      label_alt: "[class_name='{win[class_name]}' exe='{win[process][name]}' hwnd={win[hwnd]}]"
-      label_no_window: ""
-      label_icon: true
-      label_icon_size: 16
-      max_length: 36
-      max_length_ellipsis: "..."
-      monitor_exclusive: false

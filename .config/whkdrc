@@ -15,8 +15,14 @@ alt + shift + s         : komorebic move down
 alt + shift + w         : komorebic move up
 alt + shift + d         : komorebic move right
 
+# Focus windows
+ctrl + alt + a          : komorebic focus left
+ctrl + alt + s          : komorebic focus down
+ctrl + alt + w          : komorebic focus up
+ctrl + alt + d          : komorebic focus right
+
 # Move windows between monitors
-alt + shift + left      : komorebic cycle-move-to-monitor previous;
+alt + shift + left       : komorebic cycle-move-to-monitor previous;
 alt + shift + right      : komorebic cycle-move-to-monitor next;
 
 # Resize
@@ -55,11 +61,6 @@ alt + shift + 8         : komorebic move-to-workspace 7
 # Layouts
 # alt + x                 : komorebic flip-layout horizontal
 # alt + y                 : komorebic flip-layout vertical
-# # Focus windows
-# alt + h                 : komorebic focus left
-# alt + j                 : komorebic focus down
-# alt + k                 : komorebic focus up
-# alt + l                 : komorebic focus right
 # alt + shift + oem_4     : komorebic cycle-focus previous # oem_4 is [
 # alt + shift + oem_6     : komorebic cycle-focus next # oem_6 is ]
 # # Stack windows
