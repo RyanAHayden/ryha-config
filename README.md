@@ -11,7 +11,7 @@ Mostly for personal reasons but feel free to mess around with the configs.
 winget install File-New-Project.EarTrumpet
 ```
 ### Settings
-Open Taskbar flyout: `Ctrl+Alt+Shift+S`
+Open Taskbar flyout: `Ctrl+Shift+S`
 
 # < [Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip) > (Required)
 
@@ -58,7 +58,7 @@ winget install nilesoft.shell
 # < [THide](https://github.com/amnweb/thide?tab=readme-ov-file) > (Taskbar Hide)
 
 # Unused
-## < [masir](https://github.com/LGUG2Z/masir) > (optional)
+## < [masir](https://github.com/LGUG2Z/masir) > (Auto Focus Window Cursor is over)
 ```
 winget install LGUG2Z.masir
 ```
