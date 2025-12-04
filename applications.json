@@ -1,5 +1,14 @@
 {
   "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/master/schema.asc.json",
+  "KeePassXC": {
+    "manage": [
+      {
+        "kind": "Class",
+        "id": "Qt51511QWindowIcon",
+        "matching_strategy": "Legacy"
+      }
+    ]
+  },
   "1Password": {
     "ignore": [
       {
@@ -790,11 +799,6 @@
           "kind": "Exe",
           "id": "freecad.exe",
           "matching_strategy": "Equals"
-        },
-        {
-          "kind": "Class",
-          "id": "Qt51515QWindowIcon",
-          "matching_strategy": "Equals"
         }
       ]
     ]
@@ -967,39 +971,6 @@
         "id": "GoogleDriveFS.exe",
         "matching_strategy": "Equals"
       }
-    ]
-  },
-  "Google Earth Pro": {
-    "ignore": [
-      [
-        {
-          "kind": "Class",
-          "id": "Qt5QWindowToolSaveBits",
-          "matching_strategy": "Equals"
-        },
-        {
-          "kind": "Exe",
-          "id": "googleearth.exe",
-          "matching_strategy": "Equals"
-        }
-      ],
-      [
-        {
-          "kind": "Class",
-          "id": "Qt5QWindowIcon",
-          "matching_strategy": "Equals"
-        },
-        {
-          "kind": "Title",
-          "id": "Google Earth Pro",
-          "matching_strategy": "DoesNotEqual"
-        },
-        {
-          "kind": "Exe",
-          "id": "googleearth.exe",
-          "matching_strategy": "Equals"
-        }
-      ]
     ]
   },
   "GoPro Webcam": {
