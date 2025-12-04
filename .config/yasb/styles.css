@@ -4,7 +4,7 @@
     --yellow: #f9e2af;
     --orange: #fab387;
     --blue: #89b4fa;
-    --green: #94e2d5;
+    --main: #be6270;
     --lavender: #b4befe;
     --text: #cdd6f4;
     --subtext1: #bac2de;
@@ -154,10 +154,10 @@
     color: var(--subtext0);
 }
 .komorebi-workspaces .ws-btn.active {
-    color: var(--green);
+    color: var(--main);
 }
 .clock-widget .label {
-    color: var(--green);
+    color: var(--main);
 }
 .calendar {
     background-color: var(--crust)
@@ -225,7 +225,7 @@
     height: 230px;
     border-radius: 0;
     background-color: var(--crust);
-    color: var(--green);
+    color: var(--main);
     border-left: 4px solid rgba(58, 83, 80, 0);
     border-right: 4px solid rgba(58, 83, 80, 0);
     border-top: 4px solid rgba(58, 83, 80, 0);
@@ -233,10 +233,10 @@
     margin: 0px;
 }
 .power-menu-popup .button.hover {
-    border-left: 4px solid #94e2d5;
-    border-right: 4px solid #94e2d5;
-    border-top: 4px solid #94e2d5;
-    border-bottom: 4px solid #94e2d5;
+    border-left: 4px solid #be6270;
+    border-right: 4px solid #be6270;
+    border-top: 4px solid #be6270;
+    border-bottom: 4px solid #be6270;
 }
 .power-menu-popup .button.cancel.hover {
     border-left: 4px solid #e29494;
@@ -248,12 +248,12 @@
     margin-bottom: 8px;
     font-size: 16px;
     font-weight: 500;
-    color: var(--green)
+    color: var(--main)
 }
 .power-menu-popup .button .icon {
     font-size: 64px;
     padding-top: 32px;
-    color: var(--green)
+    color: var(--main)
 }
 .power-menu-popup .button.cancel .icon,
 .power-menu-popup .button.cancel .label {
@@ -270,10 +270,10 @@
 }
 .volume-widget .icon {
     font-size: 12px;
-    color: var(--green);
+    color: var(--main);
 }
 .language-widget .icon {
-    color: var(--green);
+    color: var(--main);
 }
 .language-menu {
     background-color: var(--crust);

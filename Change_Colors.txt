@@ -1,0 +1,7 @@
+Select the color code and replace all
+main text: #be6270
+background: #1f1f1f
+border: #be6271
+
+old background: #1e2030
+old green: 94e2d5
