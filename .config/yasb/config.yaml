@@ -39,10 +39,10 @@ bars:
       right: 4
     widgets:
       left: 
-      - "active_window"
       - "komorebi_active_layout"
       - "komorebi_workspaces"
       - "taskbar"
+      - "active_window"
       center:
       - "clock"
       right:
