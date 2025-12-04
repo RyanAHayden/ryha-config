@@ -39,6 +39,7 @@ bars:
       right: 4
     widgets:
       left: 
+      - "active_window"
       - "komorebi_active_layout"
       - "komorebi_workspaces"
       - "taskbar"
@@ -137,6 +138,18 @@ widgets:
         left: 0
         bottom: 0
         right: 8
+  active_window:
+    type: "yasb.active_window.ActiveWindowWidget"
+    options:
+      label: "\uf444"
+      # label: "{win[title]}"
+      label_alt: "[class_name='{win[class_name]}' exe='{win[process][name]}' hwnd={win[hwnd]}]"
+      label_no_window: ""
+      label_icon: false
+      label_icon_size: 16
+      max_length: 36
+      max_length_ellipsis: "..."
+      monitor_exclusive: false
   #settings:
   #  type: "yasb.applications.ApplicationsWidget"
   #  options:

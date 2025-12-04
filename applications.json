@@ -9,6 +9,15 @@
       }
     ]
   },
+  "Minecraft": {
+    "ignore": [
+      {
+        "kind": "Class",
+        "id": "GLFW30",
+        "matching_strategy": "Legacy"
+      }
+    ]
+  },
   "Ableton Live": {
     "ignore": [
       {
