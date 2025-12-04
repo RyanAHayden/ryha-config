@@ -112,8 +112,8 @@ widgets:
       title_label:
         enabled: true
         show: "focused"
-        min_length: 10
-        max_length: 30
+        min_length: 0
+        max_length: 8
       ignore_apps:
         processes: []
         titles: []
@@ -141,7 +141,7 @@ widgets:
   active_window:
     type: "yasb.active_window.ActiveWindowWidget"
     options:
-      label: "\uf444"
+      label: ""
       # label: "{win[title]}"
       label_alt: "[class_name='{win[class_name]}' exe='{win[process][name]}' hwnd={win[hwnd]}]"
       label_no_window: ""
