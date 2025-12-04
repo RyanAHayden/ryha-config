@@ -28,7 +28,7 @@
   "default_workspace_padding": 5,
   "global_work_area_offset": {
     "left": 0,
-    "top": 0,
+    "top": 10,
     "bottom": 10,
     "right": 0
   },

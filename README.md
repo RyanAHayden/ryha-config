@@ -6,21 +6,23 @@ Mostly for personal reasons but feel free to mess around with the configs.
 ![screenshot of windows setup](README_Assets/preview.png)
 <br>
 
-# < [EarTrumpet](https://eartrumpet.app/) >
+# Recommended
+
+## < [EarTrumpet](https://eartrumpet.app/) >
 ```
 winget install File-New-Project.EarTrumpet
 ```
 ### Settings
 Open Taskbar flyout: `Ctrl+Shift+Alt+S`
 
-# < [Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip) > (Required)
+## < [Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip) > (Required for icons)
 
-# < [YASB](https://docs.yasb.dev/latest/installation) >
+## < [YASB](https://docs.yasb.dev/latest/installation) >
 ```
 winget install --id DEVCOM.JetBrainsMonoNerdFont
 ```
 
-# < [WindHawk](https://windhawk.net/) >
+## < [WindHawk](https://windhawk.net/) >
 ```
 winget install windhawk
 ```
@@ -33,7 +35,7 @@ winget install windhawk
 <img src="README_Assets/sidebyside.png" alt="windows start menu" width="200" />
 
 
-# < [Flow Launcher](https://github.com/Flow-Launcher/Flow.Launcher) >
+## < [Flow Launcher](https://github.com/Flow-Launcher/Flow.Launcher) >
 ```
 winget install "Flow Launcher"
 ```
@@ -43,21 +45,22 @@ Copy `/FlowLauncher` to
 Apply `ryha-green` using `fltheme ryha-green`
 
 ### Plugins
-- Steam Search by Garulf
-- Visual Studio Code Workspaces by ricardosantos9521, MaskedRPGFan
+- Steam Search `by Garulf`
+- Visual Studio Code Workspaces `by ricardosantos9521, MaskedRPGFan`
+- FlowYoutube `by Garulf`
 
 ### Plugin Settings
 Set explorer shortcuts like these:
 
 <img src="README_Assets/example_quicklaunch.png" alt="example" width="400" />
 
-# < [Nilesoft](https://nilesoft.org/download) >
+## < [Nilesoft](https://nilesoft.org/download) >
 ```
 winget install nilesoft.shell
 ```
-# < [THide](https://github.com/amnweb/thide?tab=readme-ov-file) > (Taskbar Hide)
+## < [THide](https://github.com/amnweb/thide?tab=readme-ov-file) > (Taskbar Hide)
 
-# Unused
+# Optional
 ## < [masir](https://github.com/LGUG2Z/masir) > (Auto Focus Window Cursor is over)
 ```
 winget install LGUG2Z.masir
