@@ -15,9 +15,8 @@
   "border_colours": {
     "unfocused": "#00000000",
     "unfocused-locked":"#ff834a",
-    "stack": "#ff5757",
-    "monocle": "#d6dfff",
-    "single": "#be6270"
+    "monocle": "#19b6b2",
+    "single": "#473e76"
   },
   "border_implementation": "Komorebi",
   "border_offset": -1,

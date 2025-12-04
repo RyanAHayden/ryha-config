@@ -24,7 +24,7 @@ bars:
       dark_mode: true
       round_corners: true
       round_corners_type: "normal"
-      border_color: "#be6271"
+      border_color: "#473e76"
     window_flags:
       always_on_top: true
       windows_app_bar: true
@@ -82,7 +82,7 @@ widgets:
         blur: true
         round_corners: true
         round_corners_type: "normal"
-        border_color: "#be6271"
+        border_color: "#473e76"
         alignment: "left"
         direction: "down"
         offset_top: 6
@@ -198,7 +198,7 @@ widgets:
         blur: true
         round_corners: true
         round_corners_type: "normal"
-        border_color: "#be6271"
+        border_color: "#473e76"
         alignment: "right"
         direction: "down"
         offset_top: 6
@@ -271,7 +271,7 @@ widgets:
         blur: true
         round_corners: true
         round_corners_type: "normal"
-        border_color: "#be6271"
+        border_color: "#473e76"
         alignment: "center"
         direction: "down"
         offset_top: 6

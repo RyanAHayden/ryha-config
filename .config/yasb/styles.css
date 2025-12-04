@@ -4,7 +4,7 @@
     --yellow: #f9e2af;
     --orange: #fab387;
     --blue: #89b4fa;
-    --main: #be6270;
+    --main: #19b6b2;
     --lavender: #b4befe;
     --text: #cdd6f4;
     --subtext1: #bac2de;
@@ -233,10 +233,10 @@
     margin: 0px;
 }
 .power-menu-popup .button.hover {
-    border-left: 4px solid #be6270;
-    border-right: 4px solid #be6270;
-    border-top: 4px solid #be6270;
-    border-bottom: 4px solid #be6270;
+    border-left: 4px solid #19b6b2;
+    border-right: 4px solid #19b6b2;
+    border-top: 4px solid #19b6b2;
+    border-bottom: 4px solid #19b6b2;
 }
 .power-menu-popup .button.cancel.hover {
     border-left: 4px solid #e29494;
