@@ -69,15 +69,15 @@ Set explorer shortcuts like these:
 ```
 winget install File-New-Project.EarTrumpet
 ```
-## < [Nilesoft](https://nilesoft.org/download) >
-```
-winget install nilesoft.shell
-```
 
 ### Settings
 Open Taskbar flyout: `Ctrl+Shift+Alt+S`
 
 # Optional
+## < [Nilesoft](https://nilesoft.org/download) >
+```
+winget install nilesoft.shell
+```
 ## < [masir](https://github.com/LGUG2Z/masir) > (Auto Focus Window Cursor is over)
 ```
 winget install LGUG2Z.masir
