@@ -7,13 +7,13 @@
     </ResourceDictionary.MergedDictionaries>
     <system:Boolean x:Key="ThemeBlurEnabled">True</system:Boolean>
     <system:String x:Key="SystemBG">Auto</system:String>
-    <Color x:Key="LightBG">#1e2030</Color>
-    <Color x:Key="DarkBG">#1e2030</Color>
+    <Color x:Key="LightBG">#08222b</Color>
+    <Color x:Key="DarkBG">#08222b</Color>
     <Style
         x:Key="ItemBulletSelectedStyle"
         BasedOn="{StaticResource ItemBulletSelectedStyle}"
         TargetType="{x:Type Border}">
-        <Setter Property="Background" Value="#19b6b2" />
+        <Setter Property="Background" Value="#6bf4fb" />
     </Style>
     <Style
         x:Key="ItemGlyph"
@@ -27,7 +27,7 @@
         TargetType="{x:Type TextBox}">
         <Setter Property="Foreground" Value="#979eb7" />
         <Setter Property="CaretBrush" Value="#979eb7" />
-        <Setter Property="SelectionBrush" Value="#19b6b2" />
+        <Setter Property="SelectionBrush" Value="#6bf4fb" />
     </Style>
     <Style
         x:Key="QuerySuggestionBoxStyle"
@@ -40,8 +40,8 @@
         x:Key="WindowBorderStyle"
         BasedOn="{StaticResource WindowBorderStyle}"
         TargetType="{x:Type Border}">
-        <Setter Property="BorderBrush" Value="#473e76" />
-        <Setter Property="Background" Value="#1e2030" />
+        <Setter Property="BorderBrush" Value="#a21039" />
+        <Setter Property="Background" Value="#08222b" />
     </Style>
 
     <!--  Item Style  -->
@@ -103,14 +103,14 @@
         <Setter Property="Fill" Value="#939ab7" />
     </Style>
     <Style x:Key="SearchIconPosition" BasedOn="{StaticResource SearchIconPosition}" TargetType="{x:Type Canvas}">
-        <Setter Property="Background" Value="#1e2030" />
+        <Setter Property="Background" Value="#08222b" />
     </Style>
 
     <Style x:Key="ItemHotkeyStyle" TargetType="{x:Type TextBlock}">
         <Setter Property="Foreground" Value="#6e738d" />
     </Style>
     <Style x:Key="ItemHotkeySelectedStyle" TargetType="{x:Type TextBlock}">
-        <Setter Property="Foreground" Value="#19b6b2" />
+        <Setter Property="Foreground" Value="#6bf4fb" />
     </Style>
     <Style x:Key="ItemGlyphSelectedStyle" BasedOn="{StaticResource ItemGlyphSelectedStyle}" TargetType="{x:Type TextBlock}">
         <Setter Property="Foreground" Value="#cad3f5" />
@@ -131,7 +131,7 @@
         x:Key="PreviewBorderStyle"
         BasedOn="{StaticResource PreviewBorderStyle}"
         TargetType="{x:Type Border}">
-        <Setter Property="BorderBrush" Value="#473e76" />
+        <Setter Property="BorderBrush" Value="#a21039" />
     </Style>
     <Style
         x:Key="PreviewItemTitleStyle"

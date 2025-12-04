@@ -22,7 +22,8 @@ if exist "%SOURCE_DIR%\komorebi.json" (
 
 REM Copy FlowLauncher folder
 if exist "%SOURCE_DIR%\AppData\Roaming\FlowLauncher" (
-    xcopy "%SOURCE_DIR%\AppData\Roaming\FlowLauncher" "%DEST_DIR%FlowLauncher" /E /I /Y
+    xcopy "%SOURCE_DIR%\AppData\Roaming\FlowLauncher/Settings/Settings.json" "%DEST_DIR%FlowLauncher/Settings/Settings.json" /E /I /Y
+    xcopy "%SOURCE_DIR%\AppData\Roaming\FlowLauncher/Themes" "%DEST_DIR%FlowLauncher/Themes" /E /I /Y
     echo FlowLauncher folder copied successfully
 ) else (
     echo FlowLauncher folder not found

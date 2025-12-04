@@ -1,6 +1,6 @@
 :root {
-    --main: #19b6b2;
-    --background: #1e2030;
+    --main: #6bf4fb;
+    --background: #08222b;
     --text: #cdd6f4;
 
     --mauve: #cba6f7;
@@ -17,7 +17,7 @@
     --surface2: #585b70;
     --surface1: #45475a;
     --surface0: #282936;
-    --base: #1e2030;
+    --base: #08222b;
 }
 * {
     font-size: 12px;
@@ -234,10 +234,10 @@
     margin: 0px;
 }
 .power-menu-popup .button.hover {
-    border-left: 4px solid #19b6b2;
-    border-right: 4px solid #19b6b2;
-    border-top: 4px solid #19b6b2;
-    border-bottom: 4px solid #19b6b2;
+    border-left: 4px solid #6bf4fb;
+    border-right: 4px solid #6bf4fb;
+    border-top: 4px solid #6bf4fb;
+    border-bottom: 4px solid #6bf4fb;
 }
 .power-menu-popup .button.cancel.hover {
     border-left: 4px solid #e29494;
