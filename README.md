@@ -34,7 +34,6 @@ winget install windhawk
 ```
 ### Mods
 - `explorer-details-better-file-sizes`
-- `chrome-wheel-scroll-tabs` (reverse)
 - `taskbar-on-top`
 - `windows-11-start-menu-styler` (SideBySideMinimal)
   
@@ -63,6 +62,9 @@ Set explorer shortcuts like these:
 ## < [THide](https://github.com/amnweb/thide?tab=readme-ov-file) > (Taskbar Hide)
 
 # Recommended
+## < [Zen Browser](https://zen-browser.app/) >
+### [Sine](https://github.com/CosmoCreeper/Sine)
+- `Advanced Tab Groups (BETA) (v3.2.1b)`
 ## < [EarTrumpet](https://eartrumpet.app/) >
 ```
 winget install File-New-Project.EarTrumpet

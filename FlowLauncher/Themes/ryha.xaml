@@ -23,8 +23,8 @@
         BasedOn="{StaticResource BaseWindowBorderStyle}"
         TargetType="{x:Type Border}">
         <Setter Property="BorderThickness" Value="1" />
-        <Setter Property="BorderBrush" Value="#FFA21039" />
-        <Setter Property="Background" Value="#FF08222B"/>
+        <Setter Property="BorderBrush" Value="#FF6c2567" />
+        <Setter Property="Background" Value="#FF05071c"/>
         <Setter Property="CornerRadius" Value="10" />
         <Setter Property="UseLayoutRounding" Value="True" />
     </Style>
@@ -101,7 +101,7 @@
         x:Key="PendingLineStyle"
         BasedOn="{StaticResource BasePendingLineStyle}"
         TargetType="{x:Type Line}">
-        <Setter Property="Stroke" Value="#FF6BF4FB" />
+        <Setter Property="Stroke" Value="#FFc586cc" />
         <Setter Property="StrokeThickness" Value="2" />
     </Style>
     
@@ -158,7 +158,7 @@
     
     <Style x:Key="ItemHotkeySelectedStyle" TargetType="{x:Type TextBlock}">
         <Setter Property="FontSize" Value="12" />
-        <Setter Property="Foreground" Value="#6bf4fb" />
+        <Setter Property="Foreground" Value="#c586cc" />
     </Style>
     
     <!-- Result glyph -->
@@ -204,7 +204,7 @@
         <Setter Property="Width" Value="4" />
         <Setter Property="Height" Value="45" />
         <Setter Property="CornerRadius" Value="2" />
-        <Setter Property="Background" Value="#FF6BF4FB" />
+        <Setter Property="Background" Value="#FFc586cc" />
     </Style>
     
     
