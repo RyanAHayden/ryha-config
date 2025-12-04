@@ -4,7 +4,7 @@ background: #1f1f1f
 border: #be6271
 
 old background: #1e2030
-old green: 94e2d5
+old green: #94e2d5
 
 On flow apply the theme:
 fltheme ryha
