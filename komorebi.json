@@ -13,15 +13,15 @@
   },
   "border": true,
   "border_colours": {
-    "unfocused": "#00000000",
+    "unfocused": "#05071c",
     "unfocused-locked":"#ff834a",
     "monocle": "#c586cc",
-    "single": "#6c2567"
+    "single": "#8aadf4"
   },
   "border_implementation": "Komorebi",
   "border_offset": -1,
   "border_style": "Rounded",
-  "border_width": 3,
+  "border_width": 4,
   "cross_monitor_move_behaviour": "Insert",
   "default_container_padding": 8,
   "default_workspace_padding": 5,
