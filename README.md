@@ -11,7 +11,7 @@ Mostly for personal reasons but feel free to mess around with the configs.
 winget install File-New-Project.EarTrumpet
 ```
 ### Settings
-Open Taskbar flyout: `Ctrl+Shift+S`
+Open Taskbar flyout: `Ctrl+Shift+Alt+S`
 
 # < [Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip) > (Required)
 
