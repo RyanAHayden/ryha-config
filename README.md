@@ -6,17 +6,23 @@ Mostly for personal reasons but feel free to mess around with the configs.
 ![screenshot of windows setup](README_Assets/preview.png)
 <br>
 
-# Recommended
-
-## < [EarTrumpet](https://eartrumpet.app/) >
-```
-winget install File-New-Project.EarTrumpet
-```
-### Settings
-Open Taskbar flyout: `Ctrl+Shift+Alt+S`
+## Replace the theme colors with your own:
+1. In CHANGE_COLORS.md Select each color code
+2. Replace all instances in your theme files
+3. Run task copy to user folder
+4. Apply the theme to Flow Launcher using:
+   ```
+   fltheme ryha
+   ```
+![showing how to change colors](README_Assets/ChangeColors.png)
+# Install
 
 ## < [Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip) > (Required for icons)
 
+## < [Komorebi](https://github.com/LGUG2Z/komorebi) >
+```
+winget install -e --id LGUG2Z.komorebi
+```
 ## < [YASB](https://docs.yasb.dev/latest/installation) >
 ```
 winget install --id DEVCOM.JetBrainsMonoNerdFont
@@ -33,7 +39,6 @@ winget install windhawk
 - `windows-11-start-menu-styler` (SideBySideMinimal)
   
 <img src="README_Assets/sidebyside.png" alt="windows start menu" width="200" />
-
 
 ## < [Flow Launcher](https://github.com/Flow-Launcher/Flow.Launcher) >
 ```
@@ -54,11 +59,21 @@ Set explorer shortcuts like these:
 
 <img src="README_Assets/example_quicklaunch.png" alt="example" width="400" />
 
+
+## < [THide](https://github.com/amnweb/thide?tab=readme-ov-file) > (Taskbar Hide)
+
+# Recommended
+## < [EarTrumpet](https://eartrumpet.app/) >
+```
+winget install File-New-Project.EarTrumpet
+```
 ## < [Nilesoft](https://nilesoft.org/download) >
 ```
 winget install nilesoft.shell
 ```
-## < [THide](https://github.com/amnweb/thide?tab=readme-ov-file) > (Taskbar Hide)
+
+### Settings
+Open Taskbar flyout: `Ctrl+Shift+Alt+S`
 
 # Optional
 ## < [masir](https://github.com/LGUG2Z/masir) > (Auto Focus Window Cursor is over)

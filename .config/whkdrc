@@ -4,7 +4,7 @@
 alt + o                 : taskkill /f /im whkd.exe; Start-Process whkd -WindowStyle hidden # if shell is pwsh / powershell
 alt + shift + o         : komorebic stop; komorebic start; start /b whkd.exe
 
-alt + i                 : komorebic toggle-shortcuts
+# alt + i                 : komorebic toggle-shortcuts
 
 alt + q                 : komorebic close
 alt + s                 : komorebic minimize
