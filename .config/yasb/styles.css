@@ -1,12 +1,14 @@
 :root {
+    --main: #19b6b2;
+    --background: #1e2030;
+    --text: #cdd6f4;
+
     --mauve: #cba6f7;
     --red: #f38ba8;
     --yellow: #f9e2af;
     --orange: #fab387;
     --blue: #89b4fa;
-    --main: #19b6b2;
     --lavender: #b4befe;
-    --text: #cdd6f4;
     --subtext1: #bac2de;
     --subtext0: #a6adc8;
     --overlay2: #9399b2;
@@ -15,8 +17,7 @@
     --surface2: #585b70;
     --surface1: #45475a;
     --surface0: #282936;
-    --base: rgb(17, 18, 19);
-    --crust: rgba(32, 32, 43, 0.8);
+    --base: #1e2030;
 }
 * {
     font-size: 12px;
@@ -29,7 +30,7 @@
 .yasb-bar {
     padding: 0;
     margin: 0;
-    background-color: var(--crust);
+    background-color: var(--background);
 }
 /* Global styles for ToolTip */
 .tooltip {
@@ -160,7 +161,7 @@
     color: var(--main);
 }
 .calendar {
-    background-color: var(--crust)
+    background-color: var(--background)
 }
 .calendar .calendar-table,
 .calendar .calendar-table::item {
@@ -224,7 +225,7 @@
     width: 180px;
     height: 230px;
     border-radius: 0;
-    background-color: var(--crust);
+    background-color: var(--background);
     color: var(--main);
     border-left: 4px solid rgba(58, 83, 80, 0);
     border-right: 4px solid rgba(58, 83, 80, 0);
@@ -266,7 +267,7 @@
     font-weight: 600;
 }
 .audio-menu {
-    background-color: var(--crust)
+    background-color: var(--background)
 }
 .volume-widget .icon {
     font-size: 12px;
@@ -276,7 +277,7 @@
     color: var(--main);
 }
 .language-menu {
-    background-color: var(--crust);
+    background-color: var(--background);
     min-width: 300px;
 }
 .language-menu .header {
@@ -371,7 +372,7 @@
     color: var(--text);
 }
 .home-menu {
-    background-color: var(--crust);
+    background-color: var(--background);
     border-radius: 8px;
 }
 .home-menu .menu-item {
@@ -395,7 +396,7 @@
 .media-menu {
     min-width: 360px;
     max-width: 360px;
-    background-color: var(--crust)
+    background-color: var(--background)
 }
 .media-menu .title,
 .media-menu .artist,
@@ -497,7 +498,7 @@
     color: var(--yellow);
 }
 .weather-card {
-    background-color: var(--crust);
+    background-color: var(--background);
 }
 .weather-card-today .label {
     font-size: 13px;
@@ -518,7 +519,7 @@
 }
 .weather-card-day {
     border-radius: 6px;
-    background-color: var(--crust)
+    background-color: var(--background)
 }
 .weather-card-day .label {
     font-size: 13px;

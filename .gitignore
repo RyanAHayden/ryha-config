@@ -13,8 +13,5 @@
 /FlowLauncher/Plugins
 /FlowLauncher/Settings/*
 !/FlowLauncher/Settings/Settings.json
-!/FlowLauncher/Settings/Plugins/
-!/FlowLauncher/Settings/Plugins/**/Settings.json
-
 # Backup files
 *.bak

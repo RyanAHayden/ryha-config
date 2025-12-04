@@ -1,10 +1,10 @@
 Select the color code and replace all
 main text: #19b6b2
-background: #354d8c
+background: #1e2030
 border: #473e76
 
-old background: #1e2030
-old green: #94e2d5
+old background: #1e203/0
+old green: #94e2d/5
 
 On flow apply the theme:
 fltheme ryha

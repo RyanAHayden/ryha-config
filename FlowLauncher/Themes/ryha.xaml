@@ -7,8 +7,8 @@
     </ResourceDictionary.MergedDictionaries>
     <system:Boolean x:Key="ThemeBlurEnabled">True</system:Boolean>
     <system:String x:Key="SystemBG">Auto</system:String>
-    <Color x:Key="LightBG">#354d8c</Color>
-    <Color x:Key="DarkBG">#354d8c</Color>
+    <Color x:Key="LightBG">#1e2030</Color>
+    <Color x:Key="DarkBG">#1e2030</Color>
     <Style
         x:Key="ItemBulletSelectedStyle"
         BasedOn="{StaticResource ItemBulletSelectedStyle}"
@@ -41,7 +41,7 @@
         BasedOn="{StaticResource WindowBorderStyle}"
         TargetType="{x:Type Border}">
         <Setter Property="BorderBrush" Value="#473e76" />
-        <Setter Property="Background" Value="#354d8c" />
+        <Setter Property="Background" Value="#1e2030" />
     </Style>
 
     <!--  Item Style  -->
@@ -103,7 +103,7 @@
         <Setter Property="Fill" Value="#939ab7" />
     </Style>
     <Style x:Key="SearchIconPosition" BasedOn="{StaticResource SearchIconPosition}" TargetType="{x:Type Canvas}">
-        <Setter Property="Background" Value="#354d8c" />
+        <Setter Property="Background" Value="#1e2030" />
     </Style>
 
     <Style x:Key="ItemHotkeyStyle" TargetType="{x:Type TextBlock}">
@@ -131,7 +131,7 @@
         x:Key="PreviewBorderStyle"
         BasedOn="{StaticResource PreviewBorderStyle}"
         TargetType="{x:Type Border}">
-        <Setter Property="BorderBrush" Value="#354d8c" />
+        <Setter Property="BorderBrush" Value="#473e76" />
     </Style>
     <Style
         x:Key="PreviewItemTitleStyle"
