@@ -2,7 +2,7 @@
 REM Copy .config folder, komorebi.json, and FlowLauncher to user directory
 
 set SOURCE_DIR=%~dp0
-set DEST_DIR=C:\Users\ryha
+set DEST_DIR=C:\Users\%USERNAME%
 
 REM Copy .config folder
 if exist "%SOURCE_DIR%.config" (

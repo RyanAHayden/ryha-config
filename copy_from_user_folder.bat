@@ -1,7 +1,7 @@
 @echo off
 REM Copy .config folder, komorebi.json, and FlowLauncher from user directory back to repo
 
-set SOURCE_DIR=C:\Users\ryha
+set SOURCE_DIR=C:\Users\%USERNAME%
 set DEST_DIR=%~dp0
 
 REM Copy .config folder
