@@ -1,4 +1,9 @@
-/.config/yasb/yasb.log
+# config
+/.config
+!/.config/yasb
+!/.config/whkdrc
+
+.log
 .old
 
 # Windhawk
