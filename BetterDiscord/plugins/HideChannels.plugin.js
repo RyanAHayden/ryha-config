@@ -20,11 +20,7 @@ const { Webpack, Webpack: { Filters }, Data, DOM, Patcher } = BdApi,
 			//The names we need for CSS
 			cssStyle: "HideChannelsStyle",
 			hideElementsName: "hideChannelElement",
-			buttonID: "toggleChannels",
-			buttonHidden: "channelsHidden",
-			buttonVisible: "channelsVisible",
 			avatarOverlap: "avatarOverlap",
-			panelsButtonHidden: "panelsButtonHidden"
 		}
 	};
 
@@ -225,12 +221,10 @@ module.exports = class HideChannels {
 					//We hide it through CSS by adding a class.
 					sidebar?.classList.add(config.constants.hideElementsName);
 					sidebarAvatar?.classList.add(config.constants.avatarOverlap);
-					panelsButton?.classList.add(config.constants.panelsButtonHidden);
 				} else {
 					//If it is hidden, we need to show it.
 					sidebar?.classList.remove(config.constants.hideElementsName);
 					sidebarAvatar?.classList.remove(config.constants.avatarOverlap);
-					panelsButton?.classList.remove(config.constants.panelsButtonHidden);
 				}
 				return !state;
 			};
@@ -265,16 +259,6 @@ module.exports = class HideChannels {
 			if (this.WindowInfoStore.isFocused())
 				this.currentlyPressed = {};
 		});
-
-		//Return our element.
-		return React.createElement("div", {
-			//Styling
-			id: config.constants.buttonID,
-			//The icon
-			className: hidden ? config.constants.buttonHidden : config.constants.buttonVisible,
-			//Toggle the sidebar and rerender on toggle; change the state.
-			onClick: () => setHidden(toggleSidebar(sidebarNode))
-		});
 	}
 
 	/**
@@ -307,59 +291,5 @@ module.exports = class HideChannels {
 					return this.KeybindToString(keybindToLoad).toLowerCase().replace("ctrl", "control");
 		}
 		catch (e) { return defaultKeybind; }
-	}
-
-	generateCSS() {
-		//Check if there is any CSS we have already, and remove it.
-		DOM.removeStyle(config.constants.cssStyle);
-
-		//Now inject our (new) CSS
-		DOM.addStyle(config.constants.cssStyle, `
-/* Button CSS */
-#${config.constants.buttonID} {
-    min-width: 24px;
-    height: 24px;
-    background-position: center !important;
-    background-size: 100% !important;
-    opacity: 0.8;
-    cursor: pointer;
-}
-
-/* How the button looks */
-.theme-dark #${config.constants.buttonID}.${config.constants.buttonVisible} {
-    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2ZmZiIgd2lkdGg9IjE4cHgiIGhlaWdodD0iMThweCI+PHBhdGggZD0iTTE4LjQxIDE2LjU5TDEzLjgyIDEybDQuNTktNC41OUwxNyA2bC02IDYgNiA2ek02IDZoMnYxMkg2eiIvPjxwYXRoIGQ9Ik0yNCAyNEgwVjBoMjR2MjR6IiBmaWxsPSJub25lIi8+PC9zdmc+) no-repeat;
-}
-.theme-dark #${config.constants.buttonID}.${config.constants.buttonHidden} {
-    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2ZmZiIgd2lkdGg9IjE4cHgiIGhlaWdodD0iMThweCI+PHBhdGggZD0iTTAgMGgyNHYyNEgwVjB6IiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTUuNTkgNy40MUwxMC4xOCAxMmwtNC41OSA0LjU5TDcgMThsNi02LTYtNnpNMTYgNmgydjEyaC0yeiIvPjwvc3ZnPg==) no-repeat;
-}
-/* In light theme */
-.theme-light #${config.constants.buttonID}.${config.constants.buttonVisible} {
-    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzRmNTY2MCIgd2lkdGg9IjE4cHgiIGhlaWdodD0iMThweCI+PHBhdGggZD0iTTE4LjQxIDE2LjU5TDEzLjgyIDEybDQuNTktNC41OUwxNyA2bC02IDYgNiA2ek02IDZoMnYxMkg2eiIvPjxwYXRoIGQ9Ik0yNCAyNEgwVjBoMjR2MjR6IiBmaWxsPSJub25lIi8+PC9zdmc+) no-repeat;
-}
-.theme-light #${config.constants.buttonID}.${config.constants.buttonHidden} {
-    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzRmNTY2MCIgd2lkdGg9IjE4cHgiIGhlaWdodD0iMThweCI+PHBhdGggZD0iTTAgMGgyNHYyNEgwVjB6IiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTUuNTkgNy40MUwxMC4xOCAxMmwtNC41OSA0LjU5TDcgMThsNi02LTYtNnpNMTYgNmgydjEyaC0yeiIvPjwvc3ZnPg==) no-repeat;
-}
-
-/* Attached CSS to sidebar */
-html .${config.constants.hideElementsName}.${config.constants.hideElementsName} {
-    width: 0 !important;
-}
-html .${config.constants.avatarOverlap}.${config.constants.avatarOverlap}{
-		z-index: 1;
-}
-html .${config.constants.panelsButtonHidden}.${config.constants.panelsButtonHidden}{
-		display: none !important;
-}
-
-/* Don't have square border at top left when channels are hidden */
-.${this.baseClass} {
-	border-radius: 8px 0 0 !important;
-}
-
-/* Set animations */
-.${this.sidebarClass} {
-    ${this.animation ? "transition: width 400ms ease;" : ""}
-	overflow: hidden;
-}`);
 	}
 }
