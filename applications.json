@@ -9,6 +9,22 @@
       }
     ]
   },
+  "Microsoft Teams": {
+    "manage": [
+      {
+        "kind": "Class",
+        "id": "TeamsWebView",
+        "matching_strategy": "Equals"
+      }
+    ],
+    "object_name_change": [
+      {
+        "kind": "Class",
+        "id": "TeamsWebView",
+        "matching_strategy": "Equals"
+      }
+    ]
+  },
   "1Password": {
     "ignore": [
       {
@@ -1570,36 +1586,6 @@
           "matching_strategy": "StartsWith"
         }
       ]
-    ]
-  },
-  "Microsoft Teams": {
-    "tray_and_multi_window": [
-      {
-        "kind": "Class",
-        "id": "TeamsWebView",
-        "matching_strategy": "Equals"
-      }
-    ],
-    "object_name_change": [
-      {
-        "kind": "Class",
-        "id": "TeamsWebView",
-        "matching_strategy": "Equals"
-      }
-    ]
-  },
-  "Microsoft Teams classic": {
-    "ignore": [
-      {
-        "kind": "Title",
-        "id": "Microsoft Teams Notification",
-        "matching_strategy": "Legacy"
-      },
-      {
-        "kind": "Title",
-        "id": "Microsoft Teams Call",
-        "matching_strategy": "Legacy"
-      }
     ]
   },
   "Microsoft Terminal Services Client": {
