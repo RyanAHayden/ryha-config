@@ -1,0 +1,13 @@
+/**
+ * @name Hide SideBars
+ * @author real
+ * @version 1.0.0
+ * @description hide sidebars
+*//* Expand on hover For member list */
+.container_c8ffbb {
+  width: 50px;
+  transition: width 0.1s ease-out; /* smooth animation */
+}
+.container_c8ffbb:hover {
+  width: 250px;
+}
