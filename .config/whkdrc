@@ -1,11 +1,16 @@
 .shell powershell
 
 # Reload whkd configuration
-alt + o                 : taskkill /f /im whkd.exe; Start-Process whkd -WindowStyle hidden # if shell is pwsh / powershell
+alt + o                 : taskkill /f /im whkd.exe; ; start /b whkd.exe
 alt + shift + o         : komorebic stop; komorebic start; start /b whkd.exe
+# Restart yasbs
+alt + shift + y         : taskkill /f /im yasb.exe; start /b yasb.exe
 
-# alt + i                 : komorebic toggle-shortcuts
+# Show keybinds
+alt + i                 : komorebic toggle-shortcuts
 
+# Window actions
+alt + VK_RETURN         : komorebic toggle-maximize
 alt + q                 : komorebic close
 alt + s                 : komorebic minimize
 
@@ -36,6 +41,7 @@ alt + shift + oem_minus : komorebic resize-axis vertical decrease
 alt + shift + f         : komorebic toggle-monocle
 alt + shift + r         : komorebic retile
 alt + t                 : komorebic toggle-pause
+alt + x                 : komorebic manage
 
 # Workspaces
 alt + 1                 : komorebic focus-workspace 0
