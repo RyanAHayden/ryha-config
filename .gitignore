@@ -1,10 +1,9 @@
 # config
 /.config/*
-!/.config/yasb/config.yaml
-!/.config/yasb/styles.css
+!/.config/yasb/
 
-.log
-.old
+*.log
+*.old
 
 # Windhawk
 /Windhawk/Engine
