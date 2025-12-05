@@ -1,7 +1,6 @@
 # config
-/.config
+/.config/*
 !/.config/yasb
-!/.config/whkdrc
 
 .log
 .old

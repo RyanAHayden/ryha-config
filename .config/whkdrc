@@ -3,8 +3,6 @@
 # Reload whkd configuration
 alt + o                 : taskkill /f /im whkd.exe; ; start /b whkd.exe
 alt + shift + o         : komorebic stop; komorebic start; start /b whkd.exe
-# Restart yasb
-alt + shift + y         : taskkill /f /im yasb.exe; start /b yasb.exe
 
 # Show keybinds
 alt + i                 : komorebic toggle-shortcuts
