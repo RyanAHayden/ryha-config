@@ -1,6 +1,7 @@
 # config
 /.config/*
-!/.config/yasb
+!/.config/yasb/config.yaml
+!/.config/yasb/styles.css
 
 .log
 .old
