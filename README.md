@@ -65,6 +65,9 @@ Set explorer shortcuts like these:
 ## < [Zen Browser](https://zen-browser.app/) >
 ### [Sine](https://github.com/CosmoCreeper/Sine)
 - `Advanced Tab Groups (BETA) (v3.2.1b)`
+### Settings
+- Sidebar and Top Toolbar
+- Toggle Compact Mode: `Ctrl + Shift + S`
 ## < [EarTrumpet](https://eartrumpet.app/) >
 ```
 winget install File-New-Project.EarTrumpet
@@ -72,13 +75,3 @@ winget install File-New-Project.EarTrumpet
 
 ### Settings
 Open Taskbar flyout: `Ctrl+Shift+Alt+S`
-
-# Optional
-## < [Nilesoft](https://nilesoft.org/download) >
-```
-winget install nilesoft.shell
-```
-## < [masir](https://github.com/LGUG2Z/masir) > (Auto Focus Window Cursor is over)
-```
-winget install LGUG2Z.masir
-```
