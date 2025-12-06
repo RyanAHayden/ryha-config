@@ -5,7 +5,16 @@
       {
         "kind": "Class",
         "id": "Qt51511QWindowIcon",
-        "matching_strategy": "Legacy"
+        "matching_strategy": "Equals"
+      }
+    ]
+  },
+  "MPC-BE": {
+    "manage": [
+      {
+        "kind": "Class",
+        "id": "MPC-BE",
+        "matching_strategy": "Equals"
       }
     ]
   },
@@ -2346,6 +2355,13 @@
     ]
   },
   "Steam": {
+    "manage": [
+      {
+        "kind": "Title",
+        "id": "Steam",
+        "matching_strategy": "Equals"
+      }
+    ],
     "layered": [
       {
         "kind": "Exe",
@@ -2366,11 +2382,6 @@
           "kind": "Exe",
           "id": "steamwebhelper.exe",
           "matching_strategy": "Equals"
-        },
-        {
-          "kind": "Title",
-          "id": "Steam",
-          "matching_strategy": "DoesNotEqual"
         }
       ]
     ],

@@ -181,7 +181,7 @@ widgets:
     type: "yasb.active_window.ActiveWindowWidget"
     options:
       label: ""
-      label_alt: "[class_name='{win[class_name]}' exe='{win[process][name]}' hwnd={win[hwnd]}]"
+      label_alt: "[class_name='{win[class_name]}' exe='{win[process][name]}' hwnd={win[hwnd]} title={win[title]}]"
       label_no_window: ""
       label_icon: false
       label_icon_size: 16
