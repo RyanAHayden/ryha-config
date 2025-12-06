@@ -2351,11 +2351,6 @@
         "kind": "Exe",
         "id": "steam.exe",
         "matching_strategy": "Equals"
-      },
-      {
-        "kind": "Class",
-        "id": "SDL_app",
-        "matching_strategy": "Legacy"
       }
     ],
     "tray_and_multi_window": [
@@ -2367,6 +2362,11 @@
     ],
     "ignore": [
       [
+        {
+          "kind": "Exe",
+          "id": "steamwebhelper.exe",
+          "matching_strategy": "Equals"
+        },
         {
           "kind": "Title",
           "id": "Steam",
