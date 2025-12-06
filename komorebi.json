@@ -37,5 +37,43 @@
   "unmanaged_window_operation_behaviour": "Op",
   "window_container_behaviour": "Create",
   "window_hiding_behaviour": "Minimize",
-  "layout": "BSP" 
+  "layout": "BSP",
+    "monitors": [
+    {
+      "workspaces": [
+        {
+          "name": "1",
+          "layout": "BSP",
+          "initial_workspace_rules": [
+            {
+              "id": "Spotify.exe",
+              "kind": "Exe",
+              "matching_strategy": "Equals"
+            },
+            {
+              "id": "Discord.exe",
+              "kind": "Exe",
+              "matching_strategy": "Equals"
+            }
+          ]
+        },
+        {
+          "name": "2",
+          "layout": "BSP"
+        },
+        {
+          "name": "3",
+          "layout": "BSP"
+        },
+        {
+          "name": "4",
+          "layout": "BSP"
+        },
+        {
+          "name": "5",
+          "layout": "BSP"
+        }
+      ]
+    }
+  ] 
 }
