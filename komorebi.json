@@ -51,6 +51,11 @@
               "matching_strategy": "Equals"
             },
             {
+              "id": "KeePassXC.exe",
+              "kind": "Exe",
+              "matching_strategy": "Equals"
+            },
+            {
               "id": "Discord.exe",
               "kind": "Exe",
               "matching_strategy": "Equals"
