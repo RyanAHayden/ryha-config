@@ -2501,7 +2501,7 @@
     ]
   },
   "TeraCopy": {
-    "ignore": [
+    "floating": [
       {
         "kind": "Exe",
         "id": "TeraCopy.exe",
