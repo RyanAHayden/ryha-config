@@ -8,7 +8,7 @@ alt + shift + o         : komorebic stop; komorebic start; start /b whkd.exe
 alt + i                 : komorebic toggle-shortcuts
 
 # Window actions
-# alt + VK_RETURN         : komorebic toggle-maximize
+alt + VK_RETURN         : komorebic toggle-maximize
 alt + q                 : komorebic close
 alt + s                 : komorebic minimize
 
