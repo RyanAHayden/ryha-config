@@ -742,15 +742,6 @@
       }
     ]
   },
-  "Epic Games Launcher": {
-    "tray_and_multi_window": [
-      {
-        "kind": "Exe",
-        "id": "EpicGamesLauncher.exe",
-        "matching_strategy": "Equals"
-      }
-    ]
-  },
   "Everything": {
     "tray_and_multi_window": [
       {
@@ -2675,20 +2666,6 @@
           "matching_strategy": "DoesNotEndWith"
         }
       ]
-    ]
-  },
-  "Unreal Engine": {
-    "ignore": [
-      {
-        "kind": "Class",
-        "id": "UnrealWindow",
-        "matching_strategy": "Equals"
-      },
-      {
-        "kind": "Title",
-        "id": "SplashScreenGuard",
-        "matching_strategy": "Equals"
-      }
     ]
   },
   "visio": {
