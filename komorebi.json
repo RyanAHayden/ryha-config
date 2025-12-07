@@ -3,9 +3,9 @@
   "app_specific_configuration_path": "$Env:USERPROFILE/applications.json",
   "resize_delta": 200,
   "animation": {
-    "enabled": false,
-    "duration": 0,
-    "fps": 240,
+    "enabled": true,
+    "duration": 250,
+    "fps": 300,
     "style": {
       "movement": "EaseOutExpo",
       "transparency": "Linear"
