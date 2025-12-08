@@ -19,7 +19,7 @@
     ]
   },
   "Microsoft Teams": {
-    "floating": [
+    "ignore": [
       {
         "kind": "Title",
         "id": "Microsoft Teams",
@@ -29,9 +29,14 @@
         "kind": "Title",
         "id": "Meeting compact view",
         "matching_strategy": "StartsWith"
+      },
+      {
+        "kind": "Title",
+        "id": "Sharing control bar",
+        "matching_strategy": "StartsWith"
       }
     ],
-    "manage": [
+    "tray_and_multi_window": [
       {
         "kind": "Class",
         "id": "TeamsWebView",
