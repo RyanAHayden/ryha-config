@@ -19,6 +19,18 @@
     ]
   },
   "Microsoft Teams": {
+    "floating": [
+      {
+        "kind": "Title",
+        "id": "Microsoft Teams",
+        "matching_strategy": "StartsWith"
+      },
+      {
+        "kind": "Title",
+        "id": "Meeting compact view",
+        "matching_strategy": "StartsWith"
+      }
+    ],
     "manage": [
       {
         "kind": "Class",
