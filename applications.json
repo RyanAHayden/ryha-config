@@ -19,6 +19,13 @@
     ]
   },
   "Microsoft Teams": {
+    "manage": [
+      {
+        "kind": "Title",
+        "id": "Chat",
+        "matching_strategy": "StartsWith"
+      }
+    ],
     "ignore": [
       {
         "kind": "Title",
