@@ -12,7 +12,8 @@ Update these color codes in your theme configuration:
 | Alt Text     | #8d93a8 |
 | Surface2     | #363a4f |
 | Alt Elements | #5b6078 |
-| Foreground   | #8aadf4 |
+| Floating     | #8aadf4 |
+| Focused      | #929292 |
 
 ## How to Apply
 1. Select each color code above

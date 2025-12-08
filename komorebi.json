@@ -1,42 +1,38 @@
 {
-  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.34/schema.json",
   "app_specific_configuration_path": "$Env:USERPROFILE/applications.json",
-  "resize_delta": 200,
+  "mouse_follows_focus": false,
+  "cross_monitor_move_behaviour": "Insert",
+  "global_work_area_offset": {
+    "bottom": 1,
+    "left": 2,
+    "right": 4,
+    "top": 1
+  },
+  "default_workspace_padding": 5,
+  "default_container_padding": 5,
+  "border": true,
+  "border_width": 3,
+  "border_offset": -1,
+  "transparency": true,
+  "transparency_alpha": 200,
   "animation": {
     "enabled": true,
+    "fps": 144,
     "duration": 250,
-    "fps": 300,
     "style": {
       "movement": "EaseOutExpo",
       "transparency": "Linear"
     }
   },
-  "border": true,
   "border_colours": {
-    "unfocused": "#05071c",
-    "unfocused-locked":"#ff834a",
-    "monocle": "#c586cc",
-    "single": "#8aadf4"
+    "single": "#929292",
+    "unfocused": "#363636",
+    "monocle": "#6c2567",
+    "floating": "#8aadf4"
   },
-  "border_implementation": "Komorebi",
-  "border_offset": -1,
-  "border_style": "Rounded",
-  "border_width": 4,
-  "cross_monitor_move_behaviour": "Insert",
-  "default_container_padding": 8,
-  "default_workspace_padding": 5,
-  "global_work_area_offset": {
-    "left": 0,
-    "top": 10,
-    "bottom": 10,
-    "right": 0
-  },
-  "mouse_follows_focus": false,
-  "transparency": true,
-  "transparency_alpha": 230,
   "unmanaged_window_operation_behaviour": "Op",
   "window_container_behaviour": "Create",
-  "window_hiding_behaviour": "Minimize",
+  "window_hiding_behaviour": "Cloak",
   "layout": "BSP",
     "monitors": [
     {
