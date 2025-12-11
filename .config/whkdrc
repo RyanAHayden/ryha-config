@@ -11,6 +11,7 @@ alt + i                 : komorebic toggle-shortcuts
 alt + VK_RETURN         : komorebic toggle-maximize
 alt + q                 : komorebic close
 alt + s                 : komorebic minimize
+alt + VK_OEM_3          : komorebic toggle-transparency # Tilda
 
 # Move windows
 alt + shift + a         : komorebic move left
