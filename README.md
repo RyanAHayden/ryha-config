@@ -75,3 +75,12 @@ winget install File-New-Project.EarTrumpet
 
 ### Settings
 Open Taskbar flyout: `Ctrl+Shift+Alt+S`
+
+## < [TwinkleTray](https://twinkletray.com/) >
+```
+winget install xanderfrangos.twinkletray
+```
+
+### Settings
+Adjust brightness +10: `F24`
+Adjust brightness -10: `F23`
