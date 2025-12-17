@@ -1,6 +1,14 @@
 {
   "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/master/schema.asc.json",
-  "KeePassXC": {
+  "MullVad": {
+    "ignore": [
+      {
+        "kind": "Exe",
+        "id": "Mullvad VPN.exe",
+        "matching_strategy": "Equals"
+      }
+    ]
+  },"KeePassXC": {
     "manage": [
       {
         "kind": "Class",
