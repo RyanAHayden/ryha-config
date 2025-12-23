@@ -80,7 +80,3 @@ Open Taskbar flyout: `Ctrl+Shift+Alt+S`
 ```
 winget install xanderfrangos.twinkletray
 ```
-
-### Settings
-Adjust brightness +10: `F24`
-Adjust brightness -10: `F23`
