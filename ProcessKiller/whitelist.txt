@@ -21,6 +21,7 @@ komorebi
 whkd
 discord
 eartrumpet
+spotify
 vibrancegui
 atieclxx
 radeonsoftware
