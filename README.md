@@ -80,3 +80,7 @@ Open Taskbar flyout: `Ctrl+Shift+Alt+S`
 ```
 winget install xanderfrangos.twinkletray
 ```
+
+--
+# Credits
+[Process Killer](https://github.com/bmrf/tron/tree/master/resources/stage_0_prep/processkiller) from [Tron](https://github.com/bmrf/tron)

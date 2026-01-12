@@ -4,6 +4,15 @@ REM Copy .config folder, komorebi.json, and FlowLauncher to user directory
 set SOURCE_DIR=%~dp0
 set DEST_DIR=C:\Users\%USERNAME%
 
+REM Copy Process Killer Whitelist
+if exist "%SOURCE_DIR%\ProcessKiller" (
+    xcopy "%SOURCE_DIR%\ProcessKiller" "%DEST_DIR%\ProcessKiller" /E /I /Y
+    echo Process Killer copied successfully
+) else (
+    echo Process Killer not found
+)
+
+
 REM Copy .config folder
 if exist "%SOURCE_DIR%.config" (
     xcopy "%SOURCE_DIR%.config" "%DEST_DIR%\.config" /E /I /Y
