@@ -8,7 +8,17 @@
         "matching_strategy": "Equals"
       }
     ]
-  },"KeePassXC": {
+  },
+  "FlowLauncher": {
+    "ignore": [
+      {
+        "kind": "Exe",
+        "id": "Flow.Launcher.exe",
+        "matching_strategy": "Equals"
+      }
+    ]
+  },
+  "KeePassXC": {
     "manage": [
       {
         "kind": "Class",
