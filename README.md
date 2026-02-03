@@ -27,6 +27,10 @@ winget install -e --id LGUG2Z.komorebi
 ```
 winget install --id DEVCOM.JetBrainsMonoNerdFont
 ```
+## < [masir](https://github.com/LGUG2Z/masir) >
+```
+winget install --id LGUG2Z.masir
+```
 
 ## < [WindHawk](https://windhawk.net/) >
 ```
@@ -34,7 +38,6 @@ winget install windhawk
 ```
 ### Mods
 - `explorer-details-better-file-sizes`
-- `taskbar-on-top`
 - `windows-11-start-menu-styler` (SideBySideMinimal)
   
 <img src="README_Assets/sidebyside.png" alt="windows start menu" width="200" />
