@@ -18,14 +18,17 @@ Mostly for personal reasons but feel free to mess around with the configs.
 # Install
 
 ## < [Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip) > (Required for icons)
+```
+winget install --id DEVCOM.JetBrainsMonoNerdFont
 
+```
 ## < [Komorebi](https://github.com/LGUG2Z/komorebi) >
 ```
 winget install -e --id LGUG2Z.komorebi
 ```
 ## < [YASB](https://docs.yasb.dev/latest/installation) >
 ```
-winget install --id DEVCOM.JetBrainsMonoNerdFont
+winget install --id AmN.yasb
 ```
 ## < [masir](https://github.com/LGUG2Z/masir) >
 ```
