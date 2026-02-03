@@ -25,10 +25,8 @@ winget install --id DEVCOM.JetBrainsMonoNerdFont
 ```
 winget install -e --id LGUG2Z.komorebi
 ```
-Enable autostart
-```
-komorebi enable-autostart --whkd --masir
-```
+Enable autostart: `komorebi enable-autostart --whkd --masir`
+
 ## < [YASB](https://docs.yasb.dev/latest/installation) >
 ```
 winget install --id AmN.yasb
