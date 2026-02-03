@@ -2,7 +2,7 @@
 
 # Reload whkd configuration
 alt + o                 : taskkill /f /im whkd.exe; ; start /b whkd.exe
-alt + shift + o         : komorebic stop; komorebic start; start /b whkd.exe
+alt + shift + o         : komorebic stop; komorebic start --masir; start /b whkd.exe
 
 # Show keybinds
 alt + i                 : komorebic toggle-shortcuts

@@ -1,6 +1,6 @@
 {
   "app_specific_configuration_path": "$Env:USERPROFILE/applications.json",
-  "mouse_follows_focus": false,
+  "mouse_follows_focus": true,
   "cross_monitor_move_behaviour": "Insert",
   "global_work_area_offset": {
     "bottom": 1,
