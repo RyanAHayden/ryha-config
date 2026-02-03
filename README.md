@@ -20,7 +20,6 @@ Mostly for personal reasons but feel free to mess around with the configs.
 ## < [Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip) > (Required for icons)
 ```
 winget install --id DEVCOM.JetBrainsMonoNerdFont
-
 ```
 ## < [Komorebi](https://github.com/LGUG2Z/komorebi) >
 ```
