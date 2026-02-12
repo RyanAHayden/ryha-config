@@ -16,7 +16,7 @@
   "transparency": true,
   "transparency_alpha": 200,
   "animation": {
-    "enabled": true,
+    "enabled": false,
     "fps": 144,
     "duration": 250,
     "style": {
@@ -34,7 +34,7 @@
   "window_container_behaviour": "Create",
   "window_hiding_behaviour": "Cloak",
   "layout": "BSP",
-    "monitors": [
+  "monitors": [
     {
       "workspaces": [
         {
@@ -52,24 +52,8 @@
               "matching_strategy": "Equals"
             }
           ]
-        },
-        {
-          "name": "2",
-          "layout": "BSP"
-        },
-        {
-          "name": "3",
-          "layout": "BSP"
-        },
-        {
-          "name": "4",
-          "layout": "BSP"
-        },
-        {
-          "name": "5",
-          "layout": "BSP"
         }
       ]
     }
-  ] 
+  ]
 }
