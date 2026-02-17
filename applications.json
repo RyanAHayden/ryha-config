@@ -18,6 +18,15 @@
       }
     ]
   },
+  "DBeaver": {
+    "ignore": [
+      {
+        "kind": "Class",
+        "id": "SWT_Window_DBeaver",
+        "matching_strategy": "Equals"
+      }
+    ]
+  },
   "FlowLauncher": {
     "ignore": [
       {

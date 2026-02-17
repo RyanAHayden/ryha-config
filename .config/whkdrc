@@ -42,7 +42,7 @@ alt + shift + f         : komorebic toggle-monocle
 alt + shift + r         : komorebic retile
 alt + t                 : komorebic toggle-pause
 alt + x                 : komorebic manage
-alt + shift + x                 : komorebic unmanage
+alt + shift + x         : komorebic unmanage
 
 # Workspaces
 alt + 1                 : komorebic focus-workspace 0
