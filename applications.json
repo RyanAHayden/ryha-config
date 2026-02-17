@@ -9,6 +9,15 @@
       }
     ]
   },
+  "Bo3": {
+    "ignore": [
+      {
+        "kind": "Exe",
+        "id": "BlackOps3.exe",
+        "matching_strategy": "Equals"
+      }
+    ]
+  },
   "FlowLauncher": {
     "ignore": [
       {
