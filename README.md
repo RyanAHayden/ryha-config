@@ -35,6 +35,14 @@ winget install --id AmN.yasb
 ```
 winget install --id LGUG2Z.masir
 ```
+## < [AltSnap](https://github.com/RamonUnch/AltSnap) >
+```
+winget install AltSnap.AltSnap
+```
+### Config:
+- Set to Windows Key
+- Start when logging on
+- Right click: resize window
 
 ## < [WindHawk](https://windhawk.net/) >
 ```
