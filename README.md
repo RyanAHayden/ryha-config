@@ -78,11 +78,8 @@ Set explorer shortcuts like these:
 
 # Recommended
 ## < [Zen Browser](https://zen-browser.app/) >
-### [Sine](https://github.com/CosmoCreeper/Sine)
-- `Advanced Tab Groups (BETA) (v3.2.1b)`
 ### Settings
-- Sidebar and Top Toolbar
-- Toggle Compact Mode: `Ctrl + Shift + S`
+- Compact Hides Sidebar and Top Toolbar
 ## < [EarTrumpet](https://eartrumpet.app/) >
 ```
 winget install File-New-Project.EarTrumpet
@@ -96,6 +93,6 @@ Open Taskbar flyout: `Ctrl+Shift+Alt+S`
 winget install xanderfrangos.twinkletray
 ```
 
---
+---
 # Credits
 [Process Killer](https://github.com/bmrf/tron/tree/master/resources/stage_0_prep/processkiller) from [Tron](https://github.com/bmrf/tron)
