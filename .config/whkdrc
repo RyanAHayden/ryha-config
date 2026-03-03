@@ -23,10 +23,10 @@ win + VK_OEM_3          : komorebic toggle-transparency # Tilda
 win + f         		: komorebic toggle-maximize
 win + alt + f     	    : komorebic toggle-monocle
 win + alt + r         	: komorebic retile
-win + t         		: komorebic toggle-float
-win + p                 : komorebic toggle-pause
-win + y                 : komorebic toggle-tiling
-win + alt + x          : komorebic manage
+win + d         		: komorebic toggle-float # Float window
+win + t                 : komorebic toggle-tiling # Pause current workspace
+win + p                 : komorebic toggle-pause # Pause all komorebic functions
+win + alt + x           : komorebic manage
 win + shift + x         : komorebic unmanage
 
 # Move windows
