@@ -40,13 +40,13 @@ bars:
       left: 
       - "komorebi_active_layout"
       - "komorebi_workspaces"
-      - "taskbar"
+      # - "taskbar"
       - "active_window"
       center:
       - "clock"
       right:
       - "media"
-      - "systray"
+      # - "systray"
       # - "whkd"
       - "volume"
       - "notifications"
@@ -83,13 +83,13 @@ bars:
       left: 
       - "komorebi_active_layout"
       - "komorebi_workspaces"
-      - "taskbar"
+      # - "taskbar"
       - "active_window"
       center:
       - "clock"
       right:
       - "media"
-      - "systray"
+      # - "systray"
       - "volume"
 widgets:
   komorebi_active_layout:

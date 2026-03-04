@@ -49,8 +49,10 @@ winget install AltSnap.AltSnap
 winget install windhawk
 ```
 ### Mods
-- `explorer-details-better-file-sizes`
+listed in /Windhawk/userprofile.json
 - `windows-11-start-menu-styler` (SideBySideMinimal)
+- `taskbar-icon-size` - Height: `28` - Icon: `20` - Width: `28`
+- `taskbar-notification-icon-spacing` - Width: `24`
   
 <img src="README_Assets/sidebyside.png" alt="windows start menu" width="200" />
 
