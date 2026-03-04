@@ -43,7 +43,6 @@
       "version": "1.3.6"
     },
     "taskbar-notification-icon-spacing": {
-      "disabled": true,
       "latestVersion": "1.3",
       "version": "1.3"
     },
@@ -54,6 +53,14 @@
     "taskbar-button-click": {
       "version": "1.0.9",
       "latestVersion": "1.0.9"
+    },
+    "taskbar-on-top": {
+      "version": "1.1.6",
+      "latestVersion": "1.1.6",
+      "disabled": true
+    },
+    "taskbar-tray-system-icon-tweaks": {
+      "version": "1.2.3"
     }
   },
   "os": "10.0.22631"
