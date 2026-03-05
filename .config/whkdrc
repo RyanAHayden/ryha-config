@@ -63,6 +63,12 @@ win + 8                 : komorebic focus-workspace 7
 win + 9                 : komorebic focus-workspace 8
 win + 0                 : komorebic focus-workspace 9
 
+# Cycle Workspaces
+win + shift + tab       : komorebic cycle-workspace previous
+win + tab               : komorebic cycle-workspace next
+win + ctrl + shift + tab: komorebic cycle-move-to-workspace previous
+win + ctrl + tab        : komorebic cycle-move-to-workspace next
+
 # Move windows across workspaces
 win + shift + 1         : komorebic move-to-workspace 0
 win + shift + 2         : komorebic move-to-workspace 1
