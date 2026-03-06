@@ -27,7 +27,7 @@
   "border_colours": {
     "single": "#929292",
     "unfocused": "#363636",
-    "monocle": "#6c2567",
+    "monocle": "#7c7c7c",
     "floating": "#8aadf4"
   },
   "unmanaged_window_operation_behaviour": "Op",

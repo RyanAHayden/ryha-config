@@ -66,7 +66,7 @@ widgets:
         blur: true
         round_corners: true
         round_corners_type: "normal"
-        border_color: "#6c2567"
+        border_color: "#7c7c7c"
         alignment: "left"
         direction: "down"
         offset_top: 6
@@ -170,7 +170,7 @@ widgets:
         blur: true
         round_corners: true
         round_corners_type: "normal"
-        border_color: "#6c2567"
+        border_color: "#7c7c7c"
         alignment: "right"
         direction: "down"
         offset_top: 6
@@ -243,7 +243,7 @@ widgets:
         blur: true
         round_corners: true
         round_corners_type: "normal"
-        border_color: "#6c2567"
+        border_color: "#7c7c7c"
         alignment: "center"
         direction: "down"
         offset_top: 6

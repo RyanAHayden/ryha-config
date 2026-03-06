@@ -5,9 +5,9 @@ Update these color codes in your theme configuration:
 
 |    Element   |   Color   |
 |--------------|-----------|
-| Main         | #c586cc |
-| Background   | #05071c |
-| Border       | #6c2567 |
+| Main         | #39bbfa |
+| Background   | #000225 |
+| Border       | #7c7c7c |
 | Text         | #cdd6f4 |
 | Alt Text     | #8d93a8 |
 | Surface2     | #363a4f |
