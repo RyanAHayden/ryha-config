@@ -9,88 +9,33 @@ komorebi:
 bars:
   primary-bar:
     enabled: true
-    screens: ["primary"] # main monitor only
+    screens: ["*"]
     class_name: "yasb-bar"
     alignment:
-      position: "top"
+      position: "bottom"
       center: false
-    animation:
-      enabled: true
-      duration: 400
     blur_effect:
-      enabled: true
-      acrylic: false
-      dark_mode: true
-      round_corners: true
+      enabled: false
+      acrylic: true
+      dark_mode: false
+      round_corners: false
       round_corners_type: "normal"
-      border_color: "#6c2567"
     window_flags:
       always_on_top: true
-      windows_app_bar: true
+      windows_app_bar: false
       hide_on_fullscreen: true
     dimensions:
       width: "100%"
-      height: 32
+      height: 28
     padding:
-      top: 4
-      left: 4
-      bottom: 4
-      right: 4
+      top: 0
+      left: 5
+      bottom: 25
+      right: 0
     widgets:
-      left: 
+      left:
       - "komorebi_active_layout"
       - "komorebi_workspaces"
-      # - "taskbar"
-      - "active_window"
-      center:
-      - "clock"
-      right:
-      - "media"
-      # - "systray"
-      # - "whkd"
-      - "volume"
-      - "notifications"
-  secondary-bar:
-    enabled: true
-    screens: ["*"]  # all other screens
-    class_name: "yasb-bar-secondary"
-    alignment:
-      position: "top"
-      center: false
-    animation:
-      enabled: true
-      duration: 400
-    blur_effect:
-      enabled: true
-      acrylic: false
-      dark_mode: true
-      round_corners: true
-      round_corners_type: "normal"
-      border_color: "#6c2567"
-    window_flags:
-      always_on_top: true
-      windows_app_bar: true
-      hide_on_fullscreen: true
-    dimensions:
-      width: "100%"
-      height: 32
-    padding:
-      top: 4
-      left: 4
-      bottom: 4
-      right: 4
-    widgets:
-      left: 
-      - "komorebi_active_layout"
-      - "komorebi_workspaces"
-      # - "taskbar"
-      - "active_window"
-      center:
-      - "clock"
-      right:
-      - "media"
-      # - "systray"
-      - "volume"
 widgets:
   komorebi_active_layout:
     type: "komorebi.active_layout.ActiveLayoutWidget"

@@ -64,7 +64,7 @@ winget install "Flow Launcher"
 ### Settings & Theme
 Copy `/FlowLauncher` to
 `C:\Users\{user}\AppData\Roaming`
-Apply `ryha-green` using `fltheme ryha-green`
+Apply `ryha` using `fltheme ryha`
 
 ### Plugins
 - Steam Search `by Garulf`
