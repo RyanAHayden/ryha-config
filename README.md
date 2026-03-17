@@ -54,6 +54,7 @@ listed in /Windhawk/userprofile.json
 - `taskbar-icon-size` - Height: `28` - Icon: `20` - Width: `28`
 - `taskbar-notification-icon-spacing` - Width: `24`
 - `taskbar-tray-system-icon-tweaks` - Hide: `Volume`
+- `windows-11-taskbar-styler` - SimplyTransparent
   
 <img src="README_Assets/sidebyside.png" alt="windows start menu" width="200" />
 
