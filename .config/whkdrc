@@ -7,8 +7,8 @@ win + shift + y         : taskkill /f /im yasb.exe; ; start yasb.exe
 
 # Launch apps
 win + shift + return	: start zen.exe
-win + shift + f	        : start explorer.exe
 win + shift + k         : start keepassxc.exe
+win + shift + n         : start code
 win + return			: start cmd.exe
 
 # Show keybinds
@@ -21,6 +21,7 @@ win + VK_OEM_3          : komorebic toggle-transparency # Tilda
 
 # Window manager options
 win + f         		: komorebic toggle-monocle
+win + shift + f         : komorebic toggle-maximize
 win + alt + r         	: komorebic retile
 win + d         		: komorebic toggle-float # Float window
 win + t                 : komorebic toggle-tiling # Pause current workspace
