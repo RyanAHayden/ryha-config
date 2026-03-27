@@ -6,6 +6,11 @@
         "kind": "Exe",
         "id": "MacroGamer.exe",
         "matching_strategy": "Equals"
+      },
+      {
+        "kind": "Title",
+        "id": "Call of Duty",
+        "matching_strategy": "Contains"
       }
     ]
   },
