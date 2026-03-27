@@ -1,5 +1,14 @@
 {
   "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/master/schema.asc.json",
+  "Other": {
+    "ignore": [
+      {
+        "kind": "Exe",
+        "id": "MacroGamer.exe",
+        "matching_strategy": "Equals"
+      }
+    ]
+  },
   "MullVad": {
     "ignore": [
       {

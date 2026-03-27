@@ -36,6 +36,7 @@ bars:
       left:
       - "komorebi_active_layout"
       - "komorebi_workspaces"
+      - "active_window"
 widgets:
   komorebi_active_layout:
     type: "komorebi.active_layout.ActiveLayoutWidget"
