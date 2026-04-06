@@ -75,9 +75,6 @@ Set explorer shortcuts like these:
 
 <img src="README_Assets/example_quicklaunch.png" alt="example" width="400" />
 
-
-## < [THide](https://github.com/amnweb/thide?tab=readme-ov-file) > (Taskbar Hide)
-
 # Recommended
 ## < [Zen Browser](https://zen-browser.app/) >
 ### Settings
