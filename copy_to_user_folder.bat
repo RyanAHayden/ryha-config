@@ -46,6 +46,14 @@ if exist "%SOURCE_DIR%applications.json" (
     echo applications.json not found
 )
 
+REM Copy AltSnap.ini file
+if exist "%SOURCE_DIR%AltSnap.ini" (
+    copy "%SOURCE_DIR%AltSnap.ini" "%APPDATA%\AltSnap\AltSnap.ini" /Y
+    echo AltSnap.ini copied successfully
+) else (
+    echo AltSnap.ini not found
+)
+
 @REM REM Copy start_apps.bat to shell:startup
 @REM if exist "%SOURCE_DIR%start_apps.bat" (
 @REM     xcopy "%SOURCE_DIR%start_apps.bat" "%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\" /Y

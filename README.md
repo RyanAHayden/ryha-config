@@ -40,7 +40,7 @@ winget install --id LGUG2Z.masir
 winget install AltSnap.AltSnap
 ```
 ### Config:
-Use included AltSnap.ini (Not Autocopied)
+Use included AltSnap.ini (Copied in `copy_to_user_folder.bat`)
 
 ## < [WindHawk](https://windhawk.net/) >
 ```
