@@ -40,9 +40,7 @@ winget install --id LGUG2Z.masir
 winget install AltSnap.AltSnap
 ```
 ### Config:
-- Set to Windows Key
-- Start when logging on
-- Right click: resize window
+Use included AltSnap.ini (Not Autocopied)
 
 ## < [WindHawk](https://windhawk.net/) >
 ```
