@@ -1,6 +1,14 @@
 // Place your key bindings in this file to override the defaults
 [
     {
+        "key": "ctrl+tab",
+        "command": "workbench.action.nextEditor"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.previousEditor"
+    },
+    {
         "key": "ctrl+d",
         "command": "-notebook.addFindMatchToSelection",
         "when": "config.notebook.multiCursor.enabled && notebookCellEditorFocused && activeEditor == 'workbench.editor.notebook'"
@@ -16,9 +24,9 @@
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-    "key": "f5",
-    "command": "workbench.action.tasks.runTask",
-    "args": "Run start_dev.bat"
+        "key": "f5",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Run start_dev.bat"
     },
     {
         "key": "f9",
@@ -89,5 +97,25 @@
         "key": "ctrl+k f",
         "command": "-workbench.action.closeFolder",
         "when": "emptyWorkspaceSupport && workbenchState != 'empty'"
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "-workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
+        "when": "!activeEditorGroupEmpty"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "-workbench.action.quickOpenLeastRecentlyUsedEditorInGroup",
+        "when": "!activeEditorGroupEmpty"
+    },
+    {
+        "key": "ctrl+alt+s",
+        "command": "workbench.action.toggleZenMode",
+        "when": "!isAuxiliaryWindowFocusedContext"
+    },
+    {
+        "key": "ctrl+k z",
+        "command": "-workbench.action.toggleZenMode",
+        "when": "!isAuxiliaryWindowFocusedContext"
     }
 ]
