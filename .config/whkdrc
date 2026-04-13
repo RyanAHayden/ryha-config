@@ -6,10 +6,11 @@ win + shift + o         : komorebic stop; komorebic start --masir; start /b whkd
 win + shift + y         : taskkill /f /im yasb.exe; ; start yasb.exe
 
 # Launch apps
-win + shift + return	: start zen.exe
+win + shift + return	: start zen.exe --blank-window
+win + shift + b     	: start zen.exe
 win + shift + k         : start keepassxc.exe
 win + shift + n         : code
-win + return			: start powershell.exe
+win + return			: start "powershell.exe" -WorkingDirectory "~"
 
 # Show keybinds
 win + i                 : komorebic toggle-shortcuts
