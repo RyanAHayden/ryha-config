@@ -9,7 +9,7 @@ win + shift + y         : taskkill /f /im yasb.exe; ; start yasb.exe
 win + shift + return	: start zen.exe
 win + shift + k         : start keepassxc.exe
 win + shift + n         : code
-win + return			: start cmd.exe
+win + return			: start powershell.exe
 
 # Show keybinds
 win + i                 : komorebic toggle-shortcuts
