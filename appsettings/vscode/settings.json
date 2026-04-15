@@ -64,6 +64,7 @@
         { "before": ["<leader>", "c", "f"], "commands": ["editor.action.formatSelection"] }
     ],
     "vim.normalModeKeyBindingsNonRecursive": [
+        { "before": ["<leader>", "g", "r"], "commands": ["editor.action.goToReferences"] },
         // original
         { "before": ["s"], "after": ["/"] },
         { "before": ["<leader>", "d"], "after": ["d", "d"] },
@@ -121,6 +122,9 @@
     "vim.handleKeys": {
         //"<C-tab>": false,
         //"<C-S-tab>": false,
+        "<C-d>": true,
+        "<C-b>": false,
+        "<C-p>": false,
         "<C-w>": false,
         "<C-a>": false,
         "<C-f>": false,
@@ -129,5 +133,7 @@
     // To improve performance
     "extensions.experimental.affinity": {
         "vscodevim.vim": 1
-    }
+    },
+    "editor.minimap.enabled": false,
+    "java.debug.settings.showHex": false
 }
