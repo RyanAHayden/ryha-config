@@ -72,17 +72,21 @@
         { "before": ["K"], "commands": ["lineBreakInsert"], "silent": true },
         // window navigation (<C-h/j/k/l>)
         { "before": ["<leader>", "h"], "commands": ["workbench.action.focusLeftGroup"] },
-        // { "before": ["<C-j>"], "commands": ["workbench.action.focusBelowGroup"] },
-        // { "before": ["<C-k>"], "commands": ["workbench.action.focusAboveGroup"] },
+        //{ "before": ["<C-j>"], "commands": ["workbench.action.focusBelowGroup"] },
+        //{ "before": ["<C-k>"], "commands": ["workbench.action.focusAboveGroup"] },
         { "before": ["<leader>", "l"], "commands": ["workbench.action.focusRightGroup"] },
         // // move lines (<A-j/k>)
         { "before": ["<A-j>"], "commands": ["editor.action.moveLinesDownAction"] },
         { "before": ["<A-k>"], "commands": ["editor.action.moveLinesUpAction"] },
-        // buffer navigation (<C-h/l>, [b/]b, <leader>b...)
-        { "before": ["<C-h>"], "commands": ["workbench.action.previousEditor"] },
-        { "before": ["<C-l>"], "commands": ["workbench.action.nextEditor"] },
+        // buffer navigation (<S-h/l>, [b/]b, <leader>b...)
+        { "before": ["<S-h>"], "commands": ["workbench.action.previousEditor"] },
+        { "before": ["<S-l>"], "commands": ["workbench.action.nextEditor"] },
         { "before": ["[", "b"], "commands": ["workbench.action.previousEditor"] },
         { "before": ["]", "b"], "commands": ["workbench.action.nextEditor"] },
+        // Window navigation (<C-h/l>, [b/]b, <leader>b...)
+        { "before": ["<C-h>"], "commands": ["workbench.action.focusPreviousPart"] },
+        { "before": ["<C-l>"], "commands": ["workbench.action.focusNextPart"] },
+
         { "before": ["<leader>", "b", "b"], "commands": ["workbench.action.openPreviousRecentlyUsedEditorInGroup"] },
         { "before": ["<leader>", "`"], "commands": ["workbench.action.openPreviousRecentlyUsedEditorInGroup"] },
         { "before": ["<leader>", "b", "d"], "commands": ["workbench.action.closeActiveEditor"] },

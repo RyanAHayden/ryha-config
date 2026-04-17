@@ -1,5 +1,25 @@
 // Place your key bindings in this file to override the defaults
 [
+    // Ctrl+L: move right through splits, then to next UI part at the edge
+{ "key": "ctrl+l", "command": "workbench.action.focusNextGroup", "when": "editorTextFocus && !activeEditorGroupLast" },
+{ "key": "ctrl+l", "command": "workbench.action.focusNextPart", "when": "editorTextFocus && activeEditorGroupLast" },
+{ "key": "ctrl+l", "command": "workbench.action.focusNextPart", "when": "!editorTextFocus" },
+
+// Ctrl+H: move left through splits, then to previous UI part at the edge
+{ "key": "ctrl+h", "command": "workbench.action.focusPreviousGroup", "when": "editorTextFocus && activeEditorGroupIndex != 1" },
+{ "key": "ctrl+h", "command": "workbench.action.focusPreviousPart", "when": "editorTextFocus && activeEditorGroupIndex == 1" },
+{ "key": "ctrl+h", "command": "workbench.action.focusPreviousPart", "when": "!editorTextFocus" },
+
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.focusPreviousPart",
+        "when": "!editorTextFocus"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.focusNextPart",
+        "when": "!editorTextFocus"
+    },
     {
         "key": "ctrl+tab",
         "command": "workbench.action.nextEditor"
@@ -17,11 +37,6 @@
         "key": "ctrl+d",
         "command": "-editor.action.addSelectionToNextFindMatch",
         "when": "editorFocus"
-    },
-    {
-        "key": "ctrl+d",
-        "command": "editor.action.copyLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly"
     },
     {
         "key": "f5",
@@ -117,5 +132,30 @@
         "key": "ctrl+k z",
         "command": "-workbench.action.toggleZenMode",
         "when": "!isAuxiliaryWindowFocusedContext"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "-workbench.action.browser.focusUrlInput",
+        "when": "activeEditor == 'workbench.editor.browser'"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "-workbench.action.chat.newChat",
+        "when": "chatIsEnabled && inChat && chatLocation == 'panel'"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "-expandLineSelection",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "-notebook.centerActiveCell",
+        "when": "notebookEditorFocused"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "-editor.action.startFindReplaceAction",
+        "when": "editorFocus || editorIsOpen"
     }
 ]
