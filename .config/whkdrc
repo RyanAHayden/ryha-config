@@ -32,16 +32,28 @@ win + alt + x           : komorebic manage
 win + shift + x         : komorebic unmanage
 
 # Move windows
-win + shift + a         : komorebic move left
-win + shift + s         : komorebic move down
-win + shift + w         : komorebic move up
-win + shift + d         : komorebic move right
+#win + shift + a         : komorebic move left
+#win + shift + s         : komorebic move down
+#win + shift + w         : komorebic move up
+#win + shift + d         : komorebic move right
+
+# Move windows
+shift + alt + h         : komorebic move left
+shift + alt + j         : komorebic move down
+shift + alt + k         : komorebic move up
+shift + alt + l         : komorebic move right
 
 # Focus windows
-ctrl + win + a          : komorebic focus left
-ctrl + win + s          : komorebic focus down
-ctrl + win + w          : komorebic focus up
-ctrl + win + d          : komorebic focus right
+alt + h          : komorebic focus left
+alt + j          : komorebic focus down
+alt + k          : komorebic focus up
+alt + l          : komorebic focus right
+
+# Focus windows
+#ctrl + win + a          : komorebic focus left
+#ctrl + win + s          : komorebic focus down
+#ctrl + win + w          : komorebic focus up
+#ctrl + win + d          : komorebic focus right
 
 # Move windows between monitors
 win + shift + left       : komorebic cycle-move-to-monitor previous;
@@ -66,10 +78,16 @@ win + 9                 : komorebic focus-workspace 8
 win + 0                 : komorebic focus-workspace 9
 
 # Cycle Workspaces
-win + shift + tab       : komorebic cycle-workspace previous
-win + tab               : komorebic cycle-workspace next
-win + ctrl + shift + tab: komorebic cycle-move-to-workspace previous
-win + ctrl + tab        : komorebic cycle-move-to-workspace next
+#win + shift + tab       : komorebic cycle-workspace previous
+#win + tab               : komorebic cycle-workspace next
+#win + ctrl + shift + tab: komorebic cycle-move-to-workspace previous
+#win + ctrl + tab        : komorebic cycle-move-to-workspace next
+
+# Cycle Workspaces
+alt + a                 : komorebic cycle-workspace previous
+alt + d                 : komorebic cycle-workspace next
+alt + shift + a         : komorebic cycle-move-to-workspace previous
+alt + shift + d         : komorebic cycle-move-to-workspace next
 
 # Move windows across workspaces
 win + shift + 1         : komorebic move-to-workspace 0
