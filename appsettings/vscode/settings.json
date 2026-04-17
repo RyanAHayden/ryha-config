@@ -120,8 +120,15 @@
         { "before": ["<leader>", "<tab>", "]"], "commands": ["workbench.action.nextEditor"] },
         { "before": ["<leader>", "<tab>", "["], "commands": ["workbench.action.previousEditor"] },
         { "before": ["<leader>", "<tab>", "d"], "commands": ["workbench.action.closeActiveEditor"] },
-        { "before": ["<leader>", "<tab>", "o"], "commands": ["workbench.action.closeOtherEditors"] }
-    ],
+        { "before": ["<leader>", "<tab>", "o"], "commands": ["workbench.action.closeOtherEditors"] },
+        // Custom leader binds
+        { "before": ["<leader>", "<leader>"], "commands": ["workbench.action.quickOpen"] },
+        { "before": ["<leader>", "f", "f"], "commands": ["workbench.action.findInFiles"] },
+        { "before": ["<leader>", "a", "f"], "commands": ["workbench.action.chat.toggle"] },
+        { "before": ["<leader>", "E"], "commands": ["workbench.view.explorer"] },
+        { "before": ["<leader>", "e"], "commands": ["workbench.action.toggleSidebarVisibility"] },
+        { "before": ["<leader>", "g", "g"], "commands": ["workbench.view.scm"] }
+],
     "vim.leader": "<space>",
     "vim.handleKeys": {
         //"<C-tab>": false,
