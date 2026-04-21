@@ -10,6 +10,16 @@
 { "key": "ctrl+h", "command": "workbench.action.focusPreviousPart", "when": "editorTextFocus && activeEditorGroupIndex == 1" },
 { "key": "ctrl+h", "command": "workbench.action.focusPreviousPart", "when": "!editorTextFocus" },
 
+// Ctrl+J: move down through splits, then to next UI part at the edge
+{ "key": "ctrl+j", "command": "workbench.action.focusBelowGroup", "when": "editorTextFocus && !activeEditorGroupLast" },
+{ "key": "ctrl+j", "command": "workbench.action.focusNextPart", "when": "editorTextFocus && activeEditorGroupLast" },
+{ "key": "ctrl+j", "command": "workbench.action.focusNextPart", "when": "!editorTextFocus" },
+
+// Ctrl+K: move up through splits, then to previous UI part at the edge
+{ "key": "ctrl+k", "command": "workbench.action.focusAboveGroup", "when": "editorTextFocus && activeEditorGroupIndex != 1" },
+{ "key": "ctrl+k", "command": "workbench.action.focusPreviousPart", "when": "editorTextFocus && activeEditorGroupIndex == 1" },
+{ "key": "ctrl+k", "command": "workbench.action.focusPreviousPart", "when": "!editorTextFocus" },
+
     {
         "key": "ctrl+h",
         "command": "workbench.action.focusPreviousPart",
