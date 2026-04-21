@@ -1,0 +1,115 @@
+" .ideavimrc is a configuration file for IdeaVim plugin.
+
+
+" ---------- Core behavior ----------
+set scrolloff=5
+set incsearch
+set hlsearch
+set relativenumber
+set clipboard+=unnamedplus
+
+" Keep Q for formatting, as in your current config.
+map Q gq
+
+" ---------- Plugins ----------
+Plug 'machakann/vim-highlightedyank'
+Plug 'tpope/vim-commentary'
+
+" ---------- Leader ----------
+" Define leader early and neutralize Space default behavior so leader combos work reliably.
+let mapleader=" "
+let maplocalleader=" "
+nnoremap <Space> <Nop>
+xnoremap <Space> <Nop>
+
+" ---------- Insert/visual parity from VS Code Vim ----------
+inoremap jj <Esc>
+inoremap <A-j> <Esc>:action MoveLineDown<CR>
+inoremap <A-k> <Esc>:action MoveLineUp<CR>
+
+xnoremap <A-j> :m '>+1<CR>gv=gv
+xnoremap <A-k> :m '<-2<CR>gv=gv
+xnoremap < <gv
+xnoremap > >gv
+xnoremap <leader>cf :action ReformatCode<CR>
+
+" ---------- Normal mode parity ----------
+" VS Code: s -> /
+nnoremap s /
+" VS Code: <leader>d -> dd
+nnoremap <leader>d dd
+" VS Code: <C-n> clears search highlight
+nnoremap <C-n> :noh<CR>
+" VS Code lineBreakInsert equivalent
+nnoremap K i<CR><Esc>
+
+ " Move lines
+nnoremap <A-j> :action MoveLineDown<CR>
+nnoremap <A-k> :action MoveLineUp<CR>
+
+" Window/split navigation
+nnoremap <leader>h <C-w>h
+nnoremap <leader>l <C-w>l
+" Use Ctrl+h/l for IDE focus movement (Project <-> Editor) instead of split-only movement.
+noremap <C-h> :action ActivateProjectToolWindow<CR>
+noremap <C-l> :action ActivateGitHubCopilotChatToolWindow<CR>
+
+" Buffer/editor navigation
+nnoremap <S-h> :action PreviousTab<CR>
+nnoremap <S-l> :action NextTab<CR>
+nnoremap [b :action PreviousTab<CR>
+nnoremap ]b :action NextTab<CR>
+
+" Buffers/editors management
+nnoremap <leader>bb :action Switcher<CR>
+nnoremap <leader>` :action Switcher<CR>
+nnoremap <leader>bd :action CloseContent<CR>
+nnoremap <leader>bD :action CloseContent<CR>
+nnoremap <leader>bo :action CloseAllEditorsButActive<CR>
+nnoremap <leader>qq :action CloseAllEditors<CR>
+
+
+" File actions
+nnoremap <leader>fn :action NewFile<CR>
+nnoremap <leader><leader> :action GotoFile<CR>
+nnoremap <leader>ff :action FindInPath<CR>
+
+" Diagnostics / references / hover
+nnoremap <leader>gr :action ShowUsages<CR>
+nnoremap [q :action GotoPreviousError<CR>
+nnoremap ]q :action GotoNextError<CR>
+nnoremap [d :action GotoPreviousError<CR>
+nnoremap ]d :action GotoNextError<CR>
+nnoremap [e :action GotoPreviousError<CR>
+nnoremap ]e :action GotoNextError<CR>
+nnoremap [w :action GotoPreviousError<CR>
+nnoremap ]w :action GotoNextError<CR>
+nnoremap <leader>cd :action QuickJavaDoc<CR>
+
+" Format
+nnoremap <leader>cf :action ReformatCode<CR>
+nnoremap <A-f> :action ReformatCode<CR>
+
+" Split management (VS Code: <leader>-, <leader>|, <leader>wd)
+noremap <leader>- :split<CR>
+noremap <leader>| :vsplit<CR>
+noremap <leader>wd <C-w>c
+
+" Tabs group-like navigation
+nnoremap <leader><Tab>] :action NextTab<CR>
+nnoremap <leader><Tab>[ :action PreviousTab<CR>
+nnoremap <leader><Tab>l :action LastTab<CR>
+nnoremap <leader><Tab>f :action FirstTab<CR>
+nnoremap <leader><Tab><Tab> :action NewFile<CR>
+nnoremap <leader><Tab>d :action CloseContent<CR>
+nnoremap <leader><Tab>o :action CloseAllEditorsButActive<CR>
+
+" Tool windows
+nnoremap <leader>E :action ActivateProjectToolWindow<CR>
+nnoremap <leader>e :action HideAllWindows<CR>
+
+" VCS view (closest IntelliJ equivalent to VS Code SCM)
+nnoremap <leader>gg :action ActivateCommitToolWindow<CR>
+
+" Note: VS Code chat toggle (<leader>af) has no direct IntelliJ equivalent.
+nnoremap <leader>af :action ActivateGitHubCopilotChatToolWindow<CR>
