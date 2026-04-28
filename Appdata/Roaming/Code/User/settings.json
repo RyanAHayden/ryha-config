@@ -86,6 +86,7 @@
         // Window navigation (<C-h/l>, [b/]b, <leader>b...)
         { "before": ["<C-h>"], "commands": ["workbench.action.focusPreviousPart"] },
         { "before": ["<C-l>"], "commands": ["workbench.action.focusNextPart"] },
+        { "before": ["<C-/>"], "commands": ["workbench.action.focusTerminal"] },
 
         { "before": ["<leader>", "b", "b"], "commands": ["workbench.action.openPreviousRecentlyUsedEditorInGroup"] },
         { "before": ["<leader>", "`"], "commands": ["workbench.action.openPreviousRecentlyUsedEditorInGroup"] },
@@ -121,6 +122,14 @@
         { "before": ["<leader>", "<tab>", "["], "commands": ["workbench.action.previousEditor"] },
         { "before": ["<leader>", "<tab>", "d"], "commands": ["workbench.action.closeActiveEditor"] },
         { "before": ["<leader>", "<tab>", "o"], "commands": ["workbench.action.closeOtherEditors"] },
+        // folding (z...)
+        { "before": ["z", "o"], "commands": ["editor.unfold"] },
+        { "before": ["z", "c"], "commands": ["editor.fold"] },
+        { "before": ["z", "a"], "commands": ["editor.toggleFold"] },
+        { "before": ["z", "R"], "commands": ["editor.unfoldAll"] },
+        { "before": ["z", "M"], "commands": ["editor.foldAll"] },
+        { "before": ["z", "j"], "commands": ["editor.gotoNextFold"] },
+        { "before": ["z", "k"], "commands": ["editor.gotoPreviousFold"] },
         // Custom leader binds
         { "before": ["<leader>", "<leader>"], "commands": ["workbench.action.quickOpen"] },
         { "before": ["<leader>", "f", "f"], "commands": ["workbench.action.findInFiles"] },
@@ -128,24 +137,34 @@
         { "before": ["<leader>", "E"], "commands": ["workbench.view.explorer"] },
         { "before": ["<leader>", "e"], "commands": ["workbench.action.toggleSidebarVisibility"] },
         { "before": ["<leader>", "g", "g"], "commands": ["workbench.view.scm"] },
-        { "before": ["<leader>", "x", "x"], "commands": ["workbench.action.problems.focus"] }
+        { "before": ["<leader>", "x", "x"], "commands": ["workbench.action.problems.focus"] },
+        { "before": ["<leader>", "c", "r"], "commands": ["editor.action.rename"] },
+        { "before": ["enter"], "commands": ["editor.action.inlineSuggest.commit"] },
+        { "before": ["tab"], "commands": ["editor.action.inlineSuggest.commit"] }
+
 ],
     "vim.leader": "<space>",
     "vim.handleKeys": {
         //"<C-tab>": false,
         //"<C-S-tab>": false,
         "<C-d>": true,
-        "<C-b>": false,
-        "<C-p>": false,
-        "<C-w>": false,
-        "<C-a>": false,
-        "<C-f>": false,
-        "<C-s>": false
+        "<C-/>": true,
+        "tab": false,
+        // "<C-b>": false,
+        // "<C-p>": false,
+        // "<C-w>": false,
+        // "<C-a>": false,
+        // "<C-f>": false,
+        // "<C-s>": false
     },
     // To improve performance
     "extensions.experimental.affinity": {
         "vscodevim.vim": 1
     },
     "editor.minimap.enabled": false,
-    "java.debug.settings.showHex": false
+    "java.debug.settings.showHex": false,
+    "explorer.confirmDragAndDrop": false,
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
