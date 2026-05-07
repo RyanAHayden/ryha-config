@@ -65,6 +65,8 @@
     ],
     "vim.normalModeKeyBindingsNonRecursive": [
         { "before": ["<leader>", "g", "r"], "commands": ["editor.action.goToReferences"] },
+        { "before": ["g", "%"], "commands": ["editor.emmet.action.matchTag"] },
+        { "before": ["%"], "commands": ["editor.action.jumpToBracket"] },
         // original
         { "before": ["s"], "after": ["/"] },
         { "before": ["<leader>", "d"], "after": ["d", "d"] },
@@ -166,5 +168,15 @@
     "explorer.confirmDragAndDrop": false,
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+    "workbench.activityBar.compact": true,
+    "workbench.activityBar.location": "bottom",
+    "workbench.tips.enabled": false,
+    "editor.fontFamily": "JetBrainsMono NFM, monospaced",
+    "editor.fontSize": 12,
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "debug.breakpointsView.presentation": "tree"
 }
