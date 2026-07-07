@@ -1,20 +1,20 @@
 {
   "app_specific_configuration_path": "$Env:USERPROFILE/applications.json",
-  "mouse_follows_focus": false,
+  "mouse_follows_focus": true,
   "cross_monitor_move_behaviour": "Insert",
   "global_work_area_offset": {
-    "bottom": 2,
-    "left": 2,
-    "right": 2,
-    "top": 2
+    "bottom": 0,
+    "left": 0,
+    "right": 0,
+    "top": 0
   },
-  "default_workspace_padding": 9,
-  "default_container_padding": 9,
+  "default_workspace_padding": 3,
+  "default_container_padding": 3,
   "border": true,
   "border_width": 3,
   "border_offset": -1,
-  "transparency": true,
-  "transparency_alpha": 220,
+  "transparency": false,
+  "transparency_alpha": 230,
   "animation": {
     "enabled": false,
     "fps": 144,
@@ -36,19 +36,7 @@
       "workspaces": [
         {
           "name": "1",
-          "layout": "BSP",
-          "initial_workspace_rules": [
-            {
-              "id": "Spotify.exe",
-              "kind": "Exe",
-              "matching_strategy": "Equals"
-            },
-            {
-              "id": "Discord.exe",
-              "kind": "Exe",
-              "matching_strategy": "Equals"
-            }
-          ]
+          "layout": "BSP"
         },
         {
           "name": "2",

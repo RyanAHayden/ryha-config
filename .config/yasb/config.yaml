@@ -13,7 +13,7 @@ bars:
     class_name: "yasb-bar"
     alignment:
       position: "bottom"
-      center: false
+      center: true
     blur_effect:
       enabled: false
       acrylic: true
@@ -22,18 +22,18 @@ bars:
       round_corners_type: "normal"
     window_flags:
       always_on_top: true
-      windows_app_bar: false
+      windows_app_bar: true
       hide_on_fullscreen: true
     dimensions:
-      width: "100%"
+      width: "50%"
       height: 28
     padding:
       top: 0
-      left: 5
-      bottom: 25
+      left: 0
+      bottom: 0
       right: 0
     widgets:
-      left:
+      center:
       - "komorebi_active_layout"
       - "komorebi_workspaces"
       - "active_window"
