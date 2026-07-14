@@ -8,8 +8,8 @@
     "right": 0,
     "top": 0
   },
-  "default_workspace_padding": 3,
-  "default_container_padding": 3,
+  "default_workspace_padding": 2,
+  "default_container_padding": 6,
   "border": true,
   "border_width": 3,
   "border_offset": -1,
