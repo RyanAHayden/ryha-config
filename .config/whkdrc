@@ -1,8 +1,8 @@
 .shell powershell
 
 # Reload app configuration
-win + o                 : taskkill /f /im whkd.exe; ; wscript //B "D:\repos\ryha-config\.config\launch-whkd-hidden.vbs"
-win + shift + o         : komorebic stop; komorebic start --masir; wscript //B "D:\repos\ryha-config\.config\launch-whkd-hidden.vbs"
+win + o                 : taskkill /f /im whkd.exe; ; wscript //B "launch-whkd-hidden.vbs"
+win + shift + o         : komorebic stop; komorebic start --masir; wscript //B "launch-whkd-hidden.vbs"
 win + shift + y         : taskkill /f /im yasb.exe; ; start yasb.exe
 
 # Launch apps

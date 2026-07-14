@@ -54,6 +54,14 @@ if exist "%SOURCE_DIR%AltSnap.ini" (
     echo AltSnap.ini not found
 )
 
+REM Copy launch-whkd-hidden.vbs file
+if exist "%SOURCE_DIR%launch-whkd-hidden.vbs" (
+    copy "%SOURCE_DIR%launch-whkd-hidden.vbs" "%DEST_DIR%launch-whkd-hidden.vbs" /Y
+    echo WHKD Launcher copied successfully
+) else (
+    echo WHKD Launcher not found
+)
+
 @REM REM Copy start_apps.bat to shell:startup
 @REM if exist "%SOURCE_DIR%start_apps.bat" (
 @REM     xcopy "%SOURCE_DIR%start_apps.bat" "%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\" /Y
