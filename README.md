@@ -1,19 +1,11 @@
 # ryha-config
 This is My Windows Config For Theming &amp; Applications. <br>
 Mostly for personal reasons but feel free to mess around with the configs.
-<br>
-<br>
-![screenshot of windows setup](README_Assets/preview.png)
-<br>
 
 ## Replace the theme colors with your own:
 1. In CHANGE_COLORS.md Select each color code
 2. Replace all instances in your theme files
 3. Run task copy to user folder
-4. Apply the theme to Flow Launcher using:
-   ```
-   fltheme ryha
-   ```
 ![showing how to change colors](README_Assets/ChangeColors.png)
 # Install
 
@@ -25,20 +17,24 @@ winget install --id DEVCOM.JetBrainsMonoNerdFont
 ```
 winget install -e --id LGUG2Z.komorebi
 ```
-Enable autostart: `komorebi enable-autostart --whkd --masir`
+
+Enable autostart: `komorebic enable-autostart --whkd --masir`
 
 ## < [YASB](https://docs.yasb.dev/latest/installation) >
 ```
 winget install --id AmN.yasb
 ```
+
 ## < [masir](https://github.com/LGUG2Z/masir) >
 ```
 winget install --id LGUG2Z.masir
 ```
+
 ## < [AltSnap](https://github.com/RamonUnch/AltSnap) >
 ```
 winget install AltSnap.AltSnap
 ```
+
 ### Config:
 Use included AltSnap.ini (Copied in `copy_to_user_folder.bat`)
 
@@ -46,46 +42,19 @@ Use included AltSnap.ini (Copied in `copy_to_user_folder.bat`)
 ```
 winget install windhawk
 ```
+
 ### Mods
 listed in /Windhawk/userprofile.json
 - `windows-11-start-menu-styler` (SideBySideMinimal)
 - `taskbar-icon-size` - Height: `28` - Icon: `20` - Width: `28`
-- `taskbar-notification-icon-spacing` - Width: `24`
-- `taskbar-tray-system-icon-tweaks` - Hide: `Volume`
 - `windows-11-taskbar-styler` - SimplyTransparent
   
 <img src="README_Assets/sidebyside.png" alt="windows start menu" width="200" />
-
-## < [Flow Launcher](https://github.com/Flow-Launcher/Flow.Launcher) >
-```
-winget install "Flow Launcher"
-```
-### Settings & Theme
-Copy `/FlowLauncher` to
-`C:\Users\{user}\AppData\Roaming`
-Apply `ryha` using `fltheme ryha`
-
-### Plugins
-- Steam Search `by Garulf`
-- Visual Studio Code Workspaces `by ricardosantos9521, MaskedRPGFan`
-- FlowYoutube `by Garulf`
-
-### Plugin Settings
-Set explorer shortcuts like these:
-
-<img src="README_Assets/example_quicklaunch.png" alt="example" width="400" />
 
 # Recommended
 ## < [Zen Browser](https://zen-browser.app/) >
 ### Settings
 - Compact Hides Sidebar and Top Toolbar
-## < [EarTrumpet](https://eartrumpet.app/) >
-```
-winget install File-New-Project.EarTrumpet
-```
-
-### Settings
-Open Taskbar flyout: `Ctrl+Shift+Alt+S`
 
 ## < [TwinkleTray](https://twinkletray.com/) >
 ```
@@ -93,5 +62,3 @@ winget install xanderfrangos.twinkletray
 ```
 
 ---
-# Credits
-[Process Killer](https://github.com/bmrf/tron/tree/master/resources/stage_0_prep/processkiller) from [Tron](https://github.com/bmrf/tron)
