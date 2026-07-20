@@ -1,10 +1,6 @@
 # ryha-config
 This is My Windows Config For Theming &amp; Applications. <br>
 Mostly for personal reasons but feel free to mess around with the configs.
-<br>
-<br>
-![screenshot of windows setup](README_Assets/preview.png)
-<br>
 
 ## Replace the theme colors with your own:
 1. In CHANGE_COLORS.md Select each color code
@@ -25,20 +21,23 @@ winget install --id DEVCOM.JetBrainsMonoNerdFont
 ```
 winget install -e --id LGUG2Z.komorebi
 ```
-Enable autostart: `komorebi enable-autostart --whkd --masir`
+Enable autostart: `komorebic enable-autostart --whkd --masir`
 
 ## < [YASB](https://docs.yasb.dev/latest/installation) >
 ```
 winget install --id AmN.yasb
 ```
+
 ## < [masir](https://github.com/LGUG2Z/masir) >
 ```
 winget install --id LGUG2Z.masir
 ```
+
 ## < [AltSnap](https://github.com/RamonUnch/AltSnap) >
 ```
 winget install AltSnap.AltSnap
 ```
+
 ### Config:
 Use included AltSnap.ini (Copied in `copy_to_user_folder.bat`)
 
@@ -46,12 +45,11 @@ Use included AltSnap.ini (Copied in `copy_to_user_folder.bat`)
 ```
 winget install windhawk
 ```
+
 ### Mods
 listed in /Windhawk/userprofile.json
 - `windows-11-start-menu-styler` (SideBySideMinimal)
 - `taskbar-icon-size` - Height: `28` - Icon: `20` - Width: `28`
-- `taskbar-notification-icon-spacing` - Width: `24`
-- `taskbar-tray-system-icon-tweaks` - Hide: `Volume`
 - `windows-11-taskbar-styler` - SimplyTransparent
   
 <img src="README_Assets/sidebyside.png" alt="windows start menu" width="200" />
@@ -79,13 +77,6 @@ Set explorer shortcuts like these:
 ## < [Zen Browser](https://zen-browser.app/) >
 ### Settings
 - Compact Hides Sidebar and Top Toolbar
-## < [EarTrumpet](https://eartrumpet.app/) >
-```
-winget install File-New-Project.EarTrumpet
-```
-
-### Settings
-Open Taskbar flyout: `Ctrl+Shift+Alt+S`
 
 ## < [TwinkleTray](https://twinkletray.com/) >
 ```
@@ -93,5 +84,3 @@ winget install xanderfrangos.twinkletray
 ```
 
 ---
-# Credits
-[Process Killer](https://github.com/bmrf/tron/tree/master/resources/stage_0_prep/processkiller) from [Tron](https://github.com/bmrf/tron)
