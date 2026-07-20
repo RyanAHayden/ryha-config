@@ -23,7 +23,9 @@ if exist "%SOURCE_DIR%\komorebi.json" (
 REM Copy FlowLauncher settings file and Themes folder
 if exist "%SOURCE_DIR%\AppData\Roaming\FlowLauncher" (
     if not exist "%DEST_DIR%FlowLauncher\Settings" mkdir "%DEST_DIR%FlowLauncher\Settings"
+    if not exist "%DEST_DIR%FlowLauncher\Settings\Plugins" mkdir "%DEST_DIR%FlowLauncher\Settings\Plugins"
     if not exist "%DEST_DIR%FlowLauncher\Themes" mkdir "%DEST_DIR%FlowLauncher\Themes"
+    if not exist "%DEST_DIR%FlowLauncher\Plugins" mkdir "%DEST_DIR%FlowLauncher\Plugins"
 
     if exist "%SOURCE_DIR%\AppData\Roaming\FlowLauncher\Settings\Settings.json" (
         copy "%SOURCE_DIR%\AppData\Roaming\FlowLauncher\Settings\Settings.json" "%DEST_DIR%FlowLauncher\Settings\Settings.json" /Y
@@ -37,6 +39,20 @@ if exist "%SOURCE_DIR%\AppData\Roaming\FlowLauncher" (
         echo FlowLauncher Themes copied successfully
     ) else (
         echo FlowLauncher Themes folder not found
+    )
+
+    if exist "%SOURCE_DIR%\AppData\Roaming\FlowLauncher\Plugins" (
+        xcopy "%SOURCE_DIR%\AppData\Roaming\FlowLauncher\Plugins" "%DEST_DIR%FlowLauncher\Plugins" /E /I /Y
+        echo FlowLauncher Plugins copied successfully
+    ) else (
+        echo FlowLauncher Plugins folder not found
+    )
+
+    if exist "%SOURCE_DIR%\AppData\Roaming\FlowLauncher\Settings\Plugins" (
+        xcopy "%SOURCE_DIR%\AppData\Roaming\FlowLauncher\Settings\Plugins" "%DEST_DIR%FlowLauncher\Settings\Plugins" /E /I /Y
+        echo FlowLauncher plugin settings copied successfully
+    ) else (
+        echo FlowLauncher plugin settings folder not found
     )
 ) else (
     echo FlowLauncher folder not found
