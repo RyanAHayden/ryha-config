@@ -26,6 +26,19 @@
         "panel": "shared"
       },
       "problemMatcher": []
+    },
+    {
+      "label": "Setup priority startup",
+      "type": "shell",
+      "command": "${workspaceFolder}\\copy_priority_startup.bat",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
     }
   ]
 }
