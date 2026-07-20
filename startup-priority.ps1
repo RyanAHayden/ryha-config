@@ -10,8 +10,7 @@ if (Test-Path $komorebic) {
 # Add a new app by adding one line with ExePath + optional Args.
 $StartupApps = @(
     @{ ExePath = "$env:APPDATA\AltSnap\AltSnap.exe";                 Args = '' },
-    @{ ExePath = "$env:ProgramFiles\YASB\yasb.exe";                   Args = '' },
-    @{ ExePath = "$env:LOCALAPPDATA\FlowLauncher\Flow.Launcher.exe"; Args = '--minimized' }
+    @{ ExePath = "$env:ProgramFiles\YASB\yasb.exe";                   Args = '' }
 )
 
 foreach ($app in $StartupApps) {
