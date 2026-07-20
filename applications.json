@@ -4,6 +4,11 @@
     "ignore": [
       {
         "kind": "Exe",
+        "id": "PowerToys",
+        "matching_strategy": "Contains"
+      },
+      {
+        "kind": "Exe",
         "id": "MacroGamer.exe",
         "matching_strategy": "Equals"
       },

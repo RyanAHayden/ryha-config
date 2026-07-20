@@ -26,8 +26,8 @@ win + i                 : komorebic toggle-shortcuts
 win + VK_OEM_3          : komorebic toggle-transparency # Tilda
 
 # Window manager option
-win + f         		: komorebic toggle-monocle
-win + shift + f         : komorebic toggle-maximize
+#win + f         		: komorebic toggle-monocle
+#win + shift + f         : komorebic toggle-maximize
 win + alt + r         	: komorebic retile
 win + t         		: komorebic toggle-float # Float window
 win + y                 : komorebic toggle-tiling # Pause current workspace
