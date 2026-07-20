@@ -28,14 +28,20 @@ if exist "%SOURCE_DIR%launch-priority-startup-hidden.vbs" (
 
     if not exist "%DEST_DIR%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup" mkdir "%DEST_DIR%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
 
-    schtasks /Create /F /SC ONLOGON /RL LIMITED /TN "Ryha Priority Startup" /TR "wscript.exe //B \"%USERPROFILE%\launch-priority-startup-hidden.vbs\"" >nul 2>nul
-    schtasks /Query /TN "Ryha Priority Startup" >nul 2>nul
-    if errorlevel 1 (
+    set TASK_OK=0
+    powershell -NoProfile -ExecutionPolicy Bypass -Command "try { $taskName='Ryha Priority Startup'; $action=New-ScheduledTaskAction -Execute 'wscript.exe' -Argument ('//B ' + [char]34 + $env:USERPROFILE + '\\launch-priority-startup-hidden.vbs' + [char]34); $trigger=New-ScheduledTaskTrigger -AtLogOn -User $env:USERNAME; $settings=New-ScheduledTaskSettingsSet -StartWhenAvailable -DontStopIfGoingOnBatteries; $settings.DisallowStartIfOnBatteries=$false; $principal=New-ScheduledTaskPrincipal -UserId $env:USERNAME -LogonType Interactive -RunLevel Limited; Register-ScheduledTask -TaskName $taskName -Action $action -Trigger $trigger -Settings $settings -Principal $principal -Force -ErrorAction Stop | Out-Null; exit 0 } catch { exit 1 }" >nul 2>nul
+    if not errorlevel 1 (
+        powershell -NoProfile -ExecutionPolicy Bypass -Command "try { $t=Get-ScheduledTask -TaskName 'Ryha Priority Startup' -ErrorAction Stop; if($t.Settings.DisallowStartIfOnBatteries -or $t.Settings.StopIfGoingOnBatteries){ exit 2 } else { exit 0 } } catch { exit 1 }" >nul 2>nul
+        if not errorlevel 1 set TASK_OK=1
+    )
+
+    if "%TASK_OK%"=="0" (
+        schtasks /Delete /TN "Ryha Priority Startup" /F >nul 2>nul
         powershell -NoProfile -ExecutionPolicy Bypass -Command "$ws=New-Object -ComObject WScript.Shell; $lnk=$ws.CreateShortcut('%DEST_DIR%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Priority startup.lnk'); $lnk.TargetPath=$env:SystemRoot + '\\System32\\wscript.exe'; $lnk.Arguments='//B ' + [char]34 + '%DEST_DIR%\launch-priority-startup-hidden.vbs' + [char]34; $lnk.WorkingDirectory='%DEST_DIR%'; $lnk.Description='Ordered startup: komorebi, AltSnap, YASB'; $lnk.Save()"
-        echo Priority scheduled task unavailable. Startup shortcut fallback created.
+        echo Priority scheduled task unavailable or restrictive. Startup shortcut fallback created.
     ) else (
         if exist "%DEST_DIR%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Priority startup.lnk" del /F /Q "%DEST_DIR%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Priority startup.lnk"
-        echo Priority startup scheduled task created
+        echo Priority startup scheduled task created and validated
     )
 ) else (
     echo Priority startup launcher not found
