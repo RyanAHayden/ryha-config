@@ -28,7 +28,7 @@ if exist "%SOURCE_DIR%launch-priority-startup-hidden.vbs" (
 
     if not exist "%DEST_DIR%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup" mkdir "%DEST_DIR%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
 
-    schtasks /Create /F /SC ONLOGON /RL HIGHEST /TN "Ryha Priority Startup" /TR "wscript.exe //B \"%USERPROFILE%\launch-priority-startup-hidden.vbs\"" >nul 2>nul
+    schtasks /Create /F /SC ONLOGON /RL LIMITED /TN "Ryha Priority Startup" /TR "wscript.exe //B \"%USERPROFILE%\launch-priority-startup-hidden.vbs\"" >nul 2>nul
     schtasks /Query /TN "Ryha Priority Startup" >nul 2>nul
     if errorlevel 1 (
         powershell -NoProfile -ExecutionPolicy Bypass -Command "$ws=New-Object -ComObject WScript.Shell; $lnk=$ws.CreateShortcut('%DEST_DIR%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Priority startup.lnk'); $lnk.TargetPath=$env:SystemRoot + '\\System32\\wscript.exe'; $lnk.Arguments='//B ' + [char]34 + '%DEST_DIR%\launch-priority-startup-hidden.vbs' + [char]34; $lnk.WorkingDirectory='%DEST_DIR%'; $lnk.Description='Ordered startup: komorebi, AltSnap, YASB'; $lnk.Save()"
