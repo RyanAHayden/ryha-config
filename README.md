@@ -2,6 +2,8 @@
 This is My Windows Config For Theming &amp; Applications. <br>
 Mostly for personal reasons but feel free to mess around with the configs.
 
+Install what you want manually or use the included `installs.bat`
+
 ## Replace the theme colors with your own:
 1. In CHANGE_COLORS.md Select each color code
 2. Replace all instances in your theme files
