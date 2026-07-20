@@ -103,8 +103,10 @@ if exist "%SOURCE_DIR%applications.json" (
 
 REM Copy AltSnap.ini file
 if exist "%SOURCE_DIR%AltSnap.ini" (
+    copy "%SOURCE_DIR%AltSnap.ini" "%DEST_DIR%\AltSnap.ini" /Y
+    if not exist "%APPDATA%\AltSnap" mkdir "%APPDATA%\AltSnap"
     copy "%SOURCE_DIR%AltSnap.ini" "%APPDATA%\AltSnap\AltSnap.ini" /Y
-    echo AltSnap.ini copied successfully
+    echo AltSnap.ini copied successfully to user folder and AppData
 ) else (
     echo AltSnap.ini not found
 )
@@ -121,16 +123,25 @@ if exist "%SOURCE_DIR%launch-whkd-hidden.vbs" (
     echo WHKD Launcher not found
 )
 
-REM Copy launch-komorebi-hidden.vbs file and create Startup shortcut
-if exist "%SOURCE_DIR%launch-komorebi-hidden.vbs" (
-    copy "%SOURCE_DIR%launch-komorebi-hidden.vbs" "%DEST_DIR%\launch-komorebi-hidden.vbs" /Y
-    echo Komorebi launcher copied successfully
+REM Copy priority startup scripts and create Startup shortcut
+if exist "%SOURCE_DIR%startup-priority.ps1" (
+    copy "%SOURCE_DIR%startup-priority.ps1" "%DEST_DIR%\startup-priority.ps1" /Y
+    echo Priority startup script copied successfully
+) else (
+    echo Priority startup script not found
+)
+
+if exist "%SOURCE_DIR%launch-priority-startup-hidden.vbs" (
+    copy "%SOURCE_DIR%launch-priority-startup-hidden.vbs" "%DEST_DIR%\launch-priority-startup-hidden.vbs" /Y
+    echo Priority startup launcher copied successfully
 
     if not exist "%DEST_DIR%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup" mkdir "%DEST_DIR%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
-    powershell -NoProfile -ExecutionPolicy Bypass -Command "$ws=New-Object -ComObject WScript.Shell; $lnk=$ws.CreateShortcut('%DEST_DIR%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Launch komorebi.lnk'); $lnk.TargetPath=$env:SystemRoot + '\\System32\\wscript.exe'; $lnk.Arguments='//B ' + [char]34 + '%DEST_DIR%\launch-komorebi-hidden.vbs' + [char]34; $lnk.WorkingDirectory='%DEST_DIR%'; $lnk.Description='Launch komorebi quickly with --masir --whkd'; $lnk.Save()"
-    echo Komorebi Startup shortcut created
+    if exist "%DEST_DIR%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Launch komorebi.lnk" del /F /Q "%DEST_DIR%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Launch komorebi.lnk"
+
+    powershell -NoProfile -ExecutionPolicy Bypass -Command "$ws=New-Object -ComObject WScript.Shell; $lnk=$ws.CreateShortcut('%DEST_DIR%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Priority startup.lnk'); $lnk.TargetPath=$env:SystemRoot + '\\System32\\wscript.exe'; $lnk.Arguments='//B ' + [char]34 + '%DEST_DIR%\launch-priority-startup-hidden.vbs' + [char]34; $lnk.WorkingDirectory='%DEST_DIR%'; $lnk.Description='Ordered startup: komorebi, AltSnap, YASB'; $lnk.Save()"
+    echo Priority Startup shortcut created
 ) else (
-    echo Komorebi launcher not found
+    echo Priority startup launcher not found
 )
 
 @REM REM Copy start_apps.bat to shell:startup

@@ -93,9 +93,12 @@ if exist "%SOURCE_DIR%\applications.json" (
 )
 
 REM Copy AltSnap.ini file
-if exist "%APPDATA%\AltSnap\AltSnap.ini" (
+if exist "%SOURCE_DIR%\AltSnap.ini" (
+    copy "%SOURCE_DIR%\AltSnap.ini" "%DEST_DIR%\AltSnap.ini" /Y
+    echo AltSnap.ini copied successfully from user folder
+) else if exist "%APPDATA%\AltSnap\AltSnap.ini" (
     copy "%APPDATA%\AltSnap\AltSnap.ini" "%DEST_DIR%\AltSnap.ini" /Y
-    echo AltSnap.ini copied successfully
+    echo AltSnap.ini copied successfully from AppData
 ) else (
     echo AltSnap.ini not found
 )
