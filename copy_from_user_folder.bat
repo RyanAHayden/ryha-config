@@ -4,14 +4,6 @@ REM Copy .config folder, komorebi.json, and FlowLauncher from user directory bac
 set SOURCE_DIR=C:\Users\%USERNAME%
 set DEST_DIR=%~dp0
 
-REM Copy Process Killer Whitelist
-if exist "%SOURCE_DIR%\ProcessKiller\whitelist.txt" (
-    xcopy "%SOURCE_DIR%\ProcessKiller\whitelist.txt" "%DEST_DIR%\ProcessKiller" /E /I /Y
-    echo Process Killer Whitelist copied successfully
-) else (
-    echo Process Killer Whitelist not found
-)
-
 REM Copy .config folder
 if exist "%SOURCE_DIR%\.config" (
     xcopy "%SOURCE_DIR%\.config" "%DEST_DIR%.config" /E /I /Y
@@ -28,13 +20,52 @@ if exist "%SOURCE_DIR%\komorebi.json" (
     echo komorebi.json not found
 )
 
-REM Copy FlowLauncher folder
+REM Copy FlowLauncher settings file and Themes folder
 if exist "%SOURCE_DIR%\AppData\Roaming\FlowLauncher" (
-    xcopy "%SOURCE_DIR%\AppData\Roaming\FlowLauncher/Settings/Settings.json" "%DEST_DIR%FlowLauncher/Settings/Settings.json" /E /I /Y
-    xcopy "%SOURCE_DIR%\AppData\Roaming\FlowLauncher/Themes" "%DEST_DIR%FlowLauncher/Themes" /E /I /Y
-    echo FlowLauncher folder copied successfully
+    if not exist "%DEST_DIR%FlowLauncher\Settings" mkdir "%DEST_DIR%FlowLauncher\Settings"
+    if not exist "%DEST_DIR%FlowLauncher\Themes" mkdir "%DEST_DIR%FlowLauncher\Themes"
+
+    if exist "%SOURCE_DIR%\AppData\Roaming\FlowLauncher\Settings\Settings.json" (
+        copy "%SOURCE_DIR%\AppData\Roaming\FlowLauncher\Settings\Settings.json" "%DEST_DIR%FlowLauncher\Settings\Settings.json" /Y
+        echo FlowLauncher Settings.json copied successfully
+    ) else (
+        echo FlowLauncher Settings.json not found
+    )
+
+    if exist "%SOURCE_DIR%\AppData\Roaming\FlowLauncher\Themes" (
+        xcopy "%SOURCE_DIR%\AppData\Roaming\FlowLauncher\Themes" "%DEST_DIR%FlowLauncher\Themes" /E /I /Y
+        echo FlowLauncher Themes copied successfully
+    ) else (
+        echo FlowLauncher Themes folder not found
+    )
 ) else (
     echo FlowLauncher folder not found
+)
+
+REM Copy PowerToys plugin state and Keyboard Manager preferences
+if exist "%SOURCE_DIR%\AppData\Local\Microsoft\PowerToys" (
+    if not exist "%DEST_DIR%PowerToys" mkdir "%DEST_DIR%PowerToys"
+    if not exist "%DEST_DIR%PowerToys\Keyboard Manager" mkdir "%DEST_DIR%PowerToys\Keyboard Manager"
+
+    if exist "%SOURCE_DIR%\AppData\Local\Microsoft\PowerToys\settings.json" (
+        copy "%SOURCE_DIR%\AppData\Local\Microsoft\PowerToys\settings.json" "%DEST_DIR%PowerToys\settings.json" /Y
+        echo PowerToys settings.json copied successfully
+    ) else (
+        echo PowerToys settings.json not found
+    )
+
+    if exist "%SOURCE_DIR%\AppData\Local\Microsoft\PowerToys\Keyboard Manager\default.json" (
+        copy "%SOURCE_DIR%\AppData\Local\Microsoft\PowerToys\Keyboard Manager\default.json" "%DEST_DIR%PowerToys\Keyboard Manager\default.json" /Y
+    )
+    if exist "%SOURCE_DIR%\AppData\Local\Microsoft\PowerToys\Keyboard Manager\editorSettings.json" (
+        copy "%SOURCE_DIR%\AppData\Local\Microsoft\PowerToys\Keyboard Manager\editorSettings.json" "%DEST_DIR%PowerToys\Keyboard Manager\editorSettings.json" /Y
+    )
+    if exist "%SOURCE_DIR%\AppData\Local\Microsoft\PowerToys\Keyboard Manager\settings.json" (
+        copy "%SOURCE_DIR%\AppData\Local\Microsoft\PowerToys\Keyboard Manager\settings.json" "%DEST_DIR%PowerToys\Keyboard Manager\settings.json" /Y
+    )
+    echo PowerToys Keyboard Manager preferences copied
+) else (
+    echo PowerToys folder not found
 )
 
 REM Copy applications.json file

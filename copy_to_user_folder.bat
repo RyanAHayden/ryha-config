@@ -29,13 +29,52 @@ if exist "%SOURCE_DIR%komorebi.json" (
     echo komorebi.json not found
 )
 
-REM Copy FlowLauncher folder
+REM Copy FlowLauncher settings file and Themes folder
 if exist "%SOURCE_DIR%FlowLauncher" (
-    xcopy "%SOURCE_DIR%FlowLauncher/Settings/Settings.json" "%DEST_DIR%\AppData\Roaming\FlowLauncher/Settings/Settings.json" /E /I /Y
-    xcopy "%SOURCE_DIR%FlowLauncher/Themes" "%DEST_DIR%\AppData\Roaming\FlowLauncher/Themes" /E /I /Y
-    echo FlowLauncher folder copied successfully
+    if not exist "%DEST_DIR%\AppData\Roaming\FlowLauncher\Settings" mkdir "%DEST_DIR%\AppData\Roaming\FlowLauncher\Settings"
+    if not exist "%DEST_DIR%\AppData\Roaming\FlowLauncher\Themes" mkdir "%DEST_DIR%\AppData\Roaming\FlowLauncher\Themes"
+
+    if exist "%SOURCE_DIR%FlowLauncher\Settings\Settings.json" (
+        copy "%SOURCE_DIR%FlowLauncher\Settings\Settings.json" "%DEST_DIR%\AppData\Roaming\FlowLauncher\Settings\Settings.json" /Y
+        echo FlowLauncher Settings.json copied successfully
+    ) else (
+        echo FlowLauncher Settings.json not found
+    )
+
+    if exist "%SOURCE_DIR%FlowLauncher\Themes" (
+        xcopy "%SOURCE_DIR%FlowLauncher\Themes" "%DEST_DIR%\AppData\Roaming\FlowLauncher\Themes" /E /I /Y
+        echo FlowLauncher Themes copied successfully
+    ) else (
+        echo FlowLauncher Themes folder not found
+    )
 ) else (
     echo FlowLauncher folder not found
+)
+
+REM Copy PowerToys plugin state and Keyboard Manager preferences
+if exist "%SOURCE_DIR%PowerToys" (
+    if not exist "%DEST_DIR%\AppData\Local\Microsoft\PowerToys" mkdir "%DEST_DIR%\AppData\Local\Microsoft\PowerToys"
+    if not exist "%DEST_DIR%\AppData\Local\Microsoft\PowerToys\Keyboard Manager" mkdir "%DEST_DIR%\AppData\Local\Microsoft\PowerToys\Keyboard Manager"
+
+    if exist "%SOURCE_DIR%PowerToys\settings.json" (
+        copy "%SOURCE_DIR%PowerToys\settings.json" "%DEST_DIR%\AppData\Local\Microsoft\PowerToys\settings.json" /Y
+        echo PowerToys settings.json copied successfully
+    ) else (
+        echo PowerToys settings.json not found
+    )
+
+    if exist "%SOURCE_DIR%PowerToys\Keyboard Manager\default.json" (
+        copy "%SOURCE_DIR%PowerToys\Keyboard Manager\default.json" "%DEST_DIR%\AppData\Local\Microsoft\PowerToys\Keyboard Manager\default.json" /Y
+    )
+    if exist "%SOURCE_DIR%PowerToys\Keyboard Manager\editorSettings.json" (
+        copy "%SOURCE_DIR%PowerToys\Keyboard Manager\editorSettings.json" "%DEST_DIR%\AppData\Local\Microsoft\PowerToys\Keyboard Manager\editorSettings.json" /Y
+    )
+    if exist "%SOURCE_DIR%PowerToys\Keyboard Manager\settings.json" (
+        copy "%SOURCE_DIR%PowerToys\Keyboard Manager\settings.json" "%DEST_DIR%\AppData\Local\Microsoft\PowerToys\Keyboard Manager\settings.json" /Y
+    )
+    echo PowerToys Keyboard Manager preferences copied
+) else (
+    echo PowerToys folder not found
 )
 
 REM Copy applications.json file
@@ -56,7 +95,7 @@ if exist "%SOURCE_DIR%AltSnap.ini" (
 
 REM Copy launch-whkd-hidden.vbs file
 if exist "%SOURCE_DIR%launch-whkd-hidden.vbs" (
-    copy "%SOURCE_DIR%launch-whkd-hidden.vbs" "%DEST_DIR%launch-whkd-hidden.vbs" /Y
+    copy "%SOURCE_DIR%launch-whkd-hidden.vbs" "%DEST_DIR%\launch-whkd-hidden.vbs" /Y
     echo WHKD Launcher copied successfully
 ) else (
     echo WHKD Launcher not found

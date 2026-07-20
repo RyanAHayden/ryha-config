@@ -17,5 +17,15 @@
 /FlowLauncher/Plugins
 /FlowLauncher/Settings/*
 !/FlowLauncher/Settings/Settings.json
+
+# PowerToys
+/PowerToys/*
+!/PowerToys/settings.json
+!/PowerToys/Keyboard Manager/
+/PowerToys/Keyboard Manager/*
+!/PowerToys/Keyboard Manager/default.json
+!/PowerToys/Keyboard Manager/editorSettings.json
+!/PowerToys/Keyboard Manager/settings.json
+
 # Backup files
 *.bak
