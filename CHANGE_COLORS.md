@@ -18,3 +18,7 @@ Update these color codes in your theme configuration:
 ## How to Apply
 1. Select each color code above
 2. Replace all instances in your theme files
+3. Apply the theme to Flow Launcher using:
+   ```
+   fltheme ryha
+   ```
