@@ -113,8 +113,24 @@ REM Copy launch-whkd-hidden.vbs file
 if exist "%SOURCE_DIR%launch-whkd-hidden.vbs" (
     copy "%SOURCE_DIR%launch-whkd-hidden.vbs" "%DEST_DIR%\launch-whkd-hidden.vbs" /Y
     echo WHKD Launcher copied successfully
+
+    if not exist "%DEST_DIR%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs" mkdir "%DEST_DIR%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs"
+    powershell -NoProfile -ExecutionPolicy Bypass -Command "$ws=New-Object -ComObject WScript.Shell; $lnk=$ws.CreateShortcut('%DEST_DIR%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Launch whkd.lnk'); $lnk.TargetPath=$env:SystemRoot + '\\System32\\wscript.exe'; $lnk.Arguments='//B ' + [char]34 + '%DEST_DIR%\launch-whkd-hidden.vbs' + [char]34; $lnk.WorkingDirectory='%DEST_DIR%'; $lnk.Description='Launch whkd (hidden, no console window)'; $lnk.Save()"
+    echo WHKD Start Menu shortcut created
 ) else (
     echo WHKD Launcher not found
+)
+
+REM Copy launch-komorebi-hidden.vbs file and create Startup shortcut
+if exist "%SOURCE_DIR%launch-komorebi-hidden.vbs" (
+    copy "%SOURCE_DIR%launch-komorebi-hidden.vbs" "%DEST_DIR%\launch-komorebi-hidden.vbs" /Y
+    echo Komorebi launcher copied successfully
+
+    if not exist "%DEST_DIR%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup" mkdir "%DEST_DIR%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
+    powershell -NoProfile -ExecutionPolicy Bypass -Command "$ws=New-Object -ComObject WScript.Shell; $lnk=$ws.CreateShortcut('%DEST_DIR%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Launch komorebi.lnk'); $lnk.TargetPath=$env:SystemRoot + '\\System32\\wscript.exe'; $lnk.Arguments='//B ' + [char]34 + '%DEST_DIR%\launch-komorebi-hidden.vbs' + [char]34; $lnk.WorkingDirectory='%DEST_DIR%'; $lnk.Description='Launch komorebi quickly with --masir --whkd'; $lnk.Save()"
+    echo Komorebi Startup shortcut created
+) else (
+    echo Komorebi launcher not found
 )
 
 @REM REM Copy start_apps.bat to shell:startup

@@ -10,11 +10,8 @@ win + shift + return	: start zen.exe --blank-window
 win + shift + b     	: start zen.exe
 win + shift + k         : start keepassxc
 win + shift + n         : code
-#win + shift + v         : ~/nvim.lnk
 win + shift + m         : start spotify:
 win + return			: start wt
-# Work apps
-win + numpad0			: start outlook; start shell:appsFolder\MSTeams_8wekyb3d8bbwe!MSTeams;
 
 # Show keybinds
 win + i                 : komorebic toggle-shortcuts
@@ -26,6 +23,7 @@ win + i                 : komorebic toggle-shortcuts
 win + VK_OEM_3          : komorebic toggle-transparency # Tilda
 
 # Window manager option
+# These are done in powertoys remap now
 #win + f         		: komorebic toggle-monocle
 #win + shift + f         : komorebic toggle-maximize
 win + alt + r         	: komorebic retile
@@ -34,12 +32,6 @@ win + y                 : komorebic toggle-tiling # Pause current workspace
 win + p                 : komorebic toggle-pause # Pause all komorebic functions
 win + alt + x           : komorebic manage
 win + shift + x         : komorebic unmanage
-
-# Move windows
-#win + shift + a         : komorebic move left
-#win + shift + s         : komorebic move down
-#win + shift + w         : komorebic move up
-#win + shift + d         : komorebic move right
 
 # Move windows
 shift + alt + h         : komorebic move left
@@ -53,15 +45,9 @@ alt + j          : komorebic focus down
 alt + k          : komorebic focus up
 alt + l          : komorebic focus right
 
-# Focus windows
-#ctrl + win + a          : komorebic focus left
-#ctrl + win + s          : komorebic focus down
-#ctrl + win + w          : komorebic focus up
-#ctrl + win + d          : komorebic focus right
-
 # Move windows between monitors
-win + shift + left       : komorebic cycle-move-to-monitor previous;
-win + shift + right      : komorebic cycle-move-to-monitor next;
+alt + shift + h       : komorebic cycle-move-to-monitor previous;
+alt + shift + l      : komorebic cycle-move-to-monitor next;
 
 # Resize
 win + oem_plus          : komorebic resize-axis horizontal increase
