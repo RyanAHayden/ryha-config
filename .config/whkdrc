@@ -46,8 +46,8 @@ alt + k          : komorebic focus up
 alt + l          : komorebic focus right
 
 # Move windows between monitors
-win + shift + h       : komorebic cycle-move-to-monitor previous;
-win + shift + l      : komorebic cycle-move-to-monitor next;
+win + shift + l       : komorebic cycle-move-to-monitor previous;
+win + shift + h      : komorebic cycle-move-to-monitor next;
 
 # Resize
 win + oem_plus          : komorebic resize-axis horizontal increase
