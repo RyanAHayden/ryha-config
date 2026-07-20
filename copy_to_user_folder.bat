@@ -144,12 +144,4 @@ if exist "%SOURCE_DIR%launch-priority-startup-hidden.vbs" (
     echo Priority startup launcher not found
 )
 
-@REM REM Copy start_apps.bat to shell:startup
-@REM if exist "%SOURCE_DIR%start_apps.bat" (
-@REM     xcopy "%SOURCE_DIR%start_apps.bat" "%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\" /Y
-@REM     echo start_apps.bat copied to shell:startup successfully
-@REM ) else (
-@REM     echo start_apps.bat not found
-@REM )
-
 echo Done.
