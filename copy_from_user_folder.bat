@@ -92,6 +92,14 @@ if exist "%SOURCE_DIR%\applications.json" (
     echo applications.json not found
 )
 
+REM Copy GlazeWM configuration
+if exist "%SOURCE_DIR%\.glzr" (
+    xcopy "%SOURCE_DIR%\.glzr" "%DEST_DIR%.glzr" /E /I /Y
+    echo GlazeWM configuration copied successfully
+) else (
+    echo GlazeWM folder not found
+)
+
 REM Copy AltSnap.ini file
 if exist "%SOURCE_DIR%\AltSnap.ini" (
     copy "%SOURCE_DIR%\AltSnap.ini" "%DEST_DIR%\AltSnap.ini" /Y

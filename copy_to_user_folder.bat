@@ -1,17 +1,8 @@
 @echo off
-REM Copy .config folder, komorebi.json, and FlowLauncher to user directory
+REM Copy .config folder and FlowLauncher to user directory
 
 set SOURCE_DIR=%~dp0
 set DEST_DIR=C:\Users\%USERNAME%
-
-REM Copy Process Killer Whitelist
-if exist "%SOURCE_DIR%\ProcessKiller" (
-    xcopy "%SOURCE_DIR%\ProcessKiller" "%DEST_DIR%\ProcessKiller" /E /I /Y
-    echo Process Killer copied successfully
-) else (
-    echo Process Killer not found
-)
-
 
 REM Copy .config folder
 if exist "%SOURCE_DIR%.config" (
@@ -21,13 +12,6 @@ if exist "%SOURCE_DIR%.config" (
     echo .config folder not found
 )
 
-REM Copy komorebi.json file
-if exist "%SOURCE_DIR%komorebi.json" (
-    copy "%SOURCE_DIR%komorebi.json" "%DEST_DIR%\komorebi.json" /Y
-    echo komorebi.json copied successfully
-) else (
-    echo komorebi.json not found
-)
 
 REM Copy FlowLauncher settings file and Themes folder
 if exist "%SOURCE_DIR%FlowLauncher" (
@@ -93,12 +77,12 @@ if exist "%SOURCE_DIR%PowerToys" (
     echo PowerToys folder not found
 )
 
-REM Copy applications.json file
-if exist "%SOURCE_DIR%applications.json" (
-    copy "%SOURCE_DIR%applications.json" "%DEST_DIR%\applications.json" /Y
-    echo applications.json copied successfully
+REM Copy GlazeWM configuration
+if exist "%SOURCE_DIR%.glzr" (
+    xcopy "%SOURCE_DIR%.glzr" "%DEST_DIR%.glzr" /E /I /Y
+    echo GlazeWM configuration copied successfully
 ) else (
-    echo applications.json not found
+    echo GlazeWM folder not found
 )
 
 REM Copy AltSnap.ini file
