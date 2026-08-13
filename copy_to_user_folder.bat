@@ -79,7 +79,7 @@ if exist "%SOURCE_DIR%PowerToys" (
 
 REM Copy GlazeWM configuration
 if exist "%SOURCE_DIR%.glzr" (
-    xcopy "%SOURCE_DIR%.glzr" "%DEST_DIR%.glzr" /E /I /Y
+    xcopy "%SOURCE_DIR%.glzr" "%DEST_DIR%\.glzr" /E /I /Y
     echo GlazeWM configuration copied successfully
 ) else (
     echo GlazeWM folder not found
