@@ -121,28 +121,17 @@ window_behavior:
       shown_on_top: false
 
 workspaces:
-  - name: '1'
-
-  - name: '2'
-
-  - name: '3'
-
-  - name: '4'
-
-  - name: '5'
-
-  - name: '6'
-
-  - name: '7'
-
-  - name: '8'
-
-  - name: '9'
-
-  - name: '0'
-
   - name: 'S'
-
+  - name: '1'
+  - name: '2'
+  - name: '3'
+  - name: '4'
+  - name: '5'
+  - name: '6'
+  - name: '7'
+  - name: '8'
+  - name: '9'
+  - name: '0'
 
 window_rules:
   - commands: ['ignore']
