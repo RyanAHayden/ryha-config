@@ -4,35 +4,17 @@ Mostly for personal reasons but feel free to mess around with the configs.
 
 Install what you want manually or use the included `installs.bat`
 
-## Replace the theme colors with your own:
-1. In CHANGE_COLORS.md Select each color code
-2. Replace all instances in your theme files
-3. Run task copy to user folder
-4. Apply the theme to Flow Launcher using:
-   ```
-   fltheme ryha
-   ```
-![showing how to change colors](README_Assets/ChangeColors.png)
+python glaze dependency `python -m pip install websockets`
+
 # Install
 
 ## < [Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip) > (Required for icons)
 ```
 winget install --id DEVCOM.JetBrainsMonoNerdFont
 ```
-## < [Komorebi](https://github.com/LGUG2Z/komorebi) >
+## < [GlazeWM](https://github.com/glzr-io/glazewm) >
 ```
-winget install -e --id LGUG2Z.komorebi
-```
-Enable autostart: `komorebic enable-autostart --whkd --masir`
-
-## < [YASB](https://docs.yasb.dev/latest/installation) >
-```
-winget install --id AmN.yasb
-```
-
-## < [masir](https://github.com/LGUG2Z/masir) >
-```
-winget install --id LGUG2Z.masir
+winget install -e --id glzr-io.glazewm
 ```
 
 ## < [AltSnap](https://github.com/RamonUnch/AltSnap) >
