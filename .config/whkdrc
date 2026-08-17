@@ -2,13 +2,11 @@
 
 # Reload app configuration
 win + o                 : taskkill /f /im whkd.exe; ; wscript //B "launch-whkd-hidden.vbs"
-win + shift + o         : komorebic stop; komorebic start --masir; wscript //B "launch-whkd-hidden.vbs"
-win + shift + y         : taskkill /f /im yasb.exe; ; start yasb.exe
 
 # Launch apps
 win + shift + return	: start zen.exe --blank-window
 win + shift + b     	: start zen.exe
-win + shift + k         : start keepassxc
+win + shift + k         : start '~\KeePassXC.lnk'
 win + shift + n         : code
 win + shift + m         : start spotify:
 win + return			: start wt

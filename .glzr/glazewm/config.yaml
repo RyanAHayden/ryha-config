@@ -335,5 +335,5 @@ keybindings:
     bindings: ['win+shift+9']
   - commands: ['move --workspace 0', 'focus --workspace 0']
     bindings: ['win+shift+0']
-  - commands: ['move --workspace S', 'focus --workspace S']
+  - commands: ['move --workspace S']
     bindings: ['alt+win+s']
