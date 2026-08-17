@@ -278,9 +278,9 @@ keybindings:
     bindings: ['alt+d']
   - commands: ['focus --prev-workspace']
     bindings: ['alt+a']
-  - commands: ['move --next-workspace', 'focus --next-workspace']
-    bindings: ['alt+shift+a']
   - commands: ['move --prev-workspace', 'focus --prev-workspace']
+    bindings: ['alt+shift+a']
+  - commands: ['move --next-workspace', 'focus --next-workspace']
     bindings: ['alt+shift+d']
 
   # Focus the workspace that last had focus.
