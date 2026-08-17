@@ -1,10 +1,12 @@
 # ryha-config
-This is My Windows Config For Theming &amp; Applications. <br>
+This is My Windows Config For Tiling. <br>
 Mostly for personal reasons but feel free to mess around with the configs.
+
+!! GlazeWM Zebar themes are not changed by `CHANGE_COLORS.md` yet.
 
 Install what you want manually or use the included `installs.bat`
 
-python glaze dependency `python -m pip install websockets`
+python dwindle dependency `python -m pip install websockets`
 
 # Install
 
@@ -68,3 +70,5 @@ winget install xanderfrangos.twinkletray
 ```
 
 ---
+# Credits
+[Opposite34 for Dwindle GlazeWM](https://gist.github.com/Opposite34/f3a487d940e9fb968d01f7e30969fbd1)
