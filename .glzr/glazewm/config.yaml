@@ -265,13 +265,22 @@ keybindings:
     bindings: ['alt+enter']
 
   # Focus the next/previous active workspace defined in `workspaces` config.
-  - commands: ['focus --next-active-workspace']
+  # - commands: ['focus --next-active-workspace']
+  #   bindings: ['alt+d']
+  # - commands: ['focus --prev-active-workspace']
+  #   bindings: ['alt+a']
+  # - commands: ['move --next-active-workspace', 'focus --next-active-workspace']
+  #   bindings: ['alt+shift+a']
+  # - commands: ['move --prev-active-workspace', 'focus --prev-active-workspace']
+  #   bindings: ['alt+shift+d']
+
+  - commands: ['focus --next-workspace']
     bindings: ['alt+d']
-  - commands: ['focus --prev-active-workspace']
+  - commands: ['focus --prev-workspace']
     bindings: ['alt+a']
-  - commands: ['move --next-active-workspace', 'focus --next-active-workspace']
+  - commands: ['move --next-workspace', 'focus --next-workspace']
     bindings: ['alt+shift+a']
-  - commands: ['move --prev-active-workspace', 'focus --prev-active-workspace']
+  - commands: ['move --prev-workspace', 'focus --prev-workspace']
     bindings: ['alt+shift+d']
 
   # Focus the workspace that last had focus.
