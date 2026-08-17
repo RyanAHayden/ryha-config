@@ -237,12 +237,12 @@ keybindings:
     bindings: ['win+t']
 
   # Change the focused window to be fullscreen.
-  - commands: ['toggle-fullscreen']
-    bindings: ['win+f']
+  # - commands: ['toggle-fullscreen']
+  #   bindings: ['win+f']
 
   # Minimize focused window.
-  - commands: ['toggle-minimized']
-    bindings: ['win+m']
+  # - commands: ['toggle-minimized']
+  #   bindings: ['win+m']
 
   # Close focused window.
   # - commands: ['close']
@@ -312,7 +312,7 @@ keybindings:
   - commands: ['focus --workspace 0']
     bindings: ['win+0']
   - commands: ['focus --workspace S']
-    bindings: ['win+s']
+    bindings: ['alt+s']
 
   # Move focused window to a workspace defined in `workspaces` config.
   - commands: ['move --workspace 1', 'focus --workspace 1']
