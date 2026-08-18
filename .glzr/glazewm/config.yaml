@@ -121,17 +121,30 @@ window_behavior:
       shown_on_top: false
 
 workspaces:
+  # No `bind_to_monitor` here: forcing workspaces to monitor 1 breaks the
+  # keybindings whenever only the laptop screen (monitor 0) is present.
   - name: 'S'
+    bind_to_monitor: 0
   - name: '1'
+    bind_to_monitor: 1
   - name: '2'
+    bind_to_monitor: 1
   - name: '3'
+    bind_to_monitor: 1
   - name: '4'
+    bind_to_monitor: 1
   - name: '5'
+    bind_to_monitor: 1
   - name: '6'
+    bind_to_monitor: 1
   - name: '7'
+    bind_to_monitor: 1
   - name: '8'
+    bind_to_monitor: 1
   - name: '9'
+    bind_to_monitor: 1
   - name: '0'
+    bind_to_monitor: 1
 
 window_rules:
   - commands: ['ignore']
