@@ -38,7 +38,7 @@ general:
   # effect if `hide_method: 'hide'`.
   # - 'true': Show all windows (regardless of workspace).
   # - 'false': Only show windows from the currently shown workspaces.
-  show_all_in_taskbar: false
+  show_all_in_taskbar: true
 
 gaps:
   # Whether to scale the gaps with the DPI of the monitor.
@@ -249,8 +249,8 @@ keybindings:
   #   bindings: ['alt+shift+q']
 
   # Kill GlazeWM process safely.
-  # - commands: ['wm-exit']
-  #   bindings: ['alt+shift+e']
+  - commands: ['wm-exit']
+    bindings: ['alt+shift+e']
 
   # Re-evaluate configuration file.
   - commands: ['wm-reload-config']
