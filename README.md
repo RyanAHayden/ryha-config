@@ -6,8 +6,6 @@ Mostly for personal reasons but feel free to mess around with the configs.
 
 Install what you want manually or use the included `installs.bat`
 
-python dwindle dependency `python -m pip install websockets`
-
 # Install
 
 ## < [Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip) > (Required for icons)
@@ -70,5 +68,3 @@ winget install xanderfrangos.twinkletray
 ```
 
 ---
-# Credits
-[Opposite34 for Dwindle GlazeWM](https://gist.github.com/Opposite34/f3a487d940e9fb968d01f7e30969fbd1)
