@@ -2,7 +2,7 @@ general:
   # Commands to run when the WM has started. This is useful for running a
   # script or launching another application.
   # Example: The below command launches Zebar.
-  startup_commands: ['shell-exec zebar', 'shell-exec pythonw "C:\Users\%USERNAME%\.glzr\glazewm-autotile.py"']
+  startup_commands: ['shell-exec zebar']
 
   # Commands to run just before the WM is shutdown.
   # Example: The below command kills Zebar.
@@ -38,7 +38,7 @@ general:
   # effect if `hide_method: 'hide'`.
   # - 'true': Show all windows (regardless of workspace).
   # - 'false': Only show windows from the currently shown workspaces.
-  show_all_in_taskbar: false
+  show_all_in_taskbar: true
 
 gaps:
   # Whether to scale the gaps with the DPI of the monitor.
@@ -93,8 +93,8 @@ window_effects:
       enabled: true
       style: 'square'
     transparency:
-      enabled: false
-      opacity: '0%'
+      enabled: true
+      opacity: '97%'
 
 window_behavior:
   # New windows are created in this state whenever possible.
@@ -144,7 +144,8 @@ window_rules:
         window_class: { regex: 'Chrome_WidgetWin_1|MozillaDialogClass' }
 
       # Ignore rules for various 3rd-party apps.
-      - window_process: { equals: 'PowerToys' }
+      - window_title: { equals: 'Task Manager' }
+      - window_title: { equals: 'PowerToys' }
         window_class: { regex: 'HwndWrapper\[PowerToys\.PowerAccent.*?\]' }
       - window_title: { equals: 'Command Palette' }
         window_class: { equals: 'WinUIDesktopWin32WindowClass' }
@@ -158,22 +159,23 @@ window_rules:
         window_class: { not_regex: 'OpusApp' }
       - window_process: { equals: 'POWERPNT' }
         window_class: { not_regex: 'PPTFrameClass' }
+  # - commands: ['floating']
 
-binding_modes:
-  # When enabled, the focused window can be resized via arrow keys or HJKL.
-  - name: 'resize'
-    keybindings:
-      - commands: ['resize --width -2%']
-        bindings: ['h', 'left']
-      - commands: ['resize --width +2%']
-        bindings: ['l', 'right']
-      - commands: ['resize --height +2%']
-        bindings: ['k', 'up']
-      - commands: ['resize --height -2%']
-        bindings: ['j', 'down']
-      # Press enter/escape to return to default keybindings.
-      - commands: ['wm-disable-binding-mode --name resize']
-        bindings: ['escape', 'enter']
+# binding_modes:
+#   # When enabled, the focused window can be resized via arrow keys or HJKL.
+#   - name: 'resize'
+#     keybindings:
+#       - commands: ['resize --width -2%']
+#         bindings: ['h', 'left']
+#       - commands: ['resize --width +2%']
+#         bindings: ['l', 'right']
+#       - commands: ['resize --height +2%']
+#         bindings: ['k', 'up']
+#       - commands: ['resize --height -2%']
+#         bindings: ['j', 'down']
+#       # Press enter/escape to return to default keybindings.
+#       - commands: ['wm-disable-binding-mode --name resize']
+#         bindings: ['escape', 'enter']
 
 keybindings:
   # Shift focus in a given direction.
@@ -232,23 +234,23 @@ keybindings:
 
   # Change the focused window to be tiling.
   - commands: ['toggle-tiling']
-    bindings: ['alt+t']
+    bindings: ['win+t']
 
   # Change the focused window to be fullscreen.
-  - commands: ['toggle-fullscreen']
-    bindings: ['alt+f']
+  # - commands: ['toggle-fullscreen']
+  #   bindings: ['win+f']
 
   # Minimize focused window.
-  - commands: ['toggle-minimized']
-    bindings: ['alt+m']
+  # - commands: ['toggle-minimized']
+  #   bindings: ['win+m']
 
   # Close focused window.
   # - commands: ['close']
   #   bindings: ['alt+shift+q']
 
   # Kill GlazeWM process safely.
-  # - commands: ['wm-exit']
-  #   bindings: ['alt+shift+e']
+  - commands: ['wm-exit']
+    bindings: ['alt+shift+e']
 
   # Re-evaluate configuration file.
   - commands: ['wm-reload-config']
@@ -274,6 +276,7 @@ keybindings:
   # - commands: ['move --prev-active-workspace', 'focus --prev-active-workspace']
   #   bindings: ['alt+shift+d']
 
+  # Focus the next/previous workspace defined in `workspaces` config.
   - commands: ['focus --next-workspace']
     bindings: ['alt+d']
   - commands: ['focus --prev-workspace']
@@ -311,17 +314,6 @@ keybindings:
   - commands: ['focus --workspace S']
     bindings: ['alt+s']
 
-  # Move the focused window's parent workspace to a monitor in a given
-  # direction.
-  # - commands: ['move-workspace --direction left']
-  #   bindings: ['alt+shift+a']
-  # - commands: ['move-workspace --direction right']
-  #   bindings: ['alt+shift+d']
-  # - commands: ['move-workspace --direction up']
-  #   bindings: ['alt+shift+d']
-  # - commands: ['move-workspace --direction down']
-  #   bindings: ['alt+shift+s']
-
   # Move focused window to a workspace defined in `workspaces` config.
   - commands: ['move --workspace 1', 'focus --workspace 1']
     bindings: ['win+shift+1']
@@ -343,5 +335,5 @@ keybindings:
     bindings: ['win+shift+9']
   - commands: ['move --workspace 0', 'focus --workspace 0']
     bindings: ['win+shift+0']
-  - commands: ['move --workspace S', 'focus --workspace S']
+  - commands: ['move --workspace S']
     bindings: ['alt+win+s']

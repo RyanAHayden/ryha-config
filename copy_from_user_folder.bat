@@ -12,14 +12,6 @@ if exist "%SOURCE_DIR%\.config" (
     echo .config folder not found
 )
 
-REM Copy komorebi.json file
-if exist "%SOURCE_DIR%\komorebi.json" (
-    copy "%SOURCE_DIR%\komorebi.json" "%DEST_DIR%komorebi.json" /Y
-    echo komorebi.json copied successfully
-) else (
-    echo komorebi.json not found
-)
-
 REM Copy FlowLauncher settings file and Themes folder
 if exist "%SOURCE_DIR%\AppData\Roaming\FlowLauncher" (
     if not exist "%DEST_DIR%FlowLauncher\Settings" mkdir "%DEST_DIR%FlowLauncher\Settings"
@@ -83,15 +75,6 @@ if exist "%SOURCE_DIR%\AppData\Local\Microsoft\PowerToys" (
 ) else (
     echo PowerToys folder not found
 )
-
-REM Copy applications.json file
-if exist "%SOURCE_DIR%\applications.json" (
-    copy "%SOURCE_DIR%\applications.json" "%DEST_DIR%applications.json" /Y
-    echo applications.json copied successfully
-) else (
-    echo applications.json not found
-)
-
 REM Copy GlazeWM configuration
 if exist "%SOURCE_DIR%\.glzr" (
     xcopy "%SOURCE_DIR%\.glzr" "%DEST_DIR%.glzr" /E /I /Y
@@ -101,12 +84,12 @@ if exist "%SOURCE_DIR%\.glzr" (
 )
 
 REM Copy AltSnap.ini file
-if exist "%SOURCE_DIR%\AltSnap.ini" (
-    copy "%SOURCE_DIR%\AltSnap.ini" "%DEST_DIR%\AltSnap.ini" /Y
-    echo AltSnap.ini copied successfully from user folder
-) else if exist "%APPDATA%\AltSnap\AltSnap.ini" (
+if exist "%APPDATA%\AltSnap\AltSnap.ini" (
     copy "%APPDATA%\AltSnap\AltSnap.ini" "%DEST_DIR%\AltSnap.ini" /Y
     echo AltSnap.ini copied successfully from AppData
+) else if exist "%SOURCE_DIR%\AltSnap.ini" (
+    copy "%SOURCE_DIR%\AltSnap.ini" "%DEST_DIR%\AltSnap.ini" /Y
+    echo AltSnap.ini copied successfully from user folder
 ) else (
     echo AltSnap.ini not found
 )
