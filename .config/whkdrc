@@ -5,6 +5,7 @@ win + o                 : taskkill /f /im whkd.exe; ; wscript //B "launch-whkd-h
 
 # Launch apps
 win + shift + return	: start firefox.exe
+win + shift + b	        : start '~\Microsoft Edge.lnk'
 win + shift + k         : start '~\KeePassXC.lnk'
 win + shift + n         : code
 win + shift + m         : start spotify:
