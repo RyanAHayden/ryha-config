@@ -4,12 +4,12 @@
 win + o                 : taskkill /f /im whkd.exe; ; wscript //B "launch-whkd-hidden.vbs"
 
 # Launch apps
-win + shift + return	: start zen.exe --blank-window
-win + shift + b     	: start zen.exe
+win + shift + return	: start firefox.exe
+win + shift + b	        : start '~\Microsoft Edge.lnk'
 win + shift + k         : start '~\KeePassXC.lnk'
 win + shift + n         : code
 win + shift + m         : start spotify:
-win + return			: start wt
+win + return			: start powershell
 
 f19			: powershell -NoProfile -File "C:\Users\admin\.config\crosshair-toggle.ps1" cross.png
 f18			: powershell -NoProfile -File "C:\Users\admin\.config\crosshair-toggle.ps1" dot.png
