@@ -277,19 +277,19 @@ keybindings:
   - commands: ['shell-exec powershell']
     bindings: ['win+enter']
 
-  - commands: ['shell-exec start firefox.exe']
+  - commands: ['shell-exec --hide-window cmd /c start firefox']
     bindings: ['win+shift+enter']
 
-  - commands: ['shell-exec start msedge']
+  - commands: ['shell-exec --hide-window cmd /c start msedge']
     bindings: ['win+shift+b']
 
-  - commands: ['shell-exec start "" "%USERPROFILE%\KeePassXC.lnk"']
+  - commands: ['shell-exec --hide-window cmd /c start "" "%USERPROFILE%\KeePassXC.lnk"']
     bindings: ['win+shift+k']
 
   - commands: ['shell-exec code']
     bindings: ['win+shift+n']
 
-  - commands: ['shell-exec start spotify:']
+  - commands: ['shell-exec --hide-window cmd /c start spotify:']
     bindings: ['win+shift+m']
 
   # Focus the next/previous active workspace defined in `workspaces` config.
