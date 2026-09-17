@@ -95,16 +95,4 @@ if exist "%SOURCE_DIR%AltSnap.ini" (
     echo AltSnap.ini not found
 )
 
-REM Copy launch-whkd-hidden.vbs file
-if exist "%SOURCE_DIR%launch-whkd-hidden.vbs" (
-    copy "%SOURCE_DIR%launch-whkd-hidden.vbs" "%DEST_DIR%\launch-whkd-hidden.vbs" /Y
-    echo WHKD Launcher copied successfully
-
-    if not exist "%DEST_DIR%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs" mkdir "%DEST_DIR%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs"
-    powershell -NoProfile -ExecutionPolicy Bypass -Command "$ws=New-Object -ComObject WScript.Shell; $lnk=$ws.CreateShortcut('%DEST_DIR%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Launch whkd.lnk'); $lnk.TargetPath=$env:SystemRoot + '\\System32\\wscript.exe'; $lnk.Arguments='//B ' + [char]34 + '%DEST_DIR%\launch-whkd-hidden.vbs' + [char]34; $lnk.WorkingDirectory='%DEST_DIR%'; $lnk.Description='Launch whkd (hidden, no console window)'; $lnk.Save()"
-    echo WHKD Start Menu shortcut created
-) else (
-    echo WHKD Launcher not found
-)
-
 echo Done.

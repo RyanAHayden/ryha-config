@@ -5,6 +5,7 @@ winget install AltSnap.AltSnap
 winget install xanderfrangos.twinkletray
 winget install Microsoft.PowerToys
 winget install Flow-Launcher.Flow-Launcher
+winget install glzr-io.glazewm
 
 @REM Browser
 winget install Zen-Team.Zen-Browser 

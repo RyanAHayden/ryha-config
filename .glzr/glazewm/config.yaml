@@ -273,11 +273,32 @@ keybindings:
   - commands: ['wm-redraw']
     bindings: ['alt+shift+w']
 
-  # Launch CMD terminal. Alternatively, use `shell-exec wt` or
-  # `shell-exec %ProgramFiles%/Git/git-bash.exe` to start Windows
-  # Terminal and Git Bash respectively.
-  - commands: ['shell-exec cmd']
-    bindings: ['alt+enter']
+  # Launch applications.
+  - commands: ['shell-exec powershell']
+    bindings: ['win+enter']
+
+  - commands: ['shell-exec --hide-window cmd /c start zen.exe --blank-window']
+    bindings: ['win+shift+enter']
+
+  - commands: ['shell-exec --hide-window cmd /c start zen.exe']
+    bindings: ['win+shift+b']
+
+  - commands: ['shell-exec --hide-window cmd /c start "" "%USERPROFILE%\KeePassXC.lnk"']
+    bindings: ['win+shift+k']
+
+  - commands: ['shell-exec code']
+    bindings: ['win+shift+n']
+
+  - commands: ['shell-exec --hide-window cmd /c start spotify:']
+    bindings: ['win+shift+m']
+
+  # Crosshair toggle bindings.
+  - commands: ['shell-exec --hide-window powershell -WindowStyle Hidden -NoProfile -File "C:\Users\admin\.config\crosshair-toggle.ps1" cross.png']
+    bindings: ['f19']
+  - commands: ['shell-exec --hide-window powershell -WindowStyle Hidden -NoProfile -File "C:\Users\admin\.config\crosshair-toggle.ps1" dot.png']
+    bindings: ['f18']
+  - commands: ['shell-exec --hide-window powershell -WindowStyle Hidden -NoProfile -Command "Get-Process crosshair -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue"']
+    bindings: ['f13']
 
   # Focus the next/previous active workspace defined in `workspaces` config.
   # - commands: ['focus --next-active-workspace']
