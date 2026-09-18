@@ -28,3 +28,16 @@
 
 # Backup files
 *.bak
+
+# Other
+.glzr/glazewm-autotile.py
+.glzr/zebar/ryha/.gitignore
+.glzr/zebar/ryha/index.html
+.glzr/zebar/ryha/package.json
+.glzr/zebar/ryha/README.md
+.glzr/zebar/ryha/tsconfig.json
+.glzr/zebar/ryha/vite.config.ts
+.glzr/zebar/ryha/zpack.json
+.glzr/zebar/ryha/resources/preview-image-1.png
+.glzr/zebar/ryha/src/index.css
+.glzr/zebar/ryha/src/index.tsx
