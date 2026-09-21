@@ -25,6 +25,10 @@
 !/PowerToys/Keyboard Manager/default.json
 !/PowerToys/Keyboard Manager/editorSettings.json
 !/PowerToys/Keyboard Manager/settings.json
+!/PowerToys/Keyboard Manager/layout_default.json
+!/PowerToys/Keyboard Manager/layout_remapped.json
+!/PowerToys/Keyboard Manager/toggle_keyboard_layout.ps1
+!/PowerToys/Keyboard Manager/toggle_keyboard_layout.bat
 
 # Backup files
 *.bak

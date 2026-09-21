@@ -65,6 +65,18 @@ if exist "%SOURCE_DIR%\AppData\Local\Microsoft\PowerToys" (
     if exist "%SOURCE_DIR%\AppData\Local\Microsoft\PowerToys\Keyboard Manager\default.json" (
         copy "%SOURCE_DIR%\AppData\Local\Microsoft\PowerToys\Keyboard Manager\default.json" "%DEST_DIR%PowerToys\Keyboard Manager\default.json" /Y
     )
+    if exist "%SOURCE_DIR%\AppData\Local\Microsoft\PowerToys\Keyboard Manager\layout_remapped.json" (
+        copy "%SOURCE_DIR%\AppData\Local\Microsoft\PowerToys\Keyboard Manager\layout_remapped.json" "%DEST_DIR%PowerToys\Keyboard Manager\layout_remapped.json" /Y
+    )
+    if exist "%SOURCE_DIR%\AppData\Local\Microsoft\PowerToys\Keyboard Manager\layout_default.json" (
+        copy "%SOURCE_DIR%\AppData\Local\Microsoft\PowerToys\Keyboard Manager\layout_default.json" "%DEST_DIR%PowerToys\Keyboard Manager\layout_default.json" /Y
+    )
+    if exist "%SOURCE_DIR%\AppData\Local\Microsoft\PowerToys\Keyboard Manager\toggle_keyboard_layout.ps1" (
+        copy "%SOURCE_DIR%\AppData\Local\Microsoft\PowerToys\Keyboard Manager\toggle_keyboard_layout.ps1" "%DEST_DIR%PowerToys\Keyboard Manager\toggle_keyboard_layout.ps1" /Y
+    )
+    if exist "%SOURCE_DIR%\AppData\Local\Microsoft\PowerToys\Keyboard Manager\toggle_keyboard_layout.bat" (
+        copy "%SOURCE_DIR%\AppData\Local\Microsoft\PowerToys\Keyboard Manager\toggle_keyboard_layout.bat" "%DEST_DIR%PowerToys\Keyboard Manager\toggle_keyboard_layout.bat" /Y
+    )
     if exist "%SOURCE_DIR%\AppData\Local\Microsoft\PowerToys\Keyboard Manager\editorSettings.json" (
         copy "%SOURCE_DIR%\AppData\Local\Microsoft\PowerToys\Keyboard Manager\editorSettings.json" "%DEST_DIR%PowerToys\Keyboard Manager\editorSettings.json" /Y
     )
