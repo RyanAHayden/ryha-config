@@ -2,7 +2,7 @@
   "$schema": "https://github.com/glzr-io/zebar/raw/v3.3.1/resources/settings-schema.json",
   "startupConfigs": [
     {
-      "pack": "y4m3.tokyo-silence",
+      "pack": "tokyo-silence",
       "widget": "bar",
       "preset": "default"
     }

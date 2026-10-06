@@ -245,6 +245,10 @@ keybindings:
   - commands: ['toggle-floating --centered']
     bindings: ['alt+shift+space']
 
+  # Toggle the visibility of Zebar's bar windows.
+  - commands: ['shell-exec --hide-window cmd /c powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%USERPROFILE%\.glzr\glazewm\toggle_zebar.ps1"']
+    bindings: ['win+shift+space']
+
   # Change the focused window to be tiling.
   - commands: ['toggle-tiling']
     bindings: ['win+t']

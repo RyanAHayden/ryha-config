@@ -3,6 +3,22 @@ REM Copy .config folder and FlowLauncher to user directory
 
 set SOURCE_DIR=%~dp0
 set DEST_DIR=C:\Users\%USERNAME%
+set ZEBAR_DIR=%SOURCE_DIR%.glzr\zebar\ryha
+
+REM Build Zebar before copying any user settings
+if not exist "%ZEBAR_DIR%\package.json" (
+    echo Zebar widget source not found: "%ZEBAR_DIR%"
+    exit /b 1
+)
+if not exist "%ZEBAR_DIR%\node_modules\.bin\vite.cmd" (
+    echo Zebar dependencies are missing. Run npm install in "%ZEBAR_DIR%" first.
+    exit /b 1
+)
+call npm --prefix "%ZEBAR_DIR%" run build
+if errorlevel 1 (
+    echo Zebar build failed. No user settings were copied.
+    exit /b 1
+)
 
 REM Copy .config folder
 if exist "%SOURCE_DIR%.config" (
@@ -94,8 +110,12 @@ if exist "%SOURCE_DIR%PowerToys" (
 
 REM Copy GlazeWM configuration
 if exist "%SOURCE_DIR%.glzr" (
-    xcopy "%SOURCE_DIR%.glzr" "%DEST_DIR%\.glzr" /E /I /Y
-    echo GlazeWM configuration copied successfully
+    robocopy "%SOURCE_DIR%.glzr" "%DEST_DIR%\.glzr" /E /XD node_modules .git
+    if errorlevel 8 (
+        echo GlazeWM and Zebar configuration copy failed.
+        exit /b 1
+    )
+    echo GlazeWM and Zebar configuration copied successfully
 ) else (
     echo GlazeWM folder not found
 )

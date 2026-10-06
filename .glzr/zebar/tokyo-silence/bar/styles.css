@@ -1,0 +1,297 @@
+/* Nerd Font Webfont */
+@import url("https://cdn.jsdelivr.net/gh/mshaugh/nerdfont-webfonts@master/build/jetbrainsmono-nf.css");
+
+/* Tokyo Night Color Palette */
+:root {
+  --bg: #000000;
+  --bg-dark: #202020;
+  --fg: #ffffff;
+  --fg-dark: #a1a1a1;
+  --blue: #8dbcff;
+  --cyan: #7dcfff;
+  --green: #9ece6a;
+  --yellow: #e0af68;
+  --red: #f7768e;
+  --magenta: #bb9af7;
+  --bg-hover: #2a2a2a;
+  --bar-item-height: 17px;
+  --icon-optical-shift: -0.04em;
+  --marquee-gap: 8rem;
+  --marquee-speed: 35;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "JetBrainsMono NF", ui-monospace, "JetBrains Mono", "Cascadia Code", Consolas, monospace;
+  font-size: 12.5px;
+  line-height: 1;
+  color: var(--fg);
+  background: transparent;
+  overflow: hidden;
+  user-select: none;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+/* Main bar layout */
+.bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 12px;
+  background: var(--bg);
+  line-height: 1;
+}
+
+/* Left section */
+.left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+/* Center section */
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Right section */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+/* Workspaces */
+.workspaces {
+  display: flex;
+  gap: 4px;
+}
+
+.workspace {
+  background: transparent;
+  border: none;
+  color: var(--fg-dark);
+  padding: 4px 6px 0;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1;
+  height: var(--bar-item-height);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.workspace:focus-visible {
+  outline: 1px solid var(--bg);
+  outline-offset: 1px;
+}
+
+.workspace:hover {
+  color: var(--fg);
+  background: var(--bg-dark);
+}
+
+.workspace.displayed {
+  color: var(--fg);
+}
+
+.workspace.active {
+  color: var(--fg);
+  background: var(--bg-dark);
+}
+
+/* Date/Time */
+.datetime {
+  color: var(--fg);
+  font-weight: 500;
+  line-height: 1;
+  height: var(--bar-item-height);
+  display: flex;
+  align-items: center;
+  padding-top: 4px;
+}
+
+/* Chip (system info items) */
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: var(--bg-dark);
+  color: var(--fg);
+  font-size: 11px;
+  line-height: 1;
+  height: var(--bar-item-height);
+  font-variant-numeric: tabular-nums;
+}
+
+.chip .icon {
+  font-size: 12px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+}
+
+.chip .value {
+  min-width: 2.6ch;
+  text-align: right;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Network indicator */
+.network .icon {
+  font-size: 14px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15em;
+  transform: translateX(var(--icon-optical-shift));
+}
+
+/* Usage level states */
+.chip.warning {
+  color: var(--yellow);
+}
+
+.chip.critical {
+  color: var(--red);
+}
+
+/* Battery states */
+.battery.charging {
+  color: var(--green);
+}
+
+.battery.critical {
+  color: var(--red);
+}
+
+/* GlazeWM paused state */
+.chip.paused {
+  color: var(--blue);
+  font-weight: 600;
+}
+
+/* Tiling direction indicator */
+.chip.tiling {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  transition: background 0.15s ease;
+  height: var(--bar-item-height);
+  display: inline-flex;
+  align-items: center;
+  padding: 0px 7px 0px 3px;
+  justify-content: center;
+  min-width: 22px;
+}
+
+.chip.tiling:hover {
+  background: var(--bg-hover);
+}
+
+.tiling .icon {
+  font-size: 14px;
+  color: var(--fg);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1em;
+  transform: translateX(var(--icon-optical-shift));
+}
+
+.chip.network {
+  justify-content: center;
+  padding: 0px 6px;
+}
+
+.network .ssid {
+  font-size: 11px;
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Media controls */
+.media {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--bg-dark);
+  max-width: 300px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  line-height: 1;
+  height: var(--bar-item-height);
+}
+
+.media:hover {
+  background: var(--bg-hover);
+}
+
+.media-icon {
+  color: var(--fg);
+  font-size: 14px;
+  flex-shrink: 0;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+}
+
+.media-title-wrapper {
+  overflow: hidden;
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.media-title {
+  color: var(--fg);
+  font-size: 11px;
+  line-height: 1;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  column-gap: var(--marquee-gap);
+  width: max-content;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+.media-title-unit {
+  padding-right: 0;
+  display: inline-block;
+}
+
+.media-title.scrolling {
+  animation: none;
+}

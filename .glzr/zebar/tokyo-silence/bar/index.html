@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <script
+      src="https://unpkg.com/@babel/standalone@7.25.6/babel.min.js"
+      integrity="sha256-aS0B0wnsaDByLfE16h4MDCP1fQFccysd1YWOcV+gbBo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel" data-type="module">
+      import React, { useState, useEffect, useRef } from 'https://esm.sh/react@18?dev';
+      import { createRoot } from 'https://esm.sh/react-dom@18/client?dev';
+
+      // External modules (pure JS, no JSX)
+      import {
+        getUsageClass,
+        getBatteryClass,
+        getWifiIcon,
+        getBatteryIcon,
+      } from './js/utils.js';
+      import { providers } from './js/providers.js';
+
+      // ============================================================================
+      // Custom Hooks
+      // ============================================================================
+
+      /**
+       * Hook to subscribe to Zebar provider outputs
+       * @param {object} providers - Zebar provider group
+       * @returns {object} Current provider output map
+       */
+      function useProviderOutput(providers) {
+        const [output, setOutput] = useState(providers.outputMap);
+
+        useEffect(() => {
+          const unsubscribe = providers.onOutput(() => {
+            setOutput({ ...providers.outputMap });
+          });
+          return () => {
+            if (typeof unsubscribe === 'function') {
+              unsubscribe();
+            }
+          };
+        }, [providers]);
+
+        return output;
+      }
+
+      // ============================================================================
+      // Components: MarqueeText
+      // ============================================================================
+
+      /**
+       * Scrolling text component for long media titles
+       * Only scrolls on hover when media is playing
+       */
+      const MarqueeText = React.memo(function MarqueeText({ text, isPlaying }) {
+        const wrapperRef = useRef(null);
+        const textRef = useRef(null);
+        const unitRef = useRef(null);
+        const [shouldScroll, setShouldScroll] = useState(false);
+        const [isHover, setIsHover] = useState(false);
+        const distanceRef = useRef(0);
+        const unitWidthRef = useRef(0);
+        const offsetRef = useRef(0);
+
+        useEffect(() => {
+          const checkOverflow = () => {
+            if (unitRef.current && wrapperRef.current && textRef.current) {
+              const containerWidth = wrapperRef.current.clientWidth;
+              const unitWidth = unitRef.current.getBoundingClientRect().width;
+              const titleStyle = getComputedStyle(textRef.current);
+              const gap = parseFloat(titleStyle.columnGap || titleStyle.gap) || 0;
+              const distance = unitWidth + gap;
+
+              unitWidthRef.current = unitWidth;
+              distanceRef.current = distance;
+              setShouldScroll(containerWidth > 0 && unitWidth > containerWidth);
+            }
+          };
+
+          const timeoutId = setTimeout(() => {
+            document.fonts.ready.then(checkOverflow);
+          }, 100);
+
+          const resizeObserver = new ResizeObserver(checkOverflow);
+          if (wrapperRef.current) {
+            resizeObserver.observe(wrapperRef.current);
+          }
+
+          checkOverflow();
+
+          return () => {
+            clearTimeout(timeoutId);
+            resizeObserver.disconnect();
+          };
+        }, [text]);
+
+        useEffect(() => {
+          if (!shouldScroll || !isPlaying || !isHover || !textRef.current) {
+            if (textRef.current) {
+              offsetRef.current = 0;
+              textRef.current.style.transform = 'translate3d(0, 0, 0)';
+            }
+            return;
+          }
+
+          const speed =
+            parseFloat(
+              getComputedStyle(document.documentElement).getPropertyValue('--marquee-speed')
+            ) || 35; // px/s
+          let rafId = 0;
+          let lastTime = performance.now();
+
+          const step = (time) => {
+            const distance = distanceRef.current || 1;
+            const unitWidth = unitWidthRef.current || 0;
+            const containerWidth = wrapperRef.current?.clientWidth || 0;
+            if (
+              !textRef.current ||
+              distance <= 0 ||
+              containerWidth <= 0 ||
+              unitWidth <= containerWidth
+            ) {
+              if (textRef.current) {
+                offsetRef.current = 0;
+                textRef.current.style.transform = 'translate3d(0, 0, 0)';
+              }
+              lastTime = time;
+              rafId = requestAnimationFrame(step);
+              return;
+            }
+
+            const dt = (time - lastTime) / 1000;
+            lastTime = time;
+            offsetRef.current -= speed * dt;
+            if (offsetRef.current <= -distance) {
+              offsetRef.current += distance;
+            }
+            textRef.current.style.transform = `translate3d(${offsetRef.current}px, 0, 0)`;
+            rafId = requestAnimationFrame(step);
+          };
+
+          rafId = requestAnimationFrame(step);
+          return () => cancelAnimationFrame(rafId);
+        }, [text, shouldScroll, isPlaying, isHover]);
+
+        return (
+          <div
+            className="media-title-wrapper"
+            ref={wrapperRef}
+            onMouseEnter={() => setIsHover(true)}
+            onMouseLeave={() => {
+              setIsHover(false);
+              if (isPlaying && textRef.current) {
+                offsetRef.current = 0;
+                textRef.current.style.transform = 'translate3d(0, 0, 0)';
+              }
+            }}
+          >
+            <span ref={textRef} className={`media-title ${shouldScroll ? 'scrolling' : ''}`}>
+              {/* Duplicate the title only while the playing marquee is scrolling. */}
+              <span ref={unitRef} className="media-title-unit">
+                {text}
+              </span>
+              {shouldScroll && isPlaying && isHover && (
+                <span className="media-title-unit" aria-hidden="true">
+                  {text}
+                </span>
+              )}
+            </span>
+          </div>
+        );
+      });
+
+      // ============================================================================
+      // Components: NetworkChip
+      // ============================================================================
+
+      /**
+       * Network status indicator chip
+       * Shows WiFi/Ethernet/VPN icon and SSID for WiFi connections
+       */
+      function NetworkChip({ network }) {
+        const networkInfo = getWifiIcon(network);
+        const interfaceType = network?.defaultInterface?.type;
+        // Only show SSID for Wi-Fi connections
+        // VPN/Ethernet: no SSID display
+        const ssid = interfaceType === 'wifi' ? network?.defaultGateway?.ssid : null;
+
+        return (
+          <div className="chip network">
+            <span className="icon">{networkInfo.icon}</span>
+            {ssid && <span className="ssid">{ssid}</span>}
+          </div>
+        );
+      }
+
+      // ============================================================================
+      // Components: Section Components
+      // ============================================================================
+
+      /**
+       * GlazeWM workspaces and tiling direction controls
+       */
+      function WorkspacesSection({ glazewm }) {
+        if (!glazewm) return null;
+
+        return (
+          <>
+            <div className="workspaces">
+              {glazewm.currentWorkspaces?.map((ws) => (
+                <button
+                  key={ws.name}
+                  className={`workspace ${ws.hasFocus ? 'active' : ''} ${ws.isDisplayed ? 'displayed' : ''}`}
+                  onClick={() => glazewm.runCommand(`focus --workspace ${ws.name}`)}
+                >
+                  {ws.displayName || ws.name}
+                </button>
+              ))}
+            </div>
+
+            {glazewm.isPaused && <div className="chip paused">PAUSED</div>}
+
+            <button className="chip tiling" onClick={() => glazewm.runCommand('toggle-tiling-direction')}>
+              <span className="icon">{glazewm.tilingDirection === 'horizontal' ? '󰯍' : '󰯎'}</span>
+            </button>
+          </>
+        );
+      }
+
+      /**
+       * Media player controls with marquee title
+       */
+      function MediaSection({ media }) {
+        if (!media?.currentSession) return null;
+
+        return (
+          <div className="media" onClick={() => media.togglePlayPause()}>
+            <span className="media-icon">{media.currentSession.isPlaying ? '󰏤' : '󰐊'}</span>
+            <MarqueeText
+              text={media.currentSession.title || 'Unknown Title'}
+              isPlaying={media.currentSession.isPlaying}
+            />
+          </div>
+        );
+      }
+
+      /**
+       * System statistics: CPU, Memory, Battery indicators
+       */
+      function SystemStatsSection({ cpu, memory, battery, network }) {
+        return (
+          <>
+            {/* Network/WiFi */}
+            <NetworkChip network={network} />
+
+            {/* CPU */}
+            {cpu && (
+              <div className={`chip cpu ${getUsageClass(cpu.usage)}`}>
+                <span className="label">CPU</span>
+                <span className="value">{Math.round(cpu.usage)}%</span>
+              </div>
+            )}
+
+            {/* Memory */}
+            {memory && (
+              <div className={`chip memory ${getUsageClass(memory.usage)}`}>
+                <span className="label">Mem</span>
+                <span className="value">{Math.round(memory.usage)}%</span>
+              </div>
+            )}
+
+            {/* Battery */}
+            {battery && (
+              <div className={`chip battery ${getBatteryClass(battery)}`}>
+                <span className="icon">{getBatteryIcon(battery)}</span>
+                <span className="value">
+                  {Number.isFinite(battery.chargePercent)
+                    ? `${Math.round(battery.chargePercent)}%`
+                    : '--'}
+                </span>
+              </div>
+            )}
+          </>
+        );
+      }
+
+      // ============================================================================
+      // Components: App (Main)
+      // ============================================================================
+
+      /**
+       * Main application component
+       * Composes all sections into the status bar layout
+       */
+      function App() {
+        const output = useProviderOutput(providers);
+
+        return (
+          <div className="bar">
+            {/* Left: GlazeWM Workspaces, State, and Media */}
+            <div className="left">
+              <WorkspacesSection glazewm={output.glazewm} />
+              <MediaSection media={output.media} />
+            </div>
+
+            {/* Center: Date/Time */}
+            <div className="center">
+              {output.date && <div className="datetime">{output.date.formatted}</div>}
+            </div>
+
+            {/* Right: System Info */}
+            <div className="right">
+              <SystemStatsSection
+                cpu={output.cpu}
+                memory={output.memory}
+                battery={output.battery}
+                network={output.network}
+              />
+            </div>
+          </div>
+        );
+      }
+
+      // ============================================================================
+      // Application Entry Point
+      // ============================================================================
+
+      createRoot(document.getElementById('root')).render(<App />);
+    </script>
+  </body>
+</html>
